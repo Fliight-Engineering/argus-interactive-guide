@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Argus Video Training System',
   tagline: 'Complete guide for deploying, testing, and operating the Argus VTS',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/vts-guide/image29.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
