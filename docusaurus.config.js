@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://liam1472.github.io',
+  url: 'https://fliight-engineering.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/argus-interactive-guide/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'liam1472', // Usually your GitHub org/user name.
+  organizationName: 'Fliight-Engineering', // Usually your GitHub org/user name.
   projectName: 'argus-interactive-guide', // Usually your repo name.
 
   onBrokenLinks: 'throw',
