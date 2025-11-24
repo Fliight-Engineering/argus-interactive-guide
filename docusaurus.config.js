@@ -1,9 +1,6 @@
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
-// (            type: 'html',
-            position: 'right',
-            value: '<img src="/argus-interactive-guide-host/img/vts-guide/fliight-logo.png" alt="FLIIGHT" style="height: 40px; padding: 0 1rem;" />',
-          }, paired with `@ts-check`).
+// (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
@@ -95,7 +92,7 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<img src="/argus-interactive-guide/img/vts-guide/fliight-logo.png" alt="Fliight" style="height: 32px; margin-left: 16px;" />',
+            value: '<img src="/argus-interactive-guide-host/img/vts-guide/fliight-logo.png" alt="FLIIGHT" style="height: 40px; padding: 0 1rem;" />',
           },
         ],
       },
