@@ -1,6 +1,9 @@
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
+// (            type: 'html',
+            position: 'right',
+            value: '<img src="/argus-interactive-guide-host/img/vts-guide/fliight-logo.png" alt="FLIIGHT" style="height: 40px; padding: 0 1rem;" />',
+          }, paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
@@ -23,12 +26,12 @@ const config = {
   url: 'https://fliight-engineering.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/argus-interactive-guide/',
+  baseUrl: '/argus-interactive-guide-host/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Fliight-Engineering', // Usually your GitHub org/user name.
-  projectName: 'argus-interactive-guide', // Usually your repo name.
+  projectName: 'argus-interactive-guide-host', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 

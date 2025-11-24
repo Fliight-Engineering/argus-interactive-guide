@@ -1,4 +1,5 @@
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function HomepageFeatures() {
   return (
@@ -20,7 +21,7 @@ export default function HomepageFeatures() {
         alignItems: 'center'
       }}>
         <img 
-          src="/img/vts-guide/image27.png" 
+          src={useBaseUrl('/img/vts-guide/image27.png')}
           alt="Argus VTS" 
           style={{ 
             maxWidth: '1000px', 
@@ -47,7 +48,7 @@ export default function HomepageFeatures() {
             minWidth: '380px',
             fontWeight: '600'
           }}>
-          <img src="/img/vts-guide/real-quickstart-removebg-preview.png" alt="Quick Start" style={{width: '200px', height: '200px', marginRight: '24px', verticalAlign: 'middle'}} />
+          <img src={useBaseUrl('/img/vts-guide/real-quickstart-removebg-preview.png')} alt="Quick Start" style={{width: '200px', height: '200px', marginRight: '24px', verticalAlign: 'middle'}} />
           Quick Start
         </Link>
         <Link
@@ -59,7 +60,7 @@ export default function HomepageFeatures() {
             minWidth: '380px',
             fontWeight: '600'
           }}>
-          <img src="/img/vts-guide/manual.png" alt="Manual" style={{width: '200px', height: '200px', marginRight: '24px', verticalAlign: 'middle'}} />
+          <img src={useBaseUrl('/img/vts-guide/manual.png')} alt="Manual" style={{width: '200px', height: '200px', marginRight: '24px', verticalAlign: 'middle'}} />
           Manual and Documentations
         </Link>
       </div>
