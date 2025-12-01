@@ -7,8 +7,10 @@ const { autoUpdater } = require('electron-updater');
 
 let mainWindow;
 let progressWindow = null;
+let downloadStartTime = null;
 let server;
 const PORT = 8080;
+const MIN_PROGRESS_DISPLAY_MS = 2000; // Minimum 2 seconds to show progress
 
 // Check if auto-update is supported on this platform
 // macOS requires code signing certificate ($99/year Apple Developer Program)
@@ -190,7 +192,10 @@ autoUpdater.on('update-available', (info) => {
     cancelId: 1
   }).then((result) => {
     if (result.response === 0) {
+      console.log('Starting download, creating progress window...');
+      downloadStartTime = Date.now();
       createProgressWindow();
+      console.log('Progress window created:', progressWindow ? 'YES' : 'NO');
       autoUpdater.downloadUpdate().catch((err) => {
         closeProgressWindow();
         removeRendererNotification();
@@ -215,6 +220,7 @@ autoUpdater.on('download-progress', (progress) => {
   const remaining = formatTime((progress.total - progress.transferred) / progress.bytesPerSecond);
   
   console.log(`Download: ${percent}% | ${speed} | ${remaining}`);
+  console.log(`Progress window exists: ${progressWindow ? 'YES' : 'NO'}`);
   
   // Taskbar progress
   if (mainWindow) {
@@ -223,34 +229,52 @@ autoUpdater.on('download-progress', (progress) => {
   
   // Progress window
   if (progressWindow && progressWindow.webContents) {
+    console.log('Sending progress to progress window...');
     progressWindow.webContents.send('download-progress', { percent, speed, remaining });
   }
   
   // In-app notification
+  console.log('Sending progress to renderer...');
   sendProgressToRenderer({ percent, speed, remaining });
 });
 
 autoUpdater.on('update-downloaded', (info) => {
   console.log('Update downloaded:', info.version);
   
-  closeProgressWindow();
-  removeRendererNotification();
+  // Ensure progress is shown for at least MIN_PROGRESS_DISPLAY_MS
+  const elapsed = Date.now() - (downloadStartTime || 0);
+  const delay = Math.max(0, MIN_PROGRESS_DISPLAY_MS - elapsed);
   
-  if (mainWindow) {
-    mainWindow.setProgressBar(-1); // Remove progress bar
+  // Update progress to 100%
+  if (progressWindow && progressWindow.webContents) {
+    progressWindow.webContents.send('download-progress', { 
+      percent: 100, 
+      speed: 'Complete!', 
+      remaining: 'Installing...' 
+    });
   }
-  dialog.showMessageBox(mainWindow, {
-    type: 'info',
-    title: 'Update Ready',
-    message: `Version ${info.version} has been downloaded. Restart now to install?`,
-    buttons: ['Restart', 'Later'],
-    defaultId: 0,
-    cancelId: 1
-  }).then((result) => {
-    if (result.response === 0) {
-      autoUpdater.quitAndInstall();
+  sendProgressToRenderer({ percent: 100, speed: 'Complete!', remaining: 'Installing...' });
+  
+  setTimeout(() => {
+    closeProgressWindow();
+    removeRendererNotification();
+    
+    if (mainWindow) {
+      mainWindow.setProgressBar(-1); // Remove progress bar
     }
-  });
+    dialog.showMessageBox(mainWindow, {
+      type: 'info',
+      title: 'Update Ready',
+      message: `Version ${info.version} has been downloaded. Restart now to install?`,
+      buttons: ['Restart', 'Later'],
+      defaultId: 0,
+      cancelId: 1
+    }).then((result) => {
+      if (result.response === 0) {
+        autoUpdater.quitAndInstall();
+      }
+    });
+  }, delay);
 });
 
 autoUpdater.on('error', (err) => {

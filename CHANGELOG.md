@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 2025-12-01
+### Fixed
+- Progress bar now shows for minimum 2 seconds even if download is fast
+- Shows "100% Complete! Installing..." before restart dialog
+- Better visibility of download progress on fast connections
+
 ## [1.0.8] - 2025-12-01
 ### Added
 - Download progress dialog with percentage, speed, and remaining time
