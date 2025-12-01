@@ -51,7 +51,7 @@ jobs:
 
       - name: Build Electron app
         working-directory: electron
-        run: npm run build
+        run: npx electron-builder --publish never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -66,6 +66,7 @@ jobs:
             artifacts/dist-electron/*.AppImage
             artifacts/dist-electron/*.deb
             artifacts/dist-electron/*.yml
+            artifacts/dist-electron/*.blockmap
           if-no-files-found: ignore
 
   release:
