@@ -7,13 +7,20 @@
     "start": "electron .",
     "build": "electron-builder",
     "build:win-x64": "electron-builder --win --x64",
-    "build:win-arm64": "electron-builder --win --arm64"
+    "build:win-arm64": "electron-builder --win --arm64",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
   },
   "build": {
     "appId": "com.fliight.vtsguide",
     "productName": "VTS Guide",
     "directories": {
       "output": "../artifacts/dist-electron"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "Fliight-Engineering",
+      "repo": "argus-interactive-guide"
     },
     "files": [
       "main.js",
@@ -58,5 +65,8 @@
   "devDependencies": {
     "electron": "^39.2.3",
     "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
   }
 }

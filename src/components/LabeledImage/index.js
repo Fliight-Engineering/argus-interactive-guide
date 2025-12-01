@@ -14,7 +14,9 @@ import styles from './styles.module.css';
  * @param {string} className - Additional CSS classes
  */
 export default function LabeledImage({ src, alt, labels = [], className = '' }) {
-  const imageUrl = useBaseUrl(src);
+  // Normalize src: ensure it starts with '/' for useBaseUrl to work correctly
+  const normalizedSrc = src?.startsWith('/') ? src : `/${src}`;
+  const imageUrl = useBaseUrl(normalizedSrc);
 
   return (
     <div className={`${styles.labeledImageContainer} ${className}`}>

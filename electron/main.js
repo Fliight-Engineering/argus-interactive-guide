@@ -1,12 +1,72 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, dialog } = require('electron');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
 const { exec } = require('child_process');
+const { autoUpdater } = require('electron-updater');
 
 let mainWindow;
 let server;
 const PORT = 8080;
+
+// Auto-updater configuration
+autoUpdater.autoDownload = false;
+autoUpdater.autoInstallOnAppQuit = true;
+
+// Auto-updater event handlers
+autoUpdater.on('checking-for-update', () => {
+  console.log('Checking for updates...');
+});
+
+autoUpdater.on('update-available', (info) => {
+  console.log('Update available:', info.version);
+  dialog.showMessageBox(mainWindow, {
+    type: 'info',
+    title: 'Update Available',
+    message: `A new version (${info.version}) is available. Do you want to download it now?`,
+    buttons: ['Download', 'Later'],
+    defaultId: 0,
+    cancelId: 1
+  }).then((result) => {
+    if (result.response === 0) {
+      autoUpdater.downloadUpdate();
+    }
+  });
+});
+
+autoUpdater.on('update-not-available', () => {
+  console.log('No updates available.');
+});
+
+autoUpdater.on('download-progress', (progress) => {
+  console.log(`Download progress: ${Math.round(progress.percent)}%`);
+  if (mainWindow) {
+    mainWindow.setProgressBar(progress.percent / 100);
+  }
+});
+
+autoUpdater.on('update-downloaded', (info) => {
+  console.log('Update downloaded:', info.version);
+  if (mainWindow) {
+    mainWindow.setProgressBar(-1); // Remove progress bar
+  }
+  dialog.showMessageBox(mainWindow, {
+    type: 'info',
+    title: 'Update Ready',
+    message: `Version ${info.version} has been downloaded. Restart now to install?`,
+    buttons: ['Restart', 'Later'],
+    defaultId: 0,
+    cancelId: 1
+  }).then((result) => {
+    if (result.response === 0) {
+      autoUpdater.quitAndInstall();
+    }
+  });
+});
+
+autoUpdater.on('error', (err) => {
+  console.error('Auto-updater error:', err);
+});
 
 // Find build directory
 function findBuildDir() {
@@ -231,6 +291,15 @@ function createWindow() {
 // App event handlers
 app.whenReady().then(() => {
   createWindow();
+
+  // Check for updates after window is created (only in production)
+  if (app.isPackaged) {
+    setTimeout(() => {
+      autoUpdater.checkForUpdates().catch((err) => {
+        console.error('Failed to check for updates:', err);
+      });
+    }, 3000); // Wait 3 seconds after app starts
+  }
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {

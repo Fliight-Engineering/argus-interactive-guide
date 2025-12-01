@@ -8,25 +8,26 @@ export default function VersionChecker() {
   const versionFileUrl = useBaseUrl('/version.json');
   const [currentVersion, setCurrentVersion] = useState(null);
   const [latestVersion, setLatestVersion] = useState(null);
-  // Safe initialization for SSR - default to true, will be set correctly in useEffect
-  const [isOnline, setIsOnline] = useState(true);
+  // SSR-safe: initialize as false, set correct value in useEffect
+  const [isOnline, setIsOnline] = useState(false);
   const [isChecking, setIsChecking] = useState(false);
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [buildDate, setBuildDate] = useState(null);
 
   // Load current version on mount
   useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') {
-      return;
+    // SSR-safe: set isOnline from navigator only on client-side
+    if (typeof navigator !== 'undefined') {
+      setIsOnline(navigator.onLine);
     }
-
-    // Set initial online status
-    setIsOnline(navigator.onLine);
-    
     loadCurrentVersion();
-    setupOnlineListener();
-    startPeriodicCheck();
+    const cleanupOnline = setupOnlineListener();
+    const cleanupPeriodic = startPeriodicCheck();
+    
+    return () => {
+      if (cleanupOnline) cleanupOnline();
+      if (cleanupPeriodic) cleanupPeriodic();
+    };
   }, []);
 
   const loadCurrentVersion = async () => {
@@ -106,7 +107,7 @@ export default function VersionChecker() {
   };
 
   const setupOnlineListener = () => {
-    // Only set up listeners in browser
+    // SSR-safe: only add event listeners on client-side
     if (typeof window === 'undefined') {
       return () => {};
     }
@@ -146,7 +147,7 @@ export default function VersionChecker() {
   };
 
   const handleDownloadUpdate = () => {
-    // Only open in browser
+    // SSR-safe: only open window on client-side
     if (typeof window !== 'undefined') {
       window.open(
         'https://github.com/Fliight-Engineering/argus-interactive-guide/releases/latest',

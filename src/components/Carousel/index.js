@@ -56,6 +56,11 @@ export default function Carousel({ slides }) {
 
   // Keyboard navigation
   useEffect(() => {
+    // SSR-safe: only add event listeners on client-side
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowLeft') {
         setCurrentSlide((prev) => (prev - 1 + processedSlides.length) % processedSlides.length);
