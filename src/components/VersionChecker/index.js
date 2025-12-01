@@ -8,13 +8,22 @@ export default function VersionChecker() {
   const versionFileUrl = useBaseUrl('/version.json');
   const [currentVersion, setCurrentVersion] = useState(null);
   const [latestVersion, setLatestVersion] = useState(null);
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  // Safe initialization for SSR - default to true, will be set correctly in useEffect
+  const [isOnline, setIsOnline] = useState(true);
   const [isChecking, setIsChecking] = useState(false);
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [buildDate, setBuildDate] = useState(null);
 
   // Load current version on mount
   useEffect(() => {
+    // Only run in browser
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    // Set initial online status
+    setIsOnline(navigator.onLine);
+    
     loadCurrentVersion();
     setupOnlineListener();
     startPeriodicCheck();
@@ -97,6 +106,11 @@ export default function VersionChecker() {
   };
 
   const setupOnlineListener = () => {
+    // Only set up listeners in browser
+    if (typeof window === 'undefined') {
+      return () => {};
+    }
+
     const handleOnline = () => {
       setIsOnline(true);
       checkForUpdates(); // Check immediately when coming online
@@ -132,11 +146,13 @@ export default function VersionChecker() {
   };
 
   const handleDownloadUpdate = () => {
-    // Open the releases page or download link
-    window.open(
-      'https://github.com/Fliight-Engineering/argus-interactive-guide/releases/latest',
-      '_blank'
-    );
+    // Only open in browser
+    if (typeof window !== 'undefined') {
+      window.open(
+        'https://github.com/Fliight-Engineering/argus-interactive-guide/releases/latest',
+        '_blank'
+      );
+    }
   };
 
   const formatDate = (dateString) => {
