@@ -7,7 +7,7 @@
     "start": "docusaurus start --host 0.0.0.0",
     "update-version": "node scripts/update-version.js",
     "build": "npm run update-version && docusaurus build",
-    "build:offline": "npm run update-version && OFFLINE_BUILD=true docusaurus build",
+    "build:offline": "npm run update-version && cross-env OFFLINE_BUILD=true docusaurus build",
     "build:mac": "npm run build:offline && bash create-mac-app.sh",
     "build:windows": "npm run build:offline && node create-windows-exe.js",
     "build:electron": "npm run build:offline && npm run electron:build",
@@ -19,13 +19,14 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "serve:offline": "OFFLINE_BUILD=true docusaurus build && docusaurus serve --port 3000 --host 0.0.0.0",
+    "serve:offline": "cross-env OFFLINE_BUILD=true docusaurus build && docusaurus serve --port 3000 --host 0.0.0.0",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/types": "3.9.2",
+    "cross-env": "^10.1.0",
     "electron": "^28.3.3",
     "electron-builder": "^24.13.3",
     "pkg": "^5.8.1"
