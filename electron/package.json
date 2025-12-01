@@ -1,6 +1,6 @@
 {
   "name": "vts-guide-electron",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "VTS Guide - Offline Interactive Documentation for Argus VTS",
   "main": "main.js",
   "homepage": "https://github.com/Fliight-Engineering/argus-interactive-guide",
@@ -53,16 +53,15 @@
         "dmg",
         "zip"
       ],
-      "icon": "../static/img/vts-guide/image29.png"
+      "icon": "../static/img/vts-guide/image29.png",
+      "artifactName": "VTS-Guide-${version}-${arch}-mac.${ext}"
     },
     "win": {
       "target": [
-        "dir",
-        "nsis",
-        "portable"
+        "nsis"
       ],
       "icon": "../static/img/vts-guide/image29.png",
-      "artifactName": "${productName}-${version}-${arch}.${ext}"
+      "artifactName": "VTS-Guide-${version}-${arch}.${ext}"
     },
     "linux": {
       "target": [
@@ -71,7 +70,8 @@
       ],
       "icon": "../static/img/vts-guide/image29.png",
       "category": "Documentation",
-      "maintainer": "Fliight Engineering <support@fliight.com.au>"
+      "maintainer": "Fliight Engineering <support@fliight.com.au>",
+      "artifactName": "VTS-Guide-${version}.${ext}"
     }
   },
   "devDependencies": {
