@@ -73,6 +73,34 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract changelog for this version
+        id: changelog
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "Extracting changelog for version $VERSION"
+          
+          # Extract the section for this version from CHANGELOG.md
+          NOTES=$(awk -v ver="$VERSION" '
+            /^## \[/ {
+              if (found) exit
+              if ($0 ~ "\\[" ver "\\]") found=1
+              next
+            }
+            found { print }
+          ' CHANGELOG.md)
+          
+          # If no changelog found, use default message
+          if [ -z "$NOTES" ]; then
+            NOTES="Release v$VERSION"
+          fi
+          
+          # Write to file for multi-line support
+          echo "$NOTES" > release_notes.md
+          echo "notes_file=release_notes.md" >> $GITHUB_OUTPUT
+
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
@@ -83,7 +111,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: artifacts/**/*
-          generate_release_notes: true
+          body_path: release_notes.md
           draft: false
           prerelease: false
         env:

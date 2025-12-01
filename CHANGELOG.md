@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.7] - 2025-12-01
+### Added
+- Release notes now automatically extracted from CHANGELOG.md and displayed in GitHub Releases
+
+### Changed
+- Updated release workflow to include changelog in release description
+
 ## [1.0.6] - 2025-12-01
 ### Fixed
 - Disabled auto-update on macOS (requires Apple Developer certificate for code signing)
