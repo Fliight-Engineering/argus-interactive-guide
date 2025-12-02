@@ -5,16 +5,51 @@ Interactive documentation for Argus VTS system with offline desktop app support.
 ## 🚀 Quick Start
 
 ```bash
-npm install
-npm start           # Dev server at http://localhost:3000
+# Install dependencies
+make install        # Or: npm install
+
+# Development
+make dev            # Or: npm start (http://localhost:3000)
+
+# Test Electron build locally
+make test-build     # Build & check artifacts/dist-electron/
+
+# Release new version
+make release "Your changelog message here"
 ```
 
-## 📦 Release New Version
+## 📦 Available Commands
 
 ```bash
-# 1. Update CHANGELOG.md with new version entry
-# 2. Run publish command
-npm run publish     # Bump version, build apps, create GitHub Release
+make help           # Show all available commands
+make dev            # Start development server
+make build          # Build website
+make test-build     # Build Electron app locally
+make release "msg"  # Release with automatic changelog
+make clean          # Clean build artifacts
+make check-version  # Show current version
+```
+
+## 📝 Release Process
+
+Simple one-command release:
+
+```bash
+make release "Fixed icon and responsive layout"
+```
+
+This will:
+1. Auto-bump patch version (e.g., 1.0.13 → 1.0.14)
+2. Add changelog entry with your message
+3. Show preview and ask for confirmation
+4. Commit, tag, and push to GitHub
+5. Trigger CI/CD to build Windows/Linux apps
+6. Create GitHub Release with installers
+
+**Manual release:**
+```bash
+# Traditional way (still works)
+npm run publish
 ```
 
 ## ✨ Features
