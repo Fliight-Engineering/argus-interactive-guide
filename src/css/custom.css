@@ -1003,7 +1003,7 @@ h2 + .rcs-section-container {
 /* Highlights Grid for Option 3 */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
   width: 100%;
@@ -1014,11 +1014,10 @@ h2 + .rcs-section-container {
   background-color: var(--ifm-background-surface-color);
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 1.2rem;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-width: 0;
   overflow: hidden;
 }
 
@@ -1051,11 +1050,13 @@ h2 + .rcs-section-container {
 .highlight-card .card-content {
   flex: 1;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
+  white-space: normal;
+  text-align: left;
 }
 
 .highlights-badge-list {
