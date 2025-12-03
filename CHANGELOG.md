@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.17] - 2025-12-03
+### Changed
+- Fixed minimize and close buttons not working on Windows by registering IPC handlers earlier in app lifecycle
+
 ## [1.0.16] - 2025-12-03
 ### Changed
 - Improved highlight cards: 2-column layout for better readability, fixed text wrapping without hyphenation, optimized for Surface Pro display
