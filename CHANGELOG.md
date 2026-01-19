@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.19] - 2025-01-20
+### Changed
+- Fixed window controls persistence across navigation with client module, Update document for Argus newest version include voice communication
+
 ## [1.0.18] - 2025-12-03
 ### Changed
 - Fixed window controls persistence across navigation with client module, fixed server errors on internal links by adding .html extensions, hidden global scrollbars, improved Surface Pro display compatibility

@@ -448,7 +448,8 @@ h2 + .rcs-section-container {
 
 /* General table styling improvements */
 .markdown table {
-  width: 100%;
+  width: fit-content;
+  min-width: 300px;
   margin: 1.5rem 0;
   border-collapse: collapse;
   border: 1px solid var(--ifm-table-border-color);
@@ -619,6 +620,44 @@ h2 + .rcs-section-container {
 }
 
 .image-wrapper-70 em {
+  display: block;
+  text-align: center;
+  margin: 0.5rem auto 0;
+  font-style: italic;
+}
+
+/* Image wrapper for 50% width */
+.image-wrapper-50 {
+  max-width: 50%;
+  margin: 1.5rem auto;
+}
+
+.image-wrapper-50 img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image-wrapper-50 em {
+  display: block;
+  text-align: center;
+  margin: 0.5rem auto 0;
+  font-style: italic;
+}
+
+/* Image wrapper for 30% width */
+.image-wrapper-30 {
+  max-width: 30%;
+  margin: 1.5rem auto;
+}
+
+.image-wrapper-30 img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image-wrapper-30 em {
   display: block;
   text-align: center;
   margin: 0.5rem auto 0;
@@ -1154,7 +1193,8 @@ article {
 
 /* Fix tables on scaled displays */
 .markdown table {
-  display: block;
+  display: table;
+  width: fit-content;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;

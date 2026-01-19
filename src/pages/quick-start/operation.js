@@ -30,8 +30,22 @@ const slides = [
     ]
   },
   {
+    title: 'Argus Interface Overview',
+    image: '/img/vts-guide/argus-overview.png',
+    content: 'The Argus interface provides all the controls you need for training operations.',
+    steps: [
+      'A. Version badge - click to check for updates',
+      'B. Recording button - start/stop recording all feeds',
+      'C. Gallery - open recordings folder',
+      'D. Voice - open Voice System Control panel',
+      'E. Switch View - toggle camera grid layout',
+      'F. Settings, Minimize, Close buttons',
+      'G. Network Health Monitor panel'
+    ]
+  },
+  {
     title: 'Viewing Camera Feeds',
-    image: '/img/vts-guide/argus-software.jpg',
+    image: '/img/vts-guide/argus-software.png',
     content: 'Once the app is open with the system connected, the four camera feeds will start streaming automatically.',
     steps: [
       'All 4 camera feeds appear in the sidebar',
@@ -93,28 +107,35 @@ const slides = [
     ]
   },
   {
-    title: 'Argus Interface Overview',
-    image: '/img/vts-guide/argus-overview.png',
-    content: 'The Argus interface provides all the controls you need for training operations.',
+    title: 'Voice System Status',
+    image: '/img/vts-guide/voice-system.png',
+    content: 'Monitor voice communication status via the Voice indicator in the toolbar. T = Trainer, M = Machine/Trainee.',
     steps: [
-      'A. Start/Stop recording all connected camera feeds',
-      'B. Quick camera view adjustment button',
-      'C. Open recording directory folder in Explorer',
-      'D. Application Settings access',
-      'E. Expand and close application buttons',
-      'F. Network Health Monitoring Panel (lower right)'
-    ]
+      'Voice indicators show connection status for both headsets',
+      'Battery level displayed when headsets are connected',
+      'System status shows green when voice channel is ready'
+    ],
+    table: {
+      headers: ['Indicator', 'Status'],
+      rows: [
+        ['Green', 'Voice channel connected and ready'],
+        ['Gray', 'Headset not connected or initializing'],
+        ['Red', 'Connection error - check headset pairing']
+      ]
+    }
   },
   {
     title: 'Ready for Training!',
     image: '/img/vts-guide/ready-for-training.png',
     content: 'Your Argus VTS system is now fully operational and ready for training operations. The system will automatically maintain mesh connections and camera feeds during use.',
+    noNumbers: true,
     steps: [
       '✅ All camera feeds are streaming',
       '✅ Network health is monitored',
       '✅ Recording capability is ready',
-      '✅ System is maintaining connections',
-    ],
+      '✅ Voice communication active',
+      '✅ System is maintaining connections'
+    ]
   }
 ];
 

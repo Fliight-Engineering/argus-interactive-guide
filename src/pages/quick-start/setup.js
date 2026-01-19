@@ -139,7 +139,7 @@ const slides = [
   },
   {
     title: 'Tablet Login & App Launch',
-    image: '/img/vts-guide/argus-software.jpg',
+    image: '/img/vts-guide/argus-software.png',
     content: 'Login to windows using the PIN 2580 and launch the Argus software.',
     steps: [
       'Swipe up from the lock screen to show the Argus VTS user login page',
@@ -150,26 +150,41 @@ const slides = [
     ]
   },
   {
+    title: 'Power On - Headsets',
+    image: '/img/vts-guide/headset.png',
+    content: 'Power on the Bluetooth headsets for voice communication between trainer and trainee.',
+    steps: [
+      'Locate the power button on the headset (as shown in image)',
+      'Press and hold the power button until the LED lights up',
+      'The headset will announce "Power On" or play a tone when ready',
+      'Repeat for both trainer and trainee headsets'
+    ]
+  },
+  {
     title: 'System Verification',
     image: '/img/vts-guide/system-verification.png',
     content: 'Before beginning training operations, verify everything is working correctly.',
     noNumbers: true,
     steps: [
       '✅ All Access Points show solid green LED',
-      '✅ All cameras show solid green LED',
+      '✅ All cameras connected',
       '✅ Tablet is connected to WiFi (ARGUS-VTS-XXX)',
       '✅ All components are powered and ready',
-      '✅ Camera feeds are streaming'
+      '✅ Camera feeds are streaming',
+      '✅ All headsets connected',
+      '✅ Headsets and mics communicable'
     ]
   },
   {
     title: 'Setup Complete!',
     image: '/img/vts-guide/setup-complete-banner.png',
-    content: 'Your Argus VTS system is now physically set up and powered on. Proceed to the Operation guide to learn how to use the Argus software and start training.',
+    content: 'Your Argus VTS system is now physically set up and powered on.',
+    link: { text: 'Proceed to Operation Guide →', url: '/quick-start/operation' },
     steps: [
       'All hardware is deployed and powered',
       'Mesh network is established',
       'Cameras are connected with video streaming',
+      'Headsets are connected with voice channel',
       'Ready to proceed to Operation guide'
     ]
   }

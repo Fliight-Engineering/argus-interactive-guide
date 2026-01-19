@@ -16,7 +16,7 @@ This section provides a guide for best practice to use Argus VTS. If planned ahe
 
 <div class="best-practice-card">
 
-### <span class="card-icon">📏</span> Minimum AP Distance
+### Minimum AP Distance
 
 <div class="card-content">
 
@@ -34,7 +34,7 @@ The **minimum distance** that two static APs should be set up from one another i
 
 <div class="best-practice-card">
 
-### <span class="card-icon">📍</span> AP Positioning
+### AP Positioning
 
 <div class="card-content">
 
@@ -50,7 +50,7 @@ When mounting APs on welded metal mesh, ensure:
 
 <div class="best-practice-card">
 
-### <span class="card-icon">📡</span> Connection Monitoring
+### Connection Monitoring
 
 <div class="card-content">
 
@@ -70,7 +70,7 @@ When mounting APs on welded metal mesh, ensure:
 
 <div class="best-practice-card">
 
-### <span class="card-icon">📱</span> Trainer AP Distance
+### Trainer AP Distance
 
 <div class="card-content">
 
@@ -86,7 +86,7 @@ Trainer can monitor from a safer/more strategic distance while maintaining full 
 
 <div class="best-practice-card">
 
-### <span class="card-icon">🔌</span> AP/RCS Power On
+### AP/RCS Power On
 
 <div class="card-content">
 
@@ -112,7 +112,7 @@ If the AP or RCS does not seem to be powering on:
 
 <div class="best-practice-card best-practice-card-full">
 
-### <span class="card-icon">📊</span> Network Health Monitoring Panel
+### Network Health Monitoring Panel
 
 <div class="card-content">
 
@@ -129,9 +129,9 @@ For both network bands (**wlan0**: 2.4GHz and **wlan1**: 5GHz), cost values are 
 
 | Indicator | State | What It Means |
 |-----------|-------|---------------|
-| 🟢 **Green** | Optimal | Excellent connection quality, video streaming reliable |
-| 🟠 **Orange** | Functional | Connection working but not optimal |
-| 🔴 **Red** | Poor | Significant connection issues |
+| **Green** | Optimal | Excellent connection quality, video streaming reliable |
+| **Orange** | Functional | Connection working but not optimal |
+| **Red** | Poor | Significant connection issues |
 
 :::tip Quick Check
 If you see red indicators, the most common fix is repositioning the APs to improve line of sight. Even small adjustments can make a significant difference.
@@ -145,7 +145,7 @@ If you see red indicators, the most common fix is repositioning the APs to impro
 
 <div class="best-practice-card best-practice-card-full">
 
-### <span class="card-icon">🔀</span> Extending Coverage Around Corners
+### Extending Coverage Around Corners
 
 <div class="card-content">
 
@@ -169,12 +169,12 @@ This configuration allows the system to "bend" around corners and extend coverag
 
 <div class="best-practice-card best-practice-card-full">
 
-### <span class="card-icon">💻</span> Argus Tablet Operation
+### Argus Tablet Operation
 
 <div class="card-content">
 
 <div class="image-wrapper-70">
-  ![Argus Full Screen View](/img/vts-guide/argus-software.jpg)
+  ![Argus Full Screen View](/img/vts-guide/argus-software.png)
   *Argus software full-screen view showing multiple camera feeds and control interface*
 </div>
 

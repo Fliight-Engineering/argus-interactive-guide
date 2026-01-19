@@ -14,7 +14,7 @@ const quickStartSections = [
   {
     title: 'Operation',
     description: 'Learn how to use the Argus software, view feeds, record sessions, and monitor network health.',
-    image: '/img/vts-guide/argus-software.jpg',
+    image: '/img/vts-guide/argus-software.png',
     link: '/quick-start/operation'
   }
 ];
@@ -23,7 +23,7 @@ export default function QuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
   // Call useBaseUrl for all images at top level to avoid hook rule violations
   const setupImageUrl = useBaseUrl('/img/vts-guide/setup-complete-banner.png');
-  const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.jpg');
+  const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.png');
   
   // Map sections with resolved image URLs
   const sectionsWithImages = quickStartSections.map((section, idx) => ({

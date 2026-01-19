@@ -21,12 +21,12 @@ Originally developed for training underground heavy vehicle operators remotely, 
 
 ---
 
-## System Highlights 
+## System Highlights
 <div class="highlights-grid">
 
 <div class="highlight-card">
 
-### <span class="card-icon">⚡</span> Rapid Deployment
+### Rapid Deployment
 
 <div class="card-content">
 
@@ -38,7 +38,7 @@ Setup in minutes, not hours
 
 <div class="highlight-card">
 
-### <span class="card-icon">📡</span> Insta-Mesh Network
+### Insta-Mesh Network
 
 <div class="card-content">
 
@@ -50,7 +50,7 @@ Automatic connection, no cables required!
 
 <div class="highlight-card">
 
-### <span class="card-icon">📹</span> Multiple Video Feeds
+### Multiple Video Feeds
 
 <div class="card-content">
 
@@ -62,7 +62,7 @@ View and record from up to 4 cameras simultaneously
 
 <div class="highlight-card">
 
-### <span class="card-icon">🔋</span> Battery Powered
+### Battery Powered
 
 <div class="card-content">
 
@@ -74,7 +74,7 @@ Everything runs on standard Milwaukee batteries for maximum portability
 
 <div class="highlight-card">
 
-### <span class="card-icon">💾</span> Recording & Review
+### Recording & Review
 
 <div class="card-content">
 
@@ -86,7 +86,7 @@ Record all camera feeds simultaneously for post-training review and coaching
 
 <div class="highlight-card">
 
-### <span class="card-icon">🛡️</span> Safe Remote Training
+### Safe Remote Training
 
 <div class="card-content">
 

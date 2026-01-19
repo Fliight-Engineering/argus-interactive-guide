@@ -121,6 +121,14 @@ export default function Carousel({ slides, backLink = '/quick-start/' }) {
                 {currentSlideData.content}
               </div>
             )}
+            {currentSlideData.link && (
+              <Link
+                to={currentSlideData.link.url}
+                className={styles.slideLink}
+              >
+                {currentSlideData.link.text}
+              </Link>
+            )}
             {currentSlideData.steps && (
               <ul className={currentSlideData.noNumbers ? styles.stepsListNoNumbers : styles.stepsList}>
                 {currentSlideData.steps.map((step, idx) => (
