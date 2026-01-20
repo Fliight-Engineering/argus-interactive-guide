@@ -240,11 +240,11 @@
 }
 
 .infoTable th:first-child {
-  width: 25%;
+  width: 50%;
 }
 
 .infoTable th:last-child {
-  width: 75%;
+  width: 50%;
 }
 
 .infoTable td {
@@ -255,7 +255,7 @@
 }
 
 .infoTable td:first-child {
-  width: 35%;
+  width: 50%;
   font-weight: 600;
   white-space: normal;
   word-wrap: break-word;
@@ -263,7 +263,7 @@
 }
 
 .infoTable td:last-child {
-  width: 65%;
+  width: 50%;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
