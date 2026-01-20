@@ -109,8 +109,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  padding: 1.2rem 1.5rem;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
   min-height: 0;
   overflow-y: auto;
   /* Hide scrollbar but keep functionality */
@@ -123,7 +123,7 @@
 }
 
 .slideTitle {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
   font-weight: 700;
   color: var(--ifm-color-emphasis-1000);
   margin: 0;
@@ -131,19 +131,19 @@
 }
 
 .slideText {
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-  line-height: 1.5;
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  line-height: 1.4;
   color: var(--ifm-color-emphasis-800);
 }
 
 .warningHighlight {
   background-color: var(--ifm-color-warning-contrast-background);
   border-left: 4px solid var(--ifm-color-warning);
-  padding: clamp(0.675rem, 1.08vw, 0.9rem) clamp(0.9rem, 1.35vw, 1.35rem);
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  margin: clamp(0.675rem, 1.08vw, 0.9rem) 0;
+  margin: 0.5rem 0;
   font-weight: 500;
-  font-size: clamp(0.684rem, 1.08vw, 0.855rem);
+  font-size: clamp(0.65rem, 1vw, 0.75rem);
 }
 
 [data-theme='dark'] .warningHighlight {
@@ -154,11 +154,11 @@
 .noteHighlight {
   background-color: #e3f2fd;
   border-left: 4px solid #2196f3;
-  padding: clamp(0.675rem, 1.08vw, 0.9rem) clamp(0.9rem, 1.35vw, 1.35rem);
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  margin: clamp(0.675rem, 1.08vw, 0.9rem) 0;
+  margin: 0.5rem 0;
   font-weight: 500;
-  font-size: clamp(0.684rem, 1.08vw, 0.855rem);
+  font-size: clamp(0.65rem, 1vw, 0.75rem);
   color: #1565c0;
 }
 
@@ -169,16 +169,16 @@
 }
 
 .stepsList {
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-  line-height: 1.5;
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  line-height: 1.4;
   color: var(--ifm-color-emphasis-800);
-  padding-left: 1.2rem;
+  padding-left: 1rem;
   margin: 0;
 }
 
 .stepsListNoNumbers {
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-  line-height: 1.5;
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  line-height: 1.4;
   color: var(--ifm-color-emphasis-800);
   padding-left: 0;
   margin: 0;
@@ -186,7 +186,7 @@
 }
 
 .stepItem {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .slideLink {

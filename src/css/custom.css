@@ -470,6 +470,9 @@ h2 + .rcs-section-container {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid var(--ifm-table-border-color);
+  vertical-align: top;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .markdown table tr:last-child td {
@@ -1070,6 +1073,7 @@ h2 + .rcs-section-container {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  min-height: 150px;
 }
 
 .highlight-card:hover {
@@ -1170,6 +1174,46 @@ h2 + .rcs-section-container {
   gap: 1.5rem;
   margin: 1.5rem 0;
   width: 100%;
+}
+
+/* Presentation mode - compact view for slides */
+.pagination-enabled {
+  transform: scale(0.75);
+  transform-origin: top center;
+  margin-bottom: -20vh;
+}
+
+.pagination-enabled h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagination-enabled h2 {
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.pagination-enabled p,
+.pagination-enabled ul,
+.pagination-enabled .highlight-card .card-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.pagination-enabled .highlight-card {
+  padding: 0.8rem;
+  min-height: 120px;
+}
+
+.pagination-enabled .highlights-grid {
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.pagination-enabled .admonition {
+  margin: 0.8rem 0;
+  padding: 0.6rem;
 }
 
 /* Fix content overflow on high DPI/scaled displays (Surface Pro 250%) */
