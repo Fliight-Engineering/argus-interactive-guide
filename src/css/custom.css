@@ -1108,10 +1108,6 @@ h2 + .rcs-section-container {
   hyphens: none;
   white-space: normal;
   text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 60px;
 }
 
 .highlights-badge-list {
