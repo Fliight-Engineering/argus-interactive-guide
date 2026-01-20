@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.21] - 2025-01-20
+### Changed
+- Fixes routing documents and sanity check content and UI 
+
 ## [1.0.19] - 2025-01-20
 ### Changed
 - Fixed window controls persistence across navigation with client module, Update document for Argus newest version include voice communication

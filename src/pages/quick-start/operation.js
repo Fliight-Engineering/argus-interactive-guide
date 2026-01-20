@@ -33,15 +33,18 @@ const slides = [
     title: 'Argus Interface Overview',
     image: '/img/vts-guide/argus-overview.png',
     content: 'The Argus interface provides all the controls you need for training operations.',
-    steps: [
-      'A. Version badge - click to check for updates',
-      'B. Recording button - start/stop recording all feeds',
-      'C. Gallery - open recordings folder',
-      'D. Voice - open Voice System Control panel',
-      'E. Switch View - toggle camera grid layout',
-      'F. Settings, Minimize, Close buttons',
-      'G. Network Health Monitor panel'
-    ]
+    table: {
+      headers: ['Control', 'Function'],
+      rows: [
+        ['A. Version Badge', 'Click to check for updates'],
+        ['B. Recording Button', 'Start/stop recording all feeds'],
+        ['C. Gallery', 'Open recordings folder'],
+        ['D. Voice', 'Open Voice System Control panel'],
+        ['E. Switch View', 'Toggle camera grid layout'],
+        ['F. Settings/Minimize/Close', 'Application controls'],
+        ['G. Network Health Monitor', 'View mesh network status']
+      ]
+    }
   },
   {
     title: 'Viewing Camera Feeds',
@@ -109,17 +112,22 @@ const slides = [
   {
     title: 'Voice System Status',
     image: '/img/vts-guide/voice-system.png',
-    content: 'Monitor voice communication status via the Voice indicator in the toolbar. T = Trainer, M = Machine/Trainee.',
+    content: 'Monitor voice communication via the Voice indicator in the toolbar. T = Trainer, M = Machine/Trainee. The phone icon and color indicator show connection status, while the sound bars indicate voice activity.',
     steps: [
-      'Voice indicators show connection status for both headsets',
+      'Phone icon with color shows connection status (Green/Orange/Red)',
+      'Sound bars indicate voice activity when speaking',
       'Battery level displayed when headsets are connected',
       'System status shows green when voice channel is ready'
     ],
+    link: {
+      text: 'Troubleshooting Guide →',
+      url: '/docs/argus-software/voice-system'
+    },
     table: {
       headers: ['Indicator', 'Status'],
       rows: [
         ['Green', 'Voice channel connected and ready'],
-        ['Gray', 'Headset not connected or initializing'],
+        ['Orange', 'Headset not connected or initializing'],
         ['Red', 'Connection error - check headset pairing']
       ]
     }

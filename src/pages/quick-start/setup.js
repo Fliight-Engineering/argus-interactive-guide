@@ -152,7 +152,8 @@ const slides = [
   {
     title: 'Power On - Headsets',
     image: '/img/vts-guide/headset.png',
-    content: 'Power on the Bluetooth headsets for voice communication between trainer and trainee.',
+    content: 'CRITICAL: The instruction is based on our headset setup yours may be different but always turn on headset FIRST before starting Argus app.',
+    warning: true,
     steps: [
       'Locate the power button on the headset (as shown in image)',
       'Press and hold the power button until the LED lights up',

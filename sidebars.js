@@ -23,7 +23,24 @@ const sidebars = {
       label: 'Home',
     },
     'about-vts',
-    'argus-software',
+    {
+      type: 'category',
+      label: 'Argus Software',
+      link: {
+        type: 'doc',
+        id: 'argus-software/index',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'argus-software/index',
+          label: 'Overview',
+        },
+        'argus-software/video-system',
+        'argus-software/voice-system',
+        'argus-software/update-system',
+      ],
+    },
     'access-points',
     'remote-camera-systems',
     'trainers-tablet',
@@ -45,6 +62,7 @@ const sidebars = {
         'setup-operation/tablet-setup',
         'setup-operation/vehicle-setup',
         'setup-operation/access-points-deployment',
+        'setup-operation/voice-setup',
         {
           type: 'doc',
           id: 'setup-operation/best-practices',
