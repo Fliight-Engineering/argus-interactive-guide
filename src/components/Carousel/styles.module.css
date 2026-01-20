@@ -151,6 +151,23 @@
   border-left-color: var(--ifm-color-warning);
 }
 
+.noteHighlight {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: clamp(0.675rem, 1.08vw, 0.9rem) clamp(0.9rem, 1.35vw, 1.35rem);
+  border-radius: 4px;
+  margin: clamp(0.675rem, 1.08vw, 0.9rem) 0;
+  font-weight: 500;
+  font-size: clamp(0.684rem, 1.08vw, 0.855rem);
+  color: #1565c0;
+}
+
+[data-theme='dark'] .noteHighlight {
+  background-color: rgba(33, 150, 243, 0.15);
+  border-left-color: #64b5f6;
+  color: #64b5f6;
+}
+
 .stepsList {
   font-size: clamp(0.8rem, 1.5vw, 0.9rem);
   line-height: 1.5;

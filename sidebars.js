@@ -31,11 +31,6 @@ const sidebars = {
         id: 'argus-software/index',
       },
       items: [
-        {
-          type: 'doc',
-          id: 'argus-software/index',
-          label: 'Overview',
-        },
         'argus-software/video-system',
         'argus-software/voice-system',
         'argus-software/update-system',
@@ -52,11 +47,6 @@ const sidebars = {
         id: 'setup-operation/index',
       },
       items: [
-    {
-          type: 'doc',
-          id: 'setup-operation/index',
-          label: 'Overview',
-        },
         'setup-operation/access-points-initialization',
         'setup-operation/cameras',
         'setup-operation/tablet-setup',

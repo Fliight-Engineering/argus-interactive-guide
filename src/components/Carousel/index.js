@@ -121,6 +121,11 @@ export default function Carousel({ slides, backLink = '/quick-start/' }) {
                 {currentSlideData.content}
               </div>
             )}
+            {currentSlideData.note && (
+              <div className={styles.noteHighlight}>
+                <strong>ℹ️ NOTE:</strong> {currentSlideData.note}
+              </div>
+            )}
             {currentSlideData.link && (
               <Link
                 to={currentSlideData.link.url}

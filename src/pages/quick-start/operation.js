@@ -112,7 +112,8 @@ const slides = [
   {
     title: 'Voice System Status',
     image: '/img/vts-guide/voice-system.png',
-    content: 'Monitor voice communication via the Voice indicator in the toolbar. T = Trainer, M = Machine/Trainee. The phone icon and color indicator show connection status, while the sound bars indicate voice activity.',
+    content: 'Monitor voice communication via the Voice indicator in the toolbar. The phone icon and color indicator show connection status, while the sound bars indicate voice activity.',
+    note: 'T = Trainer, M = Machine/Trainee.',
     steps: [
       'Phone icon with color shows connection status (Green/Orange/Red)',
       'Sound bars indicate voice activity when speaking',
