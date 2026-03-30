@@ -60,6 +60,17 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      link: {
+        type: 'doc',
+        id: 'troubleshooting/index',
+      },
+      items: [
+        'troubleshooting/battery-calibration',
+      ],
+    },
   ],
 };
 
