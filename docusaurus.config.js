@@ -47,7 +47,11 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'vi'],
+    localeConfigs: {
+      en: { label: 'English' },
+      vi: { label: 'Tiếng Việt' },
+    },
   },
 
   presets: [
@@ -101,6 +105,10 @@ const config = {
           src: 'img/vts-guide/argus-logo.png',
         },
         items: [
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             type: 'html',
             position: 'right',
