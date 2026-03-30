@@ -6,13 +6,15 @@ sidebar_position: 1
 
 Use this procedure if the tablet battery is showing incorrect charge levels or not holding charge as expected.
 
-<div style={{position: 'relative', paddingTop: '56.25%', overflow: 'hidden'}}>
-  <iframe
-    style={{position: 'absolute', top: '-60px', left: 0, width: '100%', height: 'calc(100% + 120px)', border: 'none'}}
-    src="https://www.youtube.com/embed/0RynR3rpgp4?modestbranding=1&rel=0"
-    allowFullScreen
-  />
-</div>
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<video
+  width="100%"
+  controls
+  style={{borderRadius: '8px'}}
+>
+  <source src={useBaseUrl('/video/battery-calibration.mp4')} type="video/mp4" />
+</video>
 
 ---
 
