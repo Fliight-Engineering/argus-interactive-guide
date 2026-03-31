@@ -106,13 +106,13 @@ const config = {
         },
         items: [
           {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-          {
             type: 'html',
             position: 'right',
             value: `<img src="${baseUrl}img/vts-guide/fliight-logo-black.png" alt="FLIIGHT" class="fliight-logo-light" style="height: 28px; padding: 0 1rem;" /><img src="${baseUrl}img/vts-guide/fliight-logo-white.png" alt="FLIIGHT" class="fliight-logo-dark" style="height: 28px; padding: 0 1rem;" />`,
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             type: 'html',
