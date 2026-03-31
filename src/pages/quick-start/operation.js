@@ -2,10 +2,11 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Carousel from '@site/src/components/Carousel';
 import styles from './styles.module.css';
 
-const slides = [
+const slidesEn = [
   {
     title: 'Training Area Layout',
     image: '/img/vts-guide/example-map.png',
@@ -148,16 +149,161 @@ const slides = [
   }
 ];
 
+const slidesVi = [
+  {
+    title: 'Bố Cục Khu Vực Đào Tạo',
+    image: '/img/vts-guide/example-map.png',
+    content: 'Bố cục khu vực đào tạo mẫu cho thấy vị trí tối ưu. Bản đồ minh họa vị trí huấn luyện viên, vị trí các nút radio và khu vực hoạt động xe để lập kế hoạch triển khai hiệu quả.',
+    steps: [
+      'Vị trí huấn luyện viên không vướng đường đi của xe',
+      'Vị trí nút radio huấn luyện viên và bộ lặp được bố trí để phủ sóng',
+      'Khu vực hoạt động xe được xác định rõ',
+      'Khoảng cách an toàn được duy trì cho vị trí huấn luyện viên'
+    ]
+  },
+  {
+    title: 'Khởi Chạy Phần Mềm Argus',
+    image: '/img/vts-guide/launch-argus.png',
+    content: 'Mở phần mềm Argus trên máy tính bảng huấn luyện viên.',
+    steps: [
+      'Tìm phần mềm Argus (thường ghim trên taskbar hoặc menu start)',
+      'Khởi chạy ứng dụng',
+      'Đợi 10-15 giây để phần mềm khởi động',
+      'Phần mềm sẽ tự động phát hiện và kết nối với tất cả camera',
+      'Tất cả 4 luồng camera sẽ tự động bắt đầu phát trực tiếp'
+    ]
+  },
+  {
+    title: 'Tổng Quan Giao Diện Argus',
+    image: '/img/vts-guide/argus-overview.png',
+    content: 'Giao diện Argus cung cấp tất cả các điều khiển bạn cần cho hoạt động đào tạo.',
+    table: {
+      headers: ['Điều Khiển', 'Chức Năng'],
+      rows: [
+        ['A. Huy hiệu phiên bản', 'Nhấp để kiểm tra cập nhật'],
+        ['B. Nút ghi hình', 'Bắt đầu/dừng ghi tất cả luồng'],
+        ['C. Thư viện', 'Mở thư mục ghi hình'],
+        ['D. Thoại', 'Mở bảng điều khiển hệ thống thoại'],
+        ['E. Chuyển chế độ xem', 'Chuyển đổi bố cục lưới camera'],
+        ['F. Cài đặt/Thu nhỏ/Đóng', 'Điều khiển ứng dụng'],
+        ['G. Theo Dõi Sức Khỏe Mạng', 'Xem trạng thái mạng mesh']
+      ]
+    }
+  },
+  {
+    title: 'Xem Luồng Camera',
+    image: '/img/vts-guide/argus-software.png',
+    content: 'Khi ứng dụng mở với hệ thống đã kết nối, bốn luồng camera sẽ tự động bắt đầu phát.',
+    steps: [
+      'Tất cả 4 luồng camera xuất hiện trong thanh bên',
+      'Mỗi luồng hiển thị video trực tiếp từ vị trí lắp đặt',
+      'Luồng cập nhật theo thời gian thực',
+      'Bạn có thể xem tất cả camera đồng thời hoặc tập trung vào chế độ xem cụ thể'
+    ]
+  },
+  {
+    title: 'Chế Độ Xem Toàn Màn Hình',
+    image: '/img/vts-guide/argus-app-full-screen.png',
+    content: 'Để xem luồng camera ở chế độ toàn màn hình để quan sát chi tiết.',
+    steps: [
+      'Chạm đôi vào bất kỳ luồng video nào trong thanh bên',
+      'Camera đó sẽ mở rộng ra chế độ xem toàn màn hình',
+      'Chạm đôi lại để quay về chế độ nhiều camera',
+      'Dùng để theo dõi chi tiết các hoạt động cụ thể'
+    ]
+  },
+  {
+    title: 'Bắt Đầu Ghi Hình',
+    image: '/img/vts-guide/start-recording.png',
+    content: 'Ghi tất cả luồng camera đồng thời để xem lại và huấn luyện sau buổi học.',
+    steps: [
+      'Nhấp nút "Bắt Đầu Ghi" trong giao diện Argus',
+      'Tất cả luồng camera đã kết nối sẽ được ghi đồng thời',
+      'Bản ghi được lưu vào thư mục đã chỉ định (Cài đặt/Ghi hình/Thư mục)',
+      'Ghi hình tiếp tục cho đến khi bạn nhấp "Dừng Ghi"',
+      'Tất cả góc camera được ghi đồng bộ để xem lại toàn diện'
+    ]
+  },
+  {
+    title: 'Theo Dõi Sức Khỏe Mạng',
+    image: '/img/vts-guide/network-health.png',
+    content: 'Theo dõi chất lượng kết nối mạng mesh theo thời gian thực bằng bảng theo dõi ở góc dưới bên phải của ứng dụng Argus.',
+    steps: [
+      'Kiểm tra bảng theo dõi sức khỏe mạng (góc dưới bên trái)',
+      'Cho mạng một phút để ổn định sau khi kết nối ban đầu'
+    ],
+    table: {
+      headers: ['Chỉ Số', 'Trạng Thái'],
+      rows: [
+        ['Xanh', 'Chất lượng kết nối tối ưu, truyền video đáng tin cậy'],
+        ['Cam', 'Kết nối hoạt động, nhưng chưa tối ưu'],
+        ['Đỏ', 'Kết nối kém, có thể xảy ra các vấn đề đáng kể']
+      ]
+    }
+  },
+  {
+    title: 'Quản Lý Ghi Hình',
+    image: '/img/vts-guide/view-recordings.png',
+    content: 'Truy cập và quản lý các buổi đào tạo đã ghi.',
+    steps: [
+      'Nhấp nút "Mở Thư Mục Ghi Hình" để truy cập bản ghi đã lưu',
+      'Bản ghi được lưu trong thư mục đã chỉ định trong Cài đặt/Ghi hình/Thư mục',
+      'Tất cả luồng camera được ghi đồng thời và đồng bộ',
+      'Phát lại bản ghi để xem lại sau đào tạo và huấn luyện học viên',
+      'Sử dụng bản ghi để đánh giá và phản hồi cải thiện'
+    ]
+  },
+  {
+    title: 'Trạng Thái Hệ Thống Thoại',
+    image: '/img/vts-guide/voice-system.png',
+    content: 'Theo dõi giao tiếp thoại qua chỉ số Thoại trong thanh công cụ. Biểu tượng điện thoại và màu sắc hiển thị trạng thái kết nối, trong khi các thanh âm thanh chỉ hoạt động thoại.',
+    note: 'T = Huấn luyện viên, M = Máy/Học viên.',
+    steps: [
+      'Biểu tượng điện thoại với màu sắc hiển thị trạng thái kết nối (Xanh/Cam/Đỏ)',
+      'Các thanh âm thanh chỉ hoạt động thoại khi nói',
+      'Mức pin hiển thị khi tai nghe đã kết nối',
+      'Trạng thái hệ thống hiển thị xanh khi kênh thoại sẵn sàng'
+    ],
+    link: {
+      text: 'Hướng Dẫn Xử Lý Sự Cố →',
+      url: '/docs/argus-software/voice-system'
+    },
+    table: {
+      headers: ['Chỉ Số', 'Trạng Thái'],
+      rows: [
+        ['Xanh', 'Kênh thoại đã kết nối và sẵn sàng'],
+        ['Cam', 'Tai nghe chưa kết nối hoặc đang khởi động'],
+        ['Đỏ', 'Lỗi kết nối - kiểm tra ghép đôi tai nghe']
+      ]
+    }
+  },
+  {
+    title: 'Sẵn Sàng Đào Tạo!',
+    image: '/img/vts-guide/ready-for-training.png',
+    content: 'Hệ thống Argus VTS của bạn hiện hoàn toàn hoạt động và sẵn sàng cho hoạt động đào tạo. Hệ thống sẽ tự động duy trì kết nối mesh và luồng camera trong quá trình sử dụng.',
+    noNumbers: true,
+    steps: [
+      '✅ Tất cả luồng camera đang phát trực tiếp',
+      '✅ Sức khỏe mạng được theo dõi',
+      '✅ Khả năng ghi hình sẵn sàng',
+      '✅ Giao tiếp thoại đang hoạt động',
+      '✅ Hệ thống đang duy trì kết nối'
+    ]
+  }
+];
+
 export default function OperationQuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
-  
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const slides = currentLocale === 'vi' ? slidesVi : slidesEn;
+
   return (
     <Layout title="Operation - Quick Start" description="Learn how to use the Argus software and operate the VTS system">
-      <div 
-        style={{ 
-          padding: '1rem 1rem 0', 
-          width: '100%', 
-          margin: 0, 
+      <div
+        style={{
+          padding: '1rem 1rem 0',
+          width: '100%',
+          margin: 0,
           minHeight: 'calc(100vh - var(--ifm-navbar-height))',
           height: 'calc(100vh - var(--ifm-navbar-height))',
           backgroundImage: `url(${bannerUrl})`,
@@ -171,9 +317,9 @@ export default function OperationQuickStart() {
           justifyContent: 'center'
         }}
       >
-        <div 
+        <div
           className={styles.backgroundOverlay}
-          style={{ 
+          style={{
             position: 'absolute',
             top: 0,
             left: 0,
@@ -182,7 +328,7 @@ export default function OperationQuickStart() {
             backgroundColor: 'var(--ifm-background-color)',
             opacity: '0.85',
             zIndex: 1
-          }} 
+          }}
         />
         <div style={{ position: 'relative', zIndex: 2, width: '100%', marginTop: '-5vh' }}>
           <Carousel slides={slides} backLink="/quick-start/" />
@@ -191,4 +337,3 @@ export default function OperationQuickStart() {
     </Layout>
   );
 }
-

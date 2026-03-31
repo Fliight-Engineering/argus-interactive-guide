@@ -2,38 +2,68 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 
-const quickStartSections = [
-  {
-    title: 'Setup',
-    description: 'Complete physical deployment and power-on sequence. Get your system ready for operation.',
-    image: '/img/vts-guide/setup-complete-banner.png',
-    link: '/quick-start/setup'
-  },
-  {
-    title: 'Operation',
-    description: 'Learn how to use the Argus software, view feeds, record sessions, and monitor network health.',
-    image: '/img/vts-guide/argus-software.png',
-    link: '/quick-start/operation'
-  }
-];
+const contentEn = {
+  title: 'Quick Start Guide',
+  subtitle: 'Step-by-step visual guides to get you up and running quickly',
+  sections: [
+    {
+      title: 'Setup',
+      description: 'Complete physical deployment and power-on sequence. Get your system ready for operation.',
+      image: '/img/vts-guide/setup-complete-banner.png',
+      link: '/quick-start/setup'
+    },
+    {
+      title: 'Operation',
+      description: 'Learn how to use the Argus software, view feeds, record sessions, and monitor network health.',
+      image: '/img/vts-guide/argus-software.png',
+      link: '/quick-start/operation'
+    }
+  ],
+  startLabel: 'Start',
+  moreDetail: 'Need more detail? Check out the',
+  fullManual: 'full manual'
+};
+
+const contentVi = {
+  title: 'Hướng Dẫn Bắt Đầu Nhanh',
+  subtitle: 'Hướng dẫn trực quan từng bước để khởi động nhanh chóng',
+  sections: [
+    {
+      title: 'Cài Đặt',
+      description: 'Cài đặt vật lý và quy trình bật nguồn đầy đủ. Chuẩn bị hệ thống sẵn sàng hoạt động.',
+      image: '/img/vts-guide/setup-complete-banner.png',
+      link: '/quick-start/setup'
+    },
+    {
+      title: 'Vận Hành',
+      description: 'Tìm hiểu cách sử dụng phần mềm Argus, xem luồng camera, ghi hình và theo dõi sức khỏe mạng.',
+      image: '/img/vts-guide/argus-software.png',
+      link: '/quick-start/operation'
+    }
+  ],
+  startLabel: 'Bắt Đầu',
+  moreDetail: 'Cần thêm chi tiết? Xem',
+  fullManual: 'hướng dẫn đầy đủ'
+};
 
 export default function QuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
-  // Call useBaseUrl for all images at top level to avoid hook rule violations
   const setupImageUrl = useBaseUrl('/img/vts-guide/setup-complete-banner.png');
   const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.png');
-  
-  // Map sections with resolved image URLs
-  const sectionsWithImages = quickStartSections.map((section, idx) => ({
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const content = currentLocale === 'vi' ? contentVi : contentEn;
+
+  const sectionsWithImages = content.sections.map((section, idx) => ({
     ...section,
     imageUrl: idx === 0 ? setupImageUrl : operationImageUrl
   }));
-  
+
   return (
     <Layout title="Quick Start Guide" description="Visual quick start guides for Argus VTS">
-      <div 
+      <div
         className={styles.container}
         style={{
           backgroundImage: `url(${bannerUrl})`,
@@ -48,9 +78,9 @@ export default function QuickStart() {
         <div className={styles.overlay} />
         <div className={styles.contentWrapper}>
           <div className={styles.header}>
-            <h1 className={styles.title}>Quick Start Guide</h1>
+            <h1 className={styles.title}>{content.title}</h1>
             <p className={styles.subtitle}>
-              Step-by-step visual guides to get you up and running quickly
+              {content.subtitle}
             </p>
           </div>
 
@@ -68,7 +98,7 @@ export default function QuickStart() {
                 <h2 className={styles.cardTitle}>{section.title}</h2>
                 <p className={styles.cardDescription}>{section.description}</p>
                 <div className={styles.cardLink}>
-                  Start {section.title} →
+                  {content.startLabel} {section.title} →
                 </div>
               </div>
             </Link>
@@ -77,8 +107,8 @@ export default function QuickStart() {
 
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
             <p style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)', fontSize: '0.9rem' }}>
-              Need more detail? Check out the{' '}
-              <Link to="/docs/setup-operation/" style={{ color: 'var(--ifm-color-primary)' }}>full manual</Link>
+              {content.moreDetail}{' '}
+              <Link to="/docs/setup-operation/" style={{ color: 'var(--ifm-color-primary)' }}>{content.fullManual}</Link>
             </p>
           </div>
         </div>
@@ -86,4 +116,3 @@ export default function QuickStart() {
     </Layout>
   );
 }
-
