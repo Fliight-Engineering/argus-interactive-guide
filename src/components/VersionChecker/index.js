@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 const CHECK_INTERVAL = 5 * 60 * 1000; // Check every 5 minutes
@@ -211,18 +212,18 @@ export default function VersionChecker({ testMode = false }) {
   // Determine status text
   const getStatusText = () => {
     if (!isOnline) {
-      return 'Offline';
+      return translate({id: 'versionChecker.offline', message: 'Offline'});
     }
     if (isChecking) {
-      return 'Checking...';
+      return translate({id: 'versionChecker.checking', message: 'Checking...'});
     }
     if (updateAvailable && latestVersion) {
-      return `Update available: v${latestVersion}`;
+      return translate({id: 'versionChecker.updateAvailable', message: 'Update available: v{version}'}, {version: latestVersion});
     }
     if (currentVersion) {
-      return 'Up to date';
+      return translate({id: 'versionChecker.upToDate', message: 'Up to date'});
     }
-    return 'Loading...';
+    return translate({id: 'versionChecker.loading', message: 'Loading...'});
   };
 
   const statusText = getStatusText();
@@ -231,16 +232,16 @@ export default function VersionChecker({ testMode = false }) {
   return (
     <div className={styles.versionContainer}>
       <div className={styles.versionInfo}>
-        <span className={styles.versionLabel}>Argus Documentation:</span>
+        <span className={styles.versionLabel}>{translate({id: 'versionChecker.label', message: 'Argus Documentation:'})}</span>
         <span className={styles.versionNumber}>v{currentVersion || '0.0.1'}</span>
         <span className={styles.statusText}>({statusText})</span>
         {isUpdateAvailable && (
           <button
             className={styles.updateButton}
             onClick={handleDownloadUpdate}
-            title="Download latest version"
+            title={translate({id: 'versionChecker.downloadTitle', message: 'Download latest version'})}
           >
-            Download
+            {translate({id: 'versionChecker.download', message: 'Download'})}
           </button>
         )}
       </div>

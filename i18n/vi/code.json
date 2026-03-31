@@ -325,5 +325,45 @@
   "theme.tags.tagsPageTitle": {
     "message": "Thẻ",
     "description": "The title of the tag list page"
+  },
+  "homepage.quickStart": {
+    "message": "Bắt Đầu Nhanh",
+    "description": "Quick Start button label on homepage"
+  },
+  "homepage.fullManual": {
+    "message": "Hướng Dẫn Đầy Đủ",
+    "description": "Full Manual button label on homepage"
+  },
+  "versionChecker.offline": {
+    "message": "Ngoại tuyến",
+    "description": "Version checker offline status"
+  },
+  "versionChecker.checking": {
+    "message": "Đang kiểm tra...",
+    "description": "Version checker checking status"
+  },
+  "versionChecker.updateAvailable": {
+    "message": "Có bản cập nhật: v{version}",
+    "description": "Version checker update available status"
+  },
+  "versionChecker.upToDate": {
+    "message": "Đã cập nhật",
+    "description": "Version checker up to date status"
+  },
+  "versionChecker.loading": {
+    "message": "Đang tải...",
+    "description": "Version checker loading status"
+  },
+  "versionChecker.label": {
+    "message": "Tài liệu Argus:",
+    "description": "Version checker label"
+  },
+  "versionChecker.downloadTitle": {
+    "message": "Tải phiên bản mới nhất",
+    "description": "Download button title attribute"
+  },
+  "versionChecker.download": {
+    "message": "Tải xuống",
+    "description": "Download button label"
   }
 }

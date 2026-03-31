@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {translate} from '@docusaurus/Translate';
 import VersionChecker from '@site/src/components/VersionChecker';
 import UpdateModal from '@site/src/components/UpdateModal';
 import React, { useState, useEffect } from 'react';
@@ -113,13 +114,13 @@ export default function HomepageFeatures() {
           className={styles.mainButton}
           to="/quick-start/">
           <QuickStartIcon />
-          Quick Start
+          {translate({id: 'homepage.quickStart', message: 'Quick Start'})}
         </Link>
         <Link
           className={styles.mainButton}
           to="/docs/">
           <ManualIcon />
-          Full Manual
+          {translate({id: 'homepage.fullManual', message: 'Full Manual'})}
         </Link>
       </div>
       <VersionChecker />
