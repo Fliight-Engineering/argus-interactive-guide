@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../Downloads/argus-interactive-guide-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "argus-interactive-guide-main"
+	}
+}
