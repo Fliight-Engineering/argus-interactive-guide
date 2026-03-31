@@ -292,10 +292,153 @@ const slidesVi = [
   }
 ];
 
+const slidesEs = [
+  {
+    title: 'Distribución del Área de Entrenamiento',
+    image: '/img/vts-guide/example-map.png',
+    content: 'Ejemplo de distribución del área de entrenamiento mostrando el posicionamiento óptimo. El mapa ilustra la posición del instructor, ubicaciones de los nodos y el área operacional del vehículo para una planificación eficaz del despliegue.',
+    steps: [
+      'Posición del instructor fuera del camino del vehículo',
+      'Ubicaciones del nodo del instructor y nodo repetidor posicionadas para cobertura',
+      'Área operacional del vehículo claramente definida',
+      'Distancias seguras mantenidas para el posicionamiento del instructor'
+    ]
+  },
+  {
+    title: 'Lanzar Software Argus',
+    image: '/img/vts-guide/launch-argus.png',
+    content: 'Abra el software Argus en la tableta del instructor.',
+    steps: [
+      'Ubique el software Argus (generalmente fijado en la barra de tareas o menú de inicio)',
+      'Lance la aplicación',
+      'Espere 10-15 segundos para que el software se inicialice',
+      'El software detectará y se conectará automáticamente a todas las cámaras',
+      'Los 4 flujos de cámara deberían comenzar a transmitir automáticamente'
+    ]
+  },
+  {
+    title: 'Descripción General de la Interfaz Argus',
+    image: '/img/vts-guide/argus-overview.png',
+    content: 'La interfaz Argus proporciona todos los controles necesarios para las operaciones de entrenamiento.',
+    table: {
+      headers: ['Control', 'Función'],
+      rows: [
+        ['A. Insignia de Versión', 'Haga clic para verificar actualizaciones'],
+        ['B. Botón de Grabación', 'Iniciar/detener grabación de todos los flujos'],
+        ['C. Galería', 'Abrir carpeta de grabaciones'],
+        ['D. Voz', 'Abrir panel de control del sistema de voz'],
+        ['E. Cambiar Vista', 'Alternar diseño de cuadrícula de cámaras'],
+        ['F. Ajustes/Minimizar/Cerrar', 'Controles de la aplicación'],
+        ['G. Monitor de Salud de Red', 'Ver estado de la red mesh']
+      ]
+    }
+  },
+  {
+    title: 'Ver Flujos de Cámara',
+    image: '/img/vts-guide/argus-software.png',
+    content: 'Una vez que la aplicación está abierta con el sistema conectado, los cuatro flujos de cámara comenzarán a transmitir automáticamente.',
+    steps: [
+      'Los 4 flujos de cámara aparecen en la barra lateral',
+      'Cada flujo muestra video en vivo desde su posición montada',
+      'Los flujos se actualizan en tiempo real',
+      'Puede ver todas las cámaras simultáneamente o enfocarse en vistas específicas'
+    ]
+  },
+  {
+    title: 'Vista en Pantalla Completa',
+    image: '/img/vts-guide/argus-app-full-screen.png',
+    content: 'Para ver un flujo de cámara en pantalla completa para una observación detallada.',
+    steps: [
+      'Toque dos veces cualquier flujo de video en la barra lateral',
+      'Esa cámara se expandirá a vista de pantalla completa',
+      'Toque dos veces nuevamente para regresar a la vista múltiple',
+      'Use esto para monitoreo detallado de operaciones específicas'
+    ]
+  },
+  {
+    title: 'Iniciar Grabación',
+    image: '/img/vts-guide/start-recording.png',
+    content: 'Grabe todos los flujos de cámara simultáneamente para revisión y entrenamiento post-sesión.',
+    steps: [
+      'Haga clic en el botón "Iniciar Grabación" en la interfaz Argus',
+      'Todos los flujos de cámara conectados se grabarán simultáneamente',
+      'Las grabaciones se guardan en la carpeta especificada (Ajustes/Grabación/Directorio)',
+      'La grabación continúa hasta que haga clic en "Detener Grabación"',
+      'Todos los ángulos de cámara se capturan sincronizados para una revisión completa'
+    ]
+  },
+  {
+    title: 'Monitoreo de Salud de Red',
+    image: '/img/vts-guide/network-health.png',
+    content: 'Monitoree la calidad de conexión de la red mesh en tiempo real usando el panel de salud de red ubicado en la esquina inferior derecha de la aplicación Argus.',
+    steps: [
+      'Revise el panel de monitoreo de salud de red (esquina inferior izquierda)',
+      'Dé a la red un minuto para estabilizarse después de la conexión inicial'
+    ],
+    table: {
+      headers: ['Indicador', 'Estado'],
+      rows: [
+        ['Verde', 'Calidad de conexión óptima, transmisión de video confiable'],
+        ['Naranja', 'Conexión funcional, operando pero no óptima'],
+        ['Rojo', 'Conexión deficiente, pueden ocurrir problemas significativos']
+      ]
+    }
+  },
+  {
+    title: 'Gestión de Grabaciones',
+    image: '/img/vts-guide/view-recordings.png',
+    content: 'Acceda y gestione sus sesiones de entrenamiento grabadas.',
+    steps: [
+      'Haga clic en el botón "Abrir Directorio de Grabaciones" para acceder a las grabaciones guardadas',
+      'Las grabaciones se almacenan en la carpeta especificada en Ajustes/Grabación/Directorio',
+      'Todos los flujos de cámara se graban simultáneamente y sincronizados',
+      'Reproduzca las grabaciones para revisión post-entrenamiento y entrenamiento del operador',
+      'Use las grabaciones para evaluación y retroalimentación de mejora'
+    ]
+  },
+  {
+    title: 'Estado del Sistema de Voz',
+    image: '/img/vts-guide/voice-system.png',
+    content: 'Monitoree la comunicación de voz a través del indicador de Voz en la barra de herramientas. El ícono de teléfono e indicador de color muestran el estado de conexión, mientras que las barras de sonido indican actividad de voz.',
+    note: 'I = Instructor, M = Máquina/Operador en Formación.',
+    steps: [
+      'Ícono de teléfono con color muestra estado de conexión (Verde/Naranja/Rojo)',
+      'Las barras de sonido indican actividad de voz al hablar',
+      'Nivel de batería mostrado cuando los auriculares están conectados',
+      'El estado del sistema muestra verde cuando el canal de voz está listo'
+    ],
+    link: {
+      text: 'Guía de Solución de Problemas →',
+      url: '/docs/argus-software/voice-system'
+    },
+    table: {
+      headers: ['Indicador', 'Estado'],
+      rows: [
+        ['Verde', 'Canal de voz conectado y listo'],
+        ['Naranja', 'Auricular no conectado o inicializando'],
+        ['Rojo', 'Error de conexión - verifique el emparejamiento del auricular']
+      ]
+    }
+  },
+  {
+    title: '¡Listo para Entrenar!',
+    image: '/img/vts-guide/ready-for-training.png',
+    content: 'Su sistema Argus VTS ahora está completamente operacional y listo para las operaciones de entrenamiento. El sistema mantendrá automáticamente las conexiones mesh y los flujos de cámara durante el uso.',
+    noNumbers: true,
+    steps: [
+      '✅ Todos los flujos de cámara están transmitiendo',
+      '✅ La salud de red está siendo monitoreada',
+      '✅ La capacidad de grabación está lista',
+      '✅ La comunicación de voz está activa',
+      '✅ El sistema está manteniendo las conexiones'
+    ]
+  }
+];
+
 export default function OperationQuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
   const {i18n: {currentLocale}} = useDocusaurusContext();
-  const slides = currentLocale === 'vi' ? slidesVi : slidesEn;
+  const slides = currentLocale === 'vi' ? slidesVi : currentLocale === 'es' ? slidesEs : slidesEn;
 
   return (
     <Layout title="Operation - Quick Start" description="Learn how to use the Argus software and operate the VTS system">

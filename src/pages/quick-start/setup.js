@@ -378,10 +378,196 @@ const slidesVi = [
   }
 ];
 
+const slidesEs = [
+  {
+    title: 'Descripción General y Verificación Pre-Despliegue',
+    image: '/img/vts-guide/kit-contents-clean.png',
+    content: 'La configuración completa debería tardar unos 5 minutos si está bien planificada.',
+    steps: [
+      'Asegúrese de que todas las baterías estén cargadas antes de bajar a la mina',
+      'Verifique que todos los componentes del kit estén listos para operar',
+      'Revise el nodo de máquina, nodos repetidores (si se necesitan) y las 4 cámaras',
+      'Verifique que la tableta esté cargada y lista'
+    ]
+  },
+  {
+    title: 'Configuración del Nodo de Máquina - Desplegar Antenas',
+    image: '/img/vts-guide/machine-node-setup-2.png',
+    steps: [
+      'Tome el nodo de máquina del estuche',
+      'Despliegue las dos antenas inferiores desde su posición de almacenamiento debajo de la placa de fibra de carbono'
+    ]
+  },
+  {
+    title: 'Configuración del Nodo de Máquina - Rotar Mástil y Fijar el Pasador',
+    image: '/img/vts-guide/machine-node-setup-3.png',
+    steps: [
+      'Desenganche el mástil de la antena y gírelo hacia arriba',
+      'Jale el lazo del seguro y enganche el pasador de bloqueo cuando el mástil esté en posición vertical.'
+    ]
+  },
+  {
+    title: 'Configuración del Nodo de Máquina - Posicionar Antenas',
+    image: '/img/vts-guide/machine-node-setup-4.png',
+    steps: [
+      'Gire dos de las antenas para que sus articulaciones apunten hacia arriba',
+      'Doble todas las antenas en su posición fijada de 45 grados',
+      'El nodo de máquina ya está listo para montar y encender.'
+    ]
+  },
+  {
+    title: 'Montar el Nodo de Máquina en el Vehículo',
+    image: '/img/vts-guide/machine-ap-rear.png',
+    content: 'Para entrenamiento de cargadoras subterráneas, monte el nodo de máquina en la parte trasera del vehículo sobre el radiador.',
+    steps: [
+      'Posicione en la parte trasera del vehículo, con línea de visión directa hacia las posiciones de las cámaras',
+      'Monte firmemente sobre una superficie metálica plana para evitar movimiento durante la operación',
+      'Verifique posición elevada para una propagación óptima de señal hacia otros nodos'
+    ]
+  },
+  {
+    title: 'Desplegar Nodos Repetidores (Si es Necesario)',
+    image: '/img/vts-guide/antennas-up-render.png',
+    content: 'Los nodos repetidores amplían la cobertura de red para un posicionamiento seguro del instructor a distancias significativas (200m+) o alrededor de esquinas.',
+    steps: [
+      'Posicione a una altura igual o mayor que el nodo de máquina',
+      'Asegure línea de visión directa hacia otros nodos',
+      'Monte usando pies magnéticos o ganchos en superficies metálicas',
+      'Configure antenas: ambas hacia arriba para tramos rectos, una arriba/una abajo para esquinas'
+    ]
+  },
+  {
+    title: 'Posición de la Cámara Trasera',
+    image: '/img/vts-guide/rcs-rear-quarter.png',
+    content: 'Monte la cámara trasera (montaje magnético) para observar:',
+    steps: [
+      'Operación general del vehículo desde atrás',
+      'Entrada de otros vehículos o personas al área operacional'
+    ]
+  },
+  {
+    title: 'Vista Frontal del Cucharón',
+    image: '/img/vts-guide/rcs-forward.png',
+    content: 'Monte la cámara frontal (montaje magnético) para observar:',
+    steps: [
+      'Posicionamiento y movimiento del cucharón desde arriba',
+      'Técnica de carga',
+      'Contacto con el material',
+      'Condiciones de la superficie del suelo frontal'
+    ]
+  },
+  {
+    title: 'Vista Lateral Frontal',
+    image: '/img/vts-guide/rcs-bucket-view.png',
+    content: 'Monte la cámara lateral frontal (montaje magnético) para observar:',
+    steps: [
+      'Ángulo de aproximación del cucharón',
+      'Posición de los neumáticos respecto a obstáculos',
+      'Espacios laterales',
+      'Alineación del filo de corte del cucharón'
+    ]
+  },
+  {
+    title: 'Cámara Interior de la Cabina',
+    image: '/img/vts-guide/rcs-cab.png',
+    content: 'Monte la cámara interior usando ventosas en el vidrio para observar:',
+    steps: [
+      'Posición del operador en formación en la cabina',
+      'Entradas de control y técnica operativa',
+      'Conciencia situacional y reacciones del operador en formación',
+      'Procedimientos correctos en la cabina'
+    ]
+  },
+  {
+    title: 'Encender - Nodos de Red',
+    image: '/img/vts-guide/ap-power-button.png',
+    content: 'CRÍTICO: Siempre encienda los nodos de red PRIMERO antes de encender las cámaras.',
+    warning: true,
+    steps: [
+      'Presione el botón de encendido negro grande firmemente y suéltelo de inmediato',
+      'Espere a que los nodos se inicialicen y cambien a verde sólido',
+      'Espere 30-60 segundos para que se establezca la red mesh'
+    ]
+  },
+  {
+    title: 'Encender - Cámaras',
+    image: '/img/vts-guide/rcs-power-up.png',
+    content: 'Una vez que todos los nodos de red muestren verde sólido, encienda las cámaras.',
+    steps: [
+      'Presione el botón de encendido en cada cámara',
+      'El LED se iluminará en rojo cuando esté encendida',
+      'Escuche un suave clic mientras se calibra el lente'
+    ]
+  },
+  {
+    title: 'Encender - Tableta',
+    image: '/img/vts-guide/tablet-buttons.png',
+    content: 'Encienda la tableta del instructor.',
+    steps: [
+      'Ubique el botón de encendido en el borde superior, lado izquierdo (el más a la izquierda de los tres botones)',
+      'Presione el botón de encendido para encender la tableta',
+      'Espere a que se complete la secuencia de arranque',
+      'La tableta estará lista para iniciar sesión'
+    ]
+  },
+  {
+    title: 'Inicio de Sesión en la Tableta y Lanzar Aplicación',
+    image: '/img/vts-guide/argus-software.png',
+    content: 'Inicie sesión en Windows con el PIN 2580 y lance el software Argus.',
+    steps: [
+      'Deslice hacia arriba desde la pantalla de bloqueo para mostrar la página de inicio de sesión de Argus VTS',
+      'Ingrese el PIN de la tableta Windows: 2580',
+      'Haga clic en el ícono de la aplicación Argus en la barra de tareas para lanzarla',
+      'Espere a que el software se inicialice (10-15 segundos)',
+      'Los 4 flujos de cámara deberían comenzar a transmitir automáticamente'
+    ]
+  },
+  {
+    title: 'Encender - Auriculares',
+    image: '/img/vts-guide/headset.png',
+    content: 'CRÍTICO: La instrucción se basa en nuestra configuración de auriculares; la suya puede ser diferente, pero siempre encienda los auriculares PRIMERO antes de iniciar la aplicación Argus.',
+    warning: true,
+    steps: [
+      'Ubique el botón de encendido del auricular (como se muestra en la imagen)',
+      'Mantenga presionado el botón de encendido hasta que el LED se ilumine',
+      'El auricular anunciará \'Encendido\' o reproducirá un tono cuando esté listo',
+      'Repita para los auriculares del instructor y del operador en formación'
+    ]
+  },
+  {
+    title: 'Verificación del Sistema',
+    image: '/img/vts-guide/system-verification.png',
+    content: 'Antes de comenzar las operaciones de entrenamiento, verifique que todo funcione correctamente.',
+    noNumbers: true,
+    steps: [
+      '✅ Todos los nodos de red muestran LED verde sólido',
+      '✅ Todas las cámaras conectadas',
+      '✅ La tableta está conectada al WiFi (ARGUS-VTS-XXX)',
+      '✅ Todos los componentes están encendidos y listos',
+      '✅ Los flujos de cámara están transmitiendo',
+      '✅ Todos los auriculares conectados',
+      '✅ Auriculares y micrófonos funcionando'
+    ]
+  },
+  {
+    title: '¡Configuración Completa!',
+    image: '/img/vts-guide/setup-complete-banner.png',
+    content: 'Su sistema Argus VTS ya está configurado físicamente y encendido.',
+    link: { text: 'Ir a la Guía de Operación →', url: '/quick-start/operation' },
+    steps: [
+      'Todo el hardware está desplegado y encendido',
+      'La red mesh está establecida',
+      'Las cámaras están conectadas con transmisión de video',
+      'Los auriculares están conectados con canal de voz',
+      'Listo para proceder a la guía de operación'
+    ]
+  }
+];
+
 export default function SetupQuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
   const {i18n: {currentLocale}} = useDocusaurusContext();
-  const slides = currentLocale === 'vi' ? slidesVi : slidesEn;
+  const slides = currentLocale === 'vi' ? slidesVi : currentLocale === 'es' ? slidesEs : slidesEn;
 
   return (
     <Layout title="Setup - Quick Start" description="Complete physical deployment and power-on sequence">

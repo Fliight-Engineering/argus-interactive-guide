@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "Guía Argus VTS",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logo Argus VTS",
+    "description": "The alt text of navbar logo"
+  }
+}

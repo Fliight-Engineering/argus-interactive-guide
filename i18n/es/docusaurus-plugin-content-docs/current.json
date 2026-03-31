@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Argus Software": {
+    "message": "Software Argus",
+    "description": "The label for category 'Argus Software' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Set Up and Operation": {
+    "message": "Configuración y Operación",
+    "description": "The label for category 'Set Up and Operation' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Troubleshooting": {
+    "message": "Solución de Problemas",
+    "description": "The label for category 'Troubleshooting' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Home": {
+    "message": "Inicio",
+    "description": "The label for the doc item 'Home' in sidebar 'docs', linking to the doc index"
+  },
+  "sidebar.docs.doc.Best Practices": {
+    "message": "Mejores Prácticas",
+    "description": "The label for the doc item 'Best Practices' in sidebar 'docs', linking to the doc setup-operation/best-practices"
+  }
+}

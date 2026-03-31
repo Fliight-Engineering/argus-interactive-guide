@@ -49,12 +49,34 @@ const contentVi = {
   fullManual: 'hướng dẫn đầy đủ'
 };
 
+const contentEs = {
+  title: 'Guía de Inicio Rápido',
+  subtitle: 'Guías visuales paso a paso para ponerse en marcha rápidamente',
+  sections: [
+    {
+      title: 'Configuración',
+      description: 'Despliegue físico completo y secuencia de encendido. Prepare su sistema para operar.',
+      image: '/img/vts-guide/setup-complete-banner.png',
+      link: '/quick-start/setup'
+    },
+    {
+      title: 'Operación',
+      description: 'Aprenda a usar el software Argus, ver flujos de video, grabar sesiones y monitorear la salud de la red.',
+      image: '/img/vts-guide/argus-software.png',
+      link: '/quick-start/operation'
+    }
+  ],
+  startLabel: 'Iniciar',
+  moreDetail: '¿Necesita más detalle? Consulte el',
+  fullManual: 'manual completo'
+};
+
 export default function QuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
   const setupImageUrl = useBaseUrl('/img/vts-guide/setup-complete-banner.png');
   const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.png');
   const {i18n: {currentLocale}} = useDocusaurusContext();
-  const content = currentLocale === 'vi' ? contentVi : contentEn;
+  const content = currentLocale === 'vi' ? contentVi : currentLocale === 'es' ? contentEs : contentEn;
 
   const sectionsWithImages = content.sections.map((section, idx) => ({
     ...section,
