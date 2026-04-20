@@ -83,18 +83,23 @@ const slidesEn = [
   },
   {
     title: 'Network Health Monitoring',
-    image: '/img/vts-guide/network-health.png',
+    image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Monitor the mesh network connection quality in real-time using the network health panel located in the lower right corner of the Argus application.',
     steps: [
       'Check the network health monitoring panel (lower left corner)',
-      'Give network a minutes to stabilise after initial connection'
+      'Give the network a minute to stabilise after initial connection',
+      'If the indicator is orange or red, reposition relay nodes before starting a training session'
     ],
+    link: {
+      text: 'Mesh Network Monitor Details \u2192',
+      url: '/docs/argus-software/mesh-monitor'
+    },
     table: {
       headers: ['Indicator', 'Status'],
       rows: [
         ['Green', 'Optimal connection quality, video streaming reliable'],
-        ['Orange', 'Functional connection, working but not optimal'],
-        ['Red', 'Poor connection, significant issues may occur']
+        ['Orange', 'Marginal connection \u2014 working but signal is weak'],
+        ['Red', 'Poor connection \u2014 do not begin training, reposition nodes']
       ]
     }
   },
@@ -226,18 +231,23 @@ const slidesVi = [
   },
   {
     title: 'Theo Dõi Sức Khỏe Mạng',
-    image: '/img/vts-guide/network-health.png',
+    image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Theo dõi chất lượng kết nối mạng mesh theo thời gian thực bằng bảng theo dõi ở góc dưới bên phải của ứng dụng Argus.',
     steps: [
       'Kiểm tra bảng theo dõi sức khỏe mạng (góc dưới bên trái)',
-      'Cho mạng một phút để ổn định sau khi kết nối ban đầu'
+      'Cho mạng một phút để ổn định sau khi kết nối ban đầu',
+      'Nếu chỉ báo màu cam hoặc đỏ, di chuyển nút relay trước khi bắt đầu buổi đào tạo'
     ],
+    link: {
+      text: 'Chi Tiết Giám Sát Mạng Mesh \u2192',
+      url: '/docs/argus-software/mesh-monitor'
+    },
     table: {
       headers: ['Chỉ Số', 'Trạng Thái'],
       rows: [
         ['Xanh', 'Chất lượng kết nối tối ưu, truyền video đáng tin cậy'],
-        ['Cam', 'Kết nối hoạt động, nhưng chưa tối ưu'],
-        ['Đỏ', 'Kết nối kém, có thể xảy ra các vấn đề đáng kể']
+        ['Cam', 'Kết nối trung bình \u2014 hoạt động nhưng tín hiệu yếu'],
+        ['Đỏ', 'Kết nối kém \u2014 không bắt đầu đào tạo, di chuyển nút']
       ]
     }
   },
@@ -369,18 +379,23 @@ const slidesEs = [
   },
   {
     title: 'Monitoreo de Salud de Red',
-    image: '/img/vts-guide/network-health.png',
+    image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Monitoree la calidad de conexión de la red mesh en tiempo real usando el panel de salud de red ubicado en la esquina inferior derecha de la aplicación Argus.',
     steps: [
       'Revise el panel de monitoreo de salud de red (esquina inferior izquierda)',
-      'Dé a la red un minuto para estabilizarse después de la conexión inicial'
+      'Dé a la red un minuto para estabilizarse después de la conexión inicial',
+      'Si el indicador está en naranja o rojo, reposicione los nodos relay antes de iniciar una sesión de entrenamiento'
     ],
+    link: {
+      text: 'Detalles del Monitor de Red Mesh \u2192',
+      url: '/docs/argus-software/mesh-monitor'
+    },
     table: {
       headers: ['Indicador', 'Estado'],
       rows: [
         ['Verde', 'Calidad de conexión óptima, transmisión de video confiable'],
-        ['Naranja', 'Conexión funcional, operando pero no óptima'],
-        ['Rojo', 'Conexión deficiente, pueden ocurrir problemas significativos']
+        ['Naranja', 'Conexión marginal \u2014 funcional pero señal débil'],
+        ['Rojo', 'Conexión deficiente \u2014 no comience el entrenamiento, reposicione nodos']
       ]
     }
   },

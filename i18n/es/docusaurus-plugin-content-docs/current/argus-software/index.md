@@ -121,4 +121,5 @@ Actualizaciones automáticas de software con verificación de versión e instala
 
 - **[Sistema de Video](./video-system)** - Controles de transmisión en tiempo real, grabación y reproducción
 - **[Sistema de Voz](./voice-system)** - Configuración y solución de problemas de comunicación de voz bidireccional
+- **[Monitor de Red Mesh](./mesh-monitor)** - Estado de conexión de red y solución de problemas
 - **[Sistema de Actualización](./update-system)** - Actualizaciones de software y gestión de versiones

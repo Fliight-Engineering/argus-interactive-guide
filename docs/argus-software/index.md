@@ -121,4 +121,5 @@ Automatic software updates with version checking and one-click installation
 
 - **[Video System](./video-system)** - Real-time streaming, recording, and playback controls
 - **[Voice System](./voice-system)** - Two-way voice communication setup and troubleshooting
+- **[Mesh Network Monitor](./mesh-monitor)** - Network connection status and troubleshooting
 - **[Update System](./update-system)** - Software updates and version management

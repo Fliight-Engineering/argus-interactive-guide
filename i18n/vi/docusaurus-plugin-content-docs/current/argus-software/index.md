@@ -121,4 +121,5 @@ Tự động cập nhật phần mềm với kiểm tra phiên bản và cài đ
 
 - **[Hệ Thống Video](./video-system)** - Phát trực tiếp, ghi hình và điều khiển phát lại
 - **[Hệ Thống Thoại](./voice-system)** - Cài đặt giao tiếp thoại hai chiều và xử lý sự cố
+- **[Giám Sát Mạng Mesh](./mesh-monitor)** - Trạng thái kết nối mạng và xử lý sự cố
 - **[Hệ Thống Cập Nhật](./update-system)** - Cập nhật phần mềm và quản lý phiên bản

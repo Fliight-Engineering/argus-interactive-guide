@@ -33,6 +33,7 @@ const sidebars = {
       items: [
         'argus-software/video-system',
         'argus-software/voice-system',
+        'argus-software/mesh-monitor',
         'argus-software/update-system',
       ],
     },
