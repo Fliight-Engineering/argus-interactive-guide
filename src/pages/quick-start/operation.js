@@ -20,7 +20,7 @@ const slidesEn = [
   },
   {
     title: 'Launch Argus Software',
-    image: '/img/vts-guide/launch-argus.png',
+    image: '/img/vts-guide/qs-op-launch-argus.png',
     content: 'Open the Argus software on the trainer tablet.',
     steps: [
       'Locate Argus software (usually pinned to taskbar or start menu)',
@@ -32,7 +32,7 @@ const slidesEn = [
   },
   {
     title: 'Argus Interface Overview',
-    image: '/img/vts-guide/argus-overview.png',
+    image: '/img/vts-guide/qs-op-interface-overview.png',
     content: 'The Argus interface provides all the controls you need for training operations.',
     table: {
       headers: ['Control', 'Function'],
@@ -60,7 +60,7 @@ const slidesEn = [
   },
   {
     title: 'Full Screen View',
-    image: '/img/vts-guide/argus-app-full-screen.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'To view a camera feed in full screen for detailed observation.',
     steps: [
       'Double-tap any sidebar video feed',
@@ -117,7 +117,7 @@ const slidesEn = [
   },
   {
     title: 'Voice System Status',
-    image: '/img/vts-guide/voice-system.png',
+    image: '/img/vts-guide/qs-op-voice-status.png',
     content: 'Monitor voice communication via the Voice indicator in the toolbar. The phone icon and color indicator show connection status, while the sound bars indicate voice activity.',
     note: 'T = Trainer, M = Machine/Trainee.',
     steps: [
@@ -141,7 +141,7 @@ const slidesEn = [
   },
   {
     title: 'Ready for Training!',
-    image: '/img/vts-guide/ready-for-training.png',
+    image: '/img/vts-guide/qs-op-ready.png',
     content: 'Your Argus VTS system is now fully operational and ready for training operations. The system will automatically maintain mesh connections and camera feeds during use.',
     noNumbers: true,
     steps: [
@@ -168,7 +168,7 @@ const slidesVi = [
   },
   {
     title: 'Khởi Chạy Phần Mềm Argus',
-    image: '/img/vts-guide/launch-argus.png',
+    image: '/img/vts-guide/qs-op-launch-argus.png',
     content: 'Mở phần mềm Argus trên máy tính bảng huấn luyện viên.',
     steps: [
       'Tìm phần mềm Argus (thường ghim trên taskbar hoặc menu start)',
@@ -180,7 +180,7 @@ const slidesVi = [
   },
   {
     title: 'Tổng Quan Giao Diện Argus',
-    image: '/img/vts-guide/argus-overview.png',
+    image: '/img/vts-guide/qs-op-interface-overview.png',
     content: 'Giao diện Argus cung cấp tất cả các điều khiển bạn cần cho hoạt động đào tạo.',
     table: {
       headers: ['Điều Khiển', 'Chức Năng'],
@@ -208,7 +208,7 @@ const slidesVi = [
   },
   {
     title: 'Chế Độ Xem Toàn Màn Hình',
-    image: '/img/vts-guide/argus-app-full-screen.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Để xem luồng camera ở chế độ toàn màn hình để quan sát chi tiết.',
     steps: [
       'Chạm đôi vào bất kỳ luồng video nào trong thanh bên',
@@ -265,7 +265,7 @@ const slidesVi = [
   },
   {
     title: 'Trạng Thái Hệ Thống Thoại',
-    image: '/img/vts-guide/voice-system.png',
+    image: '/img/vts-guide/qs-op-voice-status.png',
     content: 'Theo dõi giao tiếp thoại qua chỉ số Thoại trong thanh công cụ. Biểu tượng điện thoại và màu sắc hiển thị trạng thái kết nối, trong khi các thanh âm thanh chỉ hoạt động thoại.',
     note: 'T = Huấn luyện viên, M = Máy/Học viên.',
     steps: [
@@ -289,7 +289,7 @@ const slidesVi = [
   },
   {
     title: 'Sẵn Sàng Đào Tạo!',
-    image: '/img/vts-guide/ready-for-training.png',
+    image: '/img/vts-guide/qs-op-ready.png',
     content: 'Hệ thống Argus VTS của bạn hiện hoàn toàn hoạt động và sẵn sàng cho hoạt động đào tạo. Hệ thống sẽ tự động duy trì kết nối mesh và luồng camera trong quá trình sử dụng.',
     noNumbers: true,
     steps: [
@@ -316,7 +316,7 @@ const slidesEs = [
   },
   {
     title: 'Lanzar Software Argus',
-    image: '/img/vts-guide/launch-argus.png',
+    image: '/img/vts-guide/qs-op-launch-argus.png',
     content: 'Abra el software Argus en la tableta del instructor.',
     steps: [
       'Ubique el software Argus (generalmente fijado en la barra de tareas o menú de inicio)',
@@ -328,7 +328,7 @@ const slidesEs = [
   },
   {
     title: 'Descripción General de la Interfaz Argus',
-    image: '/img/vts-guide/argus-overview.png',
+    image: '/img/vts-guide/qs-op-interface-overview.png',
     content: 'La interfaz Argus proporciona todos los controles necesarios para las operaciones de entrenamiento.',
     table: {
       headers: ['Control', 'Función'],
@@ -356,7 +356,7 @@ const slidesEs = [
   },
   {
     title: 'Vista en Pantalla Completa',
-    image: '/img/vts-guide/argus-app-full-screen.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Para ver un flujo de cámara en pantalla completa para una observación detallada.',
     steps: [
       'Toque dos veces cualquier flujo de video en la barra lateral',
@@ -413,7 +413,7 @@ const slidesEs = [
   },
   {
     title: 'Estado del Sistema de Voz',
-    image: '/img/vts-guide/voice-system.png',
+    image: '/img/vts-guide/qs-op-voice-status.png',
     content: 'Monitoree la comunicación de voz a través del indicador de Voz en la barra de herramientas. El ícono de teléfono e indicador de color muestran el estado de conexión, mientras que las barras de sonido indican actividad de voz.',
     note: 'I = Instructor, M = Máquina/Operador en Formación.',
     steps: [
@@ -437,7 +437,7 @@ const slidesEs = [
   },
   {
     title: '¡Listo para Entrenar!',
-    image: '/img/vts-guide/ready-for-training.png',
+    image: '/img/vts-guide/qs-op-ready.png',
     content: 'Su sistema Argus VTS ahora está completamente operacional y listo para las operaciones de entrenamiento. El sistema mantendrá automáticamente las conexiones mesh y los flujos de cámara durante el uso.',
     noNumbers: true,
     steps: [

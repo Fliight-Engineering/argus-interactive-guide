@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const slidesEn = [
   {
     title: 'Overview & Pre-Deployment Check',
-    image: '/img/vts-guide/kit-contents-clean.png',
+    image: '/img/vts-guide/qs-setup-kit-contents.png',
     content: 'Complete setup should take around 5 minutes if properly planned.',
     steps: [
       'Ensure all batteries are charged before heading underground',
@@ -55,7 +55,7 @@ const slidesEn = [
   },
   {
     title: 'Deploy Repeater APs (If Needed)',
-    image: '/img/vts-guide/antennas-up-render.png',
+    image: '/img/vts-guide/qs-setup-antennas.png',
     content: 'Repeater APs extend network coverage for safe trainer positioning at significant distances (200m+) or around corners.',
     steps: [
       'Position at height equal to or higher than Machine AP',
@@ -164,7 +164,7 @@ const slidesEn = [
   },
   {
     title: 'System Verification',
-    image: '/img/vts-guide/system-verification.png',
+    image: '/img/vts-guide/qs-setup-verification.png',
     content: 'Before beginning training operations, verify everything is working correctly.',
     noNumbers: true,
     steps: [
@@ -179,7 +179,7 @@ const slidesEn = [
   },
   {
     title: 'Setup Complete!',
-    image: '/img/vts-guide/setup-complete-banner.png',
+    image: '/img/vts-guide/qs-setup-complete.png',
     content: 'Your Argus VTS system is now physically set up and powered on.',
     link: { text: 'Proceed to Operation Guide →', url: '/quick-start/operation' },
     steps: [
@@ -195,7 +195,7 @@ const slidesEn = [
 const slidesVi = [
   {
     title: 'Tổng Quan & Kiểm Tra Trước Triển Khai',
-    image: '/img/vts-guide/kit-contents-clean.png',
+    image: '/img/vts-guide/qs-setup-kit-contents.png',
     content: 'Việc cài đặt đầy đủ sẽ mất khoảng 5 phút nếu được lên kế hoạch đúng.',
     steps: [
       'Đảm bảo tất cả pin đã sạc đầy trước khi xuống mỏ',
@@ -241,7 +241,7 @@ const slidesVi = [
   },
   {
     title: 'Triển Khai Nút Radio Bộ Lặp (Nếu Cần)',
-    image: '/img/vts-guide/antennas-up-render.png',
+    image: '/img/vts-guide/qs-setup-antennas.png',
     content: 'Nút radio bộ lặp mở rộng vùng phủ mạng cho vị trí an toàn của huấn luyện viên ở khoảng cách đáng kể (200m+) hoặc quanh góc khuất.',
     steps: [
       'Đặt ở độ cao bằng hoặc cao hơn nút radio máy',
@@ -350,7 +350,7 @@ const slidesVi = [
   },
   {
     title: 'Xác Nhận Hệ Thống',
-    image: '/img/vts-guide/system-verification.png',
+    image: '/img/vts-guide/qs-setup-verification.png',
     content: 'Trước khi bắt đầu hoạt động đào tạo, xác nhận mọi thứ hoạt động đúng.',
     noNumbers: true,
     steps: [
@@ -365,7 +365,7 @@ const slidesVi = [
   },
   {
     title: 'Cài Đặt Hoàn Tất!',
-    image: '/img/vts-guide/setup-complete-banner.png',
+    image: '/img/vts-guide/qs-setup-complete.png',
     content: 'Hệ thống Argus VTS của bạn đã được cài đặt vật lý và bật nguồn.',
     link: { text: 'Tiến hành Hướng Dẫn Vận Hành →', url: '/quick-start/operation' },
     steps: [
@@ -381,7 +381,7 @@ const slidesVi = [
 const slidesEs = [
   {
     title: 'Descripción General y Verificación Pre-Despliegue',
-    image: '/img/vts-guide/kit-contents-clean.png',
+    image: '/img/vts-guide/qs-setup-kit-contents.png',
     content: 'La configuración completa debería tardar unos 5 minutos si está bien planificada.',
     steps: [
       'Asegúrese de que todas las baterías estén cargadas antes de bajar a la mina',
@@ -427,7 +427,7 @@ const slidesEs = [
   },
   {
     title: 'Desplegar Nodos Repetidores (Si es Necesario)',
-    image: '/img/vts-guide/antennas-up-render.png',
+    image: '/img/vts-guide/qs-setup-antennas.png',
     content: 'Los nodos repetidores amplían la cobertura de red para un posicionamiento seguro del instructor a distancias significativas (200m+) o alrededor de esquinas.',
     steps: [
       'Posicione a una altura igual o mayor que el nodo de máquina',
@@ -536,7 +536,7 @@ const slidesEs = [
   },
   {
     title: 'Verificación del Sistema',
-    image: '/img/vts-guide/system-verification.png',
+    image: '/img/vts-guide/qs-setup-verification.png',
     content: 'Antes de comenzar las operaciones de entrenamiento, verifique que todo funcione correctamente.',
     noNumbers: true,
     steps: [
@@ -551,7 +551,7 @@ const slidesEs = [
   },
   {
     title: '¡Configuración Completa!',
-    image: '/img/vts-guide/setup-complete-banner.png',
+    image: '/img/vts-guide/qs-setup-complete.png',
     content: 'Su sistema Argus VTS ya está configurado físicamente y encendido.',
     link: { text: 'Ir a la Guía de Operación →', url: '/quick-start/operation' },
     steps: [

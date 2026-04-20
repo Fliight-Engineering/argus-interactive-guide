@@ -12,7 +12,7 @@ const contentEn = {
     {
       title: 'Setup',
       description: 'Complete physical deployment and power-on sequence. Get your system ready for operation.',
-      image: '/img/vts-guide/setup-complete-banner.png',
+      image: '/img/vts-guide/qs-setup-complete.png',
       link: '/quick-start/setup'
     },
     {
@@ -34,7 +34,7 @@ const contentVi = {
     {
       title: 'Cài Đặt',
       description: 'Cài đặt vật lý và quy trình bật nguồn đầy đủ. Chuẩn bị hệ thống sẵn sàng hoạt động.',
-      image: '/img/vts-guide/setup-complete-banner.png',
+      image: '/img/vts-guide/qs-setup-complete.png',
       link: '/quick-start/setup'
     },
     {
@@ -56,7 +56,7 @@ const contentEs = {
     {
       title: 'Configuración',
       description: 'Despliegue físico completo y secuencia de encendido. Prepare su sistema para operar.',
-      image: '/img/vts-guide/setup-complete-banner.png',
+      image: '/img/vts-guide/qs-setup-complete.png',
       link: '/quick-start/setup'
     },
     {
@@ -73,7 +73,7 @@ const contentEs = {
 
 export default function QuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
-  const setupImageUrl = useBaseUrl('/img/vts-guide/setup-complete-banner.png');
+  const setupImageUrl = useBaseUrl('/img/vts-guide/qs-setup-complete.png');
   const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.png');
   const {i18n: {currentLocale}} = useDocusaurusContext();
   const content = currentLocale === 'vi' ? contentVi : currentLocale === 'es' ? contentEs : contentEn;
