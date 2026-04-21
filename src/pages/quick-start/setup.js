@@ -140,7 +140,7 @@ const slidesEn = [
   },
   {
     title: 'Tablet Login & App Launch',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Login to windows using the PIN 2580 and launch the Argus software.',
     steps: [
       'Swipe up from the lock screen to show the Argus VTS user login page',
@@ -326,7 +326,7 @@ const slidesVi = [
   },
   {
     title: 'Đăng Nhập Máy Tính Bảng & Khởi Chạy Ứng Dụng',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Đăng nhập Windows bằng mã PIN 2580 và khởi chạy phần mềm Argus.',
     steps: [
       'Vuốt lên từ màn hình khóa để hiển thị trang đăng nhập Argus VTS',
@@ -512,7 +512,7 @@ const slidesEs = [
   },
   {
     title: 'Inicio de Sesión en la Tableta y Lanzar Aplicación',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Inicie sesión en Windows con el PIN 2580 y lance el software Argus.',
     steps: [
       'Deslice hacia arriba desde la pantalla de bloqueo para mostrar la página de inicio de sesión de Argus VTS',

@@ -7,7 +7,7 @@ sidebar_position: 2
 Argus is a Windows-based software platform that gives remote trainers access to multiple video feeds from remote cameras. Users can toggle between feeds and record all streams simultaneously for later review and trainee coaching.
 
 <div class="image-wrapper-90">
-  ![Argus Software Operating Screen](/img/vts-guide/main-screen-overview.png)
+  ![Argus Software Operating Screen](/img/vts-guide/qs-op-full-screen.png)
   *Argus software main screen with camera grid, toolbar controls, and voice status indicators*
 </div>
 

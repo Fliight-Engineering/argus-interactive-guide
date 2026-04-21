@@ -34,7 +34,7 @@ Chuyển đổi giữa hai tùy chọn bố cục camera bằng nút **Lưới X
 Một khung nhìn chính lớn + ba khung nhỏ hơn bên phải. Đây là bố cục mặc định khi khởi động ứng dụng.
 
 <div class="image-wrapper-90">
-  ![Chế Độ Xem Bố Cục 1+3](/img/vts-guide/main-screen-overview.png)
+  ![Chế Độ Xem Bố Cục 1+3](/img/vts-guide/grid-view.png)
   *Bố cục 1+3: Khung nhìn camera chính với ba khung nhìn phụ bên phải*
 </div>
 
@@ -43,7 +43,7 @@ Một khung nhìn chính lớn + ba khung nhỏ hơn bên phải. Đây là bố
 Bốn khung nhìn camera kích thước bằng nhau dạng lưới.
 
 <div class="image-wrapper-90">
-  ![Chế Độ Xem Bố Cục 2+2](/img/vts-guide/argus-software.png)
+  ![Chế Độ Xem Bố Cục 2+2](/img/vts-guide/quad-view.png)
   *Bố cục 2+2: Bốn khung nhìn camera trong lưới bằng nhau*
 </div>
 

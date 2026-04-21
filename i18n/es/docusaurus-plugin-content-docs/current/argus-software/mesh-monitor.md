@@ -6,6 +6,15 @@ sidebar_position: 4
 
 El software Argus incluye un monitor de red mesh en tiempo real que muestra el estado de conexión entre la tablet del instructor, los nodos relay y la máquina. Esto le permite identificar rápidamente si la red está funcionando correctamente antes y durante una sesión de entrenamiento.
 
+## Cómo Abrir
+
+El estado de la red mesh siempre es visible en la barra de herramientas superior. Haga clic en el indicador de estado mesh para abrir el panel completo de Red Mesh.
+
+<div class="image-wrapper-90">
+  ![Ubicación del monitor mesh en la barra de herramientas](/img/vts-guide/mesh-nav.png)
+  *El indicador de estado mesh se encuentra en la barra de herramientas superior — haga clic para abrir el panel completo*
+</div>
+
 ---
 
 ## Barra de Estado

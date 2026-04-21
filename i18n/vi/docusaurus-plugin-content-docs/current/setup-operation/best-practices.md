@@ -174,7 +174,7 @@ Cấu hình này cho phép hệ thống "uốn" quanh các góc và mở rộng 
 <div class="card-content">
 
 <div class="image-wrapper-70">
-  ![Chế Độ Toàn Màn Hình Argus](/img/vts-guide/argus-software.png)
+  ![Chế Độ Toàn Màn Hình Argus](/img/vts-guide/qs-op-full-screen.png)
   *Argus toàn màn hình hiển thị nhiều luồng camera và giao diện điều khiển*
 </div>
 

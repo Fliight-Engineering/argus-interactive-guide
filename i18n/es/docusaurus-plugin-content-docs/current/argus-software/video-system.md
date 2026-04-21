@@ -34,7 +34,7 @@ Alterna entre dos opciones de diseño de cámaras usando el botón **Grid View**
 Una vista principal grande y tres vistas más pequeñas a la derecha. Este es el diseño predeterminado cuando se inicia la aplicación.
 
 <div class="image-wrapper-90">
-  ![1+3 Layout View](/img/vts-guide/main-screen-overview.png)
+  ![1+3 Layout View](/img/vts-guide/grid-view.png)
   *Diseño 1+3: Vista principal de la cámara con tres vistas secundarias a la derecha*
 </div>
 
@@ -43,7 +43,7 @@ Una vista principal grande y tres vistas más pequeñas a la derecha. Este es el
 Cuatro vistas de cámara de igual tamaño en formato de cuadrícula.
 
 <div class="image-wrapper-90">
-  ![2+2 Layout View](/img/vts-guide/argus-software.png)
+  ![2+2 Layout View](/img/vts-guide/quad-view.png)
   *Diseño 2+2: Cuatro vistas de cámara en cuadrícula igual*
 </div>
 

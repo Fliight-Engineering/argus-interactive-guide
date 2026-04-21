@@ -34,7 +34,7 @@ Toggle between two camera layout options using the **Grid View** button in the t
 One large main view + three smaller views on the right. This is the default layout when the application starts.
 
 <div class="image-wrapper-90">
-  ![1+3 Layout View](/img/vts-guide/main-screen-overview.png)
+  ![1+3 Layout View](/img/vts-guide/grid-view.png)
   *1+3 layout: Main camera view with three secondary views on the right*
 </div>
 
@@ -43,7 +43,7 @@ One large main view + three smaller views on the right. This is the default layo
 Four equal-sized camera views in a grid format.
 
 <div class="image-wrapper-90">
-  ![2+2 Layout View](/img/vts-guide/argus-software.png)
+  ![2+2 Layout View](/img/vts-guide/quad-view.png)
   *2+2 layout: Four camera views in equal grid*
 </div>
 

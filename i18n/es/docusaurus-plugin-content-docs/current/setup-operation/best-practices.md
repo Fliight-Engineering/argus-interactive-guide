@@ -174,7 +174,7 @@ Esta configuración permite al sistema "doblar" alrededor de las esquinas y exte
 <div class="card-content">
 
 <div class="image-wrapper-70">
-  ![Argus Full Screen View](/img/vts-guide/argus-software.png)
+  ![Argus Full Screen View](/img/vts-guide/qs-op-full-screen.png)
   *Vista de pantalla completa del software Argus mostrando múltiples feeds de cámara e interfaz de control*
 </div>
 

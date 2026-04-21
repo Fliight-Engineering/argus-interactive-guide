@@ -174,7 +174,7 @@ This configuration allows the system to "bend" around corners and extend coverag
 <div class="card-content">
 
 <div class="image-wrapper-70">
-  ![Argus Full Screen View](/img/vts-guide/argus-software.png)
+  ![Argus Full Screen View](/img/vts-guide/qs-op-full-screen.png)
   *Argus software full-screen view showing multiple camera feeds and control interface*
 </div>
 

@@ -38,35 +38,23 @@ const slidesEn = [
       headers: ['Control', 'Function'],
       rows: [
         ['A. Version Badge', 'Click to check for updates'],
-        ['B. Recording Button', 'Start/stop recording all feeds'],
-        ['C. Gallery', 'Open recordings folder'],
-        ['D. Voice', 'Open Voice System Control panel'],
+        ['B. Network Health Monitor', 'View mesh network status'],
+        ['C. Voice', 'Open Voice System Control panel'],
+        ['D. Start Recording & Gallery', 'Start/stop recording and open recordings folder'],
         ['E. Switch View', 'Toggle camera grid layout'],
-        ['F. Settings/Minimize/Close', 'Application controls'],
-        ['G. Network Health Monitor', 'View mesh network status']
+        ['F. Settings/Minimise/Close', 'Application controls']
       ]
     }
   },
   {
     title: 'Viewing Camera Feeds',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Once the app is open with the system connected, the four camera feeds will start streaming automatically.',
     steps: [
       'All 4 camera feeds appear in the sidebar',
       'Each feed shows live video from its mounted position',
       'Feeds update in real-time',
-      'You can see all cameras simultaneously or focus on specific views'
-    ]
-  },
-  {
-    title: 'Full Screen View',
-    image: '/img/vts-guide/qs-op-full-screen.png',
-    content: 'To view a camera feed in full screen for detailed observation.',
-    steps: [
-      'Double-tap any sidebar video feed',
-      'That camera will expand to full screen view',
-      'Double-tap again to return to multi-view',
-      'Use this for detailed monitoring of specific operations'
+      'Double-tap any feed to view full screen, double-tap again to return'
     ]
   },
   {
@@ -186,35 +174,23 @@ const slidesVi = [
       headers: ['Điều Khiển', 'Chức Năng'],
       rows: [
         ['A. Huy hiệu phiên bản', 'Nhấp để kiểm tra cập nhật'],
-        ['B. Nút ghi hình', 'Bắt đầu/dừng ghi tất cả luồng'],
-        ['C. Thư viện', 'Mở thư mục ghi hình'],
-        ['D. Thoại', 'Mở bảng điều khiển hệ thống thoại'],
+        ['B. Theo Dõi Sức Khỏe Mạng', 'Xem trạng thái mạng mesh'],
+        ['C. Thoại', 'Mở bảng điều khiển hệ thống thoại'],
+        ['D. Ghi Hình & Thư Viện', 'Bắt đầu/dừng ghi hình và mở thư mục ghi hình'],
         ['E. Chuyển chế độ xem', 'Chuyển đổi bố cục lưới camera'],
-        ['F. Cài đặt/Thu nhỏ/Đóng', 'Điều khiển ứng dụng'],
-        ['G. Theo Dõi Sức Khỏe Mạng', 'Xem trạng thái mạng mesh']
+        ['F. Cài đặt/Thu nhỏ/Đóng', 'Điều khiển ứng dụng']
       ]
     }
   },
   {
     title: 'Xem Luồng Camera',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Khi ứng dụng mở với hệ thống đã kết nối, bốn luồng camera sẽ tự động bắt đầu phát.',
     steps: [
       'Tất cả 4 luồng camera xuất hiện trong thanh bên',
       'Mỗi luồng hiển thị video trực tiếp từ vị trí lắp đặt',
       'Luồng cập nhật theo thời gian thực',
-      'Bạn có thể xem tất cả camera đồng thời hoặc tập trung vào chế độ xem cụ thể'
-    ]
-  },
-  {
-    title: 'Chế Độ Xem Toàn Màn Hình',
-    image: '/img/vts-guide/qs-op-full-screen.png',
-    content: 'Để xem luồng camera ở chế độ toàn màn hình để quan sát chi tiết.',
-    steps: [
-      'Chạm đôi vào bất kỳ luồng video nào trong thanh bên',
-      'Camera đó sẽ mở rộng ra chế độ xem toàn màn hình',
-      'Chạm đôi lại để quay về chế độ nhiều camera',
-      'Dùng để theo dõi chi tiết các hoạt động cụ thể'
+      'Chạm đôi vào bất kỳ luồng nào để xem toàn màn hình, chạm đôi lại để quay về'
     ]
   },
   {
@@ -334,35 +310,23 @@ const slidesEs = [
       headers: ['Control', 'Función'],
       rows: [
         ['A. Insignia de Versión', 'Haga clic para verificar actualizaciones'],
-        ['B. Botón de Grabación', 'Iniciar/detener grabación de todos los flujos'],
-        ['C. Galería', 'Abrir carpeta de grabaciones'],
-        ['D. Voz', 'Abrir panel de control del sistema de voz'],
+        ['B. Monitor de Salud de Red', 'Ver estado de la red mesh'],
+        ['C. Voz', 'Abrir panel de control del sistema de voz'],
+        ['D. Grabación y Galería', 'Iniciar/detener grabación y abrir carpeta de grabaciones'],
         ['E. Cambiar Vista', 'Alternar diseño de cuadrícula de cámaras'],
-        ['F. Ajustes/Minimizar/Cerrar', 'Controles de la aplicación'],
-        ['G. Monitor de Salud de Red', 'Ver estado de la red mesh']
+        ['F. Ajustes/Minimizar/Cerrar', 'Controles de la aplicación']
       ]
     }
   },
   {
     title: 'Ver Flujos de Cámara',
-    image: '/img/vts-guide/argus-software.png',
+    image: '/img/vts-guide/qs-op-full-screen.png',
     content: 'Una vez que la aplicación está abierta con el sistema conectado, los cuatro flujos de cámara comenzarán a transmitir automáticamente.',
     steps: [
       'Los 4 flujos de cámara aparecen en la barra lateral',
       'Cada flujo muestra video en vivo desde su posición montada',
       'Los flujos se actualizan en tiempo real',
-      'Puede ver todas las cámaras simultáneamente o enfocarse en vistas específicas'
-    ]
-  },
-  {
-    title: 'Vista en Pantalla Completa',
-    image: '/img/vts-guide/qs-op-full-screen.png',
-    content: 'Para ver un flujo de cámara en pantalla completa para una observación detallada.',
-    steps: [
-      'Toque dos veces cualquier flujo de video en la barra lateral',
-      'Esa cámara se expandirá a vista de pantalla completa',
-      'Toque dos veces nuevamente para regresar a la vista múltiple',
-      'Use esto para monitoreo detallado de operaciones específicas'
+      'Toque dos veces cualquier flujo para ver en pantalla completa, toque dos veces para regresar'
     ]
   },
   {

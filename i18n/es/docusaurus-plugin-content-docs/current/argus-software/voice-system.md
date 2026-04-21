@@ -61,7 +61,7 @@ Esta sección gestiona el auricular conectado al nodo Hyperion de la máquina:
 ## Uso
 
 <div class="image-wrapper-50">
-  ![Starting Voice System](/img/vts-guide/start-voice.png)
+  ![Starting Voice System](/img/vts-guide/qs-op-voice-status.png)
   *Proceso de inicio y conexión del Sistema de Voz*
 </div>
 

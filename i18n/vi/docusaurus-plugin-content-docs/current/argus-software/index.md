@@ -7,7 +7,7 @@ sidebar_position: 2
 Argus là nền tảng phần mềm trên Windows cho phép huấn luyện viên từ xa truy cập nhiều luồng video từ camera từ xa. Người dùng có thể chuyển đổi giữa các luồng và ghi tất cả đồng thời để xem lại và hướng dẫn học viên sau này.
 
 <div class="image-wrapper-90">
-  ![Màn Hình Hoạt Động Phần Mềm Argus](/img/vts-guide/main-screen-overview.png)
+  ![Màn Hình Hoạt Động Phần Mềm Argus](/img/vts-guide/qs-op-full-screen.png)
   *Màn hình chính phần mềm Argus với lưới camera, điều khiển thanh công cụ và chỉ báo trạng thái giọng nói*
 </div>
 

@@ -7,7 +7,7 @@ sidebar_position: 2
 Argus es una plataforma de software basada en Windows que brinda a los instructores remotos acceso a múltiples transmisiones de video desde cámaras remotas. Los usuarios pueden cambiar entre transmisiones y grabar todas simultáneamente para su revisión posterior y la retroalimentación a los operadores en formación.
 
 <div class="image-wrapper-90">
-  ![Argus Software Operating Screen](/img/vts-guide/main-screen-overview.png)
+  ![Argus Software Operating Screen](/img/vts-guide/qs-op-full-screen.png)
   *Pantalla principal del software Argus con cuadrícula de cámaras, controles de la barra de herramientas e indicadores de estado de voz*
 </div>
 

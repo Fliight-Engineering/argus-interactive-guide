@@ -6,6 +6,15 @@ sidebar_position: 4
 
 The Argus software includes a real-time mesh network monitor that shows the connection status between the trainer tablet, relay nodes, and the machine. This helps you quickly identify if the network is healthy before and during a training session.
 
+## How to Open
+
+The mesh network status is always visible in the top toolbar. Click the mesh status indicator to open the full Mesh Network panel.
+
+<div class="image-wrapper-90">
+  ![Mesh monitor location in toolbar](/img/vts-guide/mesh-nav.png)
+  *The mesh status indicator is located in the top toolbar — click it to open the full panel*
+</div>
+
 ---
 
 ## Status Bar

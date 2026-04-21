@@ -61,7 +61,7 @@ This section manages the headset connected to the machine's Hyperion node:
 ## Usage
 
 <div class="image-wrapper-50">
-  ![Starting Voice System](/img/vts-guide/start-voice.png)
+  ![Starting Voice System](/img/vts-guide/qs-op-voice-status.png)
   *Voice System startup and connection process*
 </div>
 

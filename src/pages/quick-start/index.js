@@ -18,7 +18,7 @@ const contentEn = {
     {
       title: 'Operation',
       description: 'Learn how to use the Argus software, view feeds, record sessions, and monitor network health.',
-      image: '/img/vts-guide/argus-software.png',
+      image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
   ],
@@ -40,7 +40,7 @@ const contentVi = {
     {
       title: 'Vận Hành',
       description: 'Tìm hiểu cách sử dụng phần mềm Argus, xem luồng camera, ghi hình và theo dõi sức khỏe mạng.',
-      image: '/img/vts-guide/argus-software.png',
+      image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
   ],
@@ -62,7 +62,7 @@ const contentEs = {
     {
       title: 'Operación',
       description: 'Aprenda a usar el software Argus, ver flujos de video, grabar sesiones y monitorear la salud de la red.',
-      image: '/img/vts-guide/argus-software.png',
+      image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
   ],
@@ -74,7 +74,7 @@ const contentEs = {
 export default function QuickStart() {
   const bannerUrl = useBaseUrl('/img/vts-guide/main-banner.png');
   const setupImageUrl = useBaseUrl('/img/vts-guide/qs-setup-complete.png');
-  const operationImageUrl = useBaseUrl('/img/vts-guide/argus-software.png');
+  const operationImageUrl = useBaseUrl('/img/vts-guide/qs-op-full-screen.png');
   const {i18n: {currentLocale}} = useDocusaurusContext();
   const content = currentLocale === 'vi' ? contentVi : currentLocale === 'es' ? contentEs : contentEn;
 

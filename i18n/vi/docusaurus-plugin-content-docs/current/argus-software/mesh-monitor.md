@@ -6,6 +6,15 @@ sidebar_position: 4
 
 Phần mềm Argus bao gồm tính năng giám sát mạng mesh theo thời gian thực, hiển thị trạng thái kết nối giữa máy tính bảng huấn luyện viên, các nút relay và máy. Tính năng này giúp bạn nhanh chóng xác định tình trạng mạng trước và trong suốt buổi đào tạo.
 
+## Cách Mở
+
+Trạng thái mạng mesh luôn hiển thị trên thanh công cụ phía trên. Nhấp vào chỉ báo trạng thái mesh để mở bảng Mạng Mesh đầy đủ.
+
+<div class="image-wrapper-90">
+  ![Vị trí giám sát mesh trên thanh công cụ](/img/vts-guide/mesh-nav.png)
+  *Chỉ báo trạng thái mesh nằm trên thanh công cụ phía trên — nhấp vào để mở bảng đầy đủ*
+</div>
+
 ---
 
 ## Thanh Trạng Thái
