@@ -60,7 +60,6 @@ Playback sessions include separate audio and speech activity indicators for the 
 - **M** controls the machine/operator audio channel.
 - A red crossed speaker means that channel is muted.
 - A normal speaker means that channel is unmuted.
-- The blue activity dot indicates playback audio or detected speech activity.
 - Tap the speaker control beside each channel to mute or unmute that channel during review.
 
 ## Return to Live View
@@ -89,5 +88,6 @@ Playback sessions can be removed from the tablet when they are no longer require
 :::warning
 Deleted playback sessions cannot be restored from ARGUS. Confirm that the recording is no longer needed before deleting it.
 :::
+
 
 
