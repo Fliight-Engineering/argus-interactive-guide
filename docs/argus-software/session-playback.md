@@ -46,6 +46,23 @@ Use the playback bar to:
 - Scrub through the session timeline.
 - Check the current playback time and session duration.
 
+
+## Playback Audio Channels
+
+Playback sessions include separate audio and speech activity indicators for the trainer and the machine operator.
+
+<div class="image-wrapper-50">
+  ![Playback audio toolbar](/img/vts-guide/playback-audio-toolbar.png)
+  *Playback audio controls for the Trainer (T) and Machine/Trainee (M) channels*
+</div>
+
+- **T** controls the trainer audio channel.
+- **M** controls the machine/operator audio channel.
+- A red crossed speaker means that channel is muted.
+- A normal speaker means that channel is unmuted.
+- The blue activity dot indicates playback audio or detected speech activity.
+- Tap the speaker control beside each channel to mute or unmute that channel during review.
+
 ## Return to Live View
 
 Tap the red **X** button on the playback bar to leave playback and return to live camera view.
@@ -72,3 +89,5 @@ Playback sessions can be removed from the tablet when they are no longer require
 :::warning
 Deleted playback sessions cannot be restored from ARGUS. Confirm that the recording is no longer needed before deleting it.
 :::
+
+

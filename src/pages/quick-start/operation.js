@@ -77,6 +77,7 @@ const slidesEn = [
       'Open Playback from the toolbar after a recording has been saved',
       'Use Sort and View to find the session and choose larger driver thumbnails when needed',
       'Double-tap a session to replay all camera feeds in sync',
+      'Use the T and M speaker controls to mute or unmute trainer and machine audio channels during playback',
       'Use Select to mark one or more sessions for deletion; ARGUS will ask for confirmation before removing files',
       'Tap the red X on the playback bar to return to live camera view'
     ],
@@ -228,6 +229,7 @@ const slidesVi = [
       'Mở Playback từ thanh công cụ sau khi đã lưu bản ghi',
       'Dùng Sort và View để tìm phiên ghi hình và chọn thumbnail lớn khi cần nhìn rõ người lái',
       'Chạm đôi vào một phiên để phát lại tất cả camera đồng bộ',
+      'Dùng nút loa T và M để mute hoặc unmute kênh âm thanh trainer và machine trong lúc playback',
       'Dùng Select để chọn một hoặc nhiều phiên cần xóa; ARGUS sẽ hỏi xác nhận trước khi xóa file',
       'Chạm nút X đỏ trên thanh playback để quay lại màn hình camera trực tiếp'
     ],
@@ -379,6 +381,7 @@ const slidesEs = [
       'Abra Playback desde la barra de herramientas después de guardar una grabación',
       'Use Sort y View para encontrar la sesión y mostrar miniaturas más grandes cuando sea necesario',
       'Toque dos veces una sesión para reproducir todas las cámaras sincronizadas',
+      'Use los controles de altavoz T y M para silenciar o activar los canales de audio del instructor y la máquina durante la reproducción',
       'Use Select para marcar una o más sesiones para eliminar; ARGUS pedirá confirmación antes de borrar archivos',
       'Toque la X roja en la barra de reproducción para volver a la vista de cámara en vivo'
     ],
@@ -504,4 +507,5 @@ export default function OperationQuickStart() {
     </Layout>
   );
 }
+
 
