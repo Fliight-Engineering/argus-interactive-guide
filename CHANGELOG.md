@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.39] - 2026-05-13
+### Changed
+- Simplified Session Playback audio control guidance.
+
 ## [1.0.38] - 2026-05-13
 ### Changed
 - Clarified Session Playback audio channel controls and mute/unmute behavior.
@@ -132,5 +136,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment for online access
 - Version tracking and update checking
 - Responsive design with dark/light mode support
+
 
 
