@@ -1,4 +1,4 @@
-// @ts-check
+﻿// @ts-check
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -32,6 +32,7 @@ const sidebars = {
       },
       items: [
         'argus-software/video-system',
+        'argus-software/session-playback',
         'argus-software/voice-system',
         'argus-software/mesh-monitor',
         'argus-software/update-system',
@@ -76,3 +77,4 @@ const sidebars = {
 };
 
 export default sidebars;
+

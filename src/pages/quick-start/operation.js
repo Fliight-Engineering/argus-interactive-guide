@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -70,6 +70,21 @@ const slidesEn = [
     ]
   },
   {
+    title: 'Session Playback Review',
+    image: '/img/vts-guide/playback-session-list.png',
+    content: 'Review recorded training sessions directly inside ARGUS without leaving the app.',
+    steps: [
+      'Open Playback from the toolbar after a recording has been saved',
+      'Use Sort and View to find the session and choose larger driver thumbnails when needed',
+      'Double-tap a session to replay all camera feeds in sync',
+      'Use Select to mark one or more sessions for deletion; ARGUS will ask for confirmation before removing files',
+      'Tap the red X on the playback bar to return to live camera view'
+    ],
+    link: {
+      text: 'Session Playback Details ->',
+      url: '/docs/argus-software/session-playback'
+    }
+  },  {
     title: 'Network Health Monitoring',
     image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Monitor the mesh network connection quality in real-time using the network health panel located in the lower right corner of the Argus application.',
@@ -206,6 +221,21 @@ const slidesVi = [
     ]
   },
   {
+    title: 'Xem Lại Phiên Ghi Hình',
+    image: '/img/vts-guide/playback-session-list.png',
+    content: 'Xem lại các phiên đào tạo đã ghi trực tiếp trong ARGUS mà không cần rời ứng dụng.',
+    steps: [
+      'Mở Playback từ thanh công cụ sau khi đã lưu bản ghi',
+      'Dùng Sort và View để tìm phiên ghi hình và chọn thumbnail lớn khi cần nhìn rõ người lái',
+      'Chạm đôi vào một phiên để phát lại tất cả camera đồng bộ',
+      'Dùng Select để chọn một hoặc nhiều phiên cần xóa; ARGUS sẽ hỏi xác nhận trước khi xóa file',
+      'Chạm nút X đỏ trên thanh playback để quay lại màn hình camera trực tiếp'
+    ],
+    link: {
+      text: 'Chi Tiết Session Playback ->',
+      url: '/docs/argus-software/session-playback'
+    }
+  },  {
     title: 'Theo Dõi Sức Khỏe Mạng',
     image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Theo dõi chất lượng kết nối mạng mesh theo thời gian thực bằng bảng theo dõi ở góc dưới bên phải của ứng dụng Argus.',
@@ -342,6 +372,21 @@ const slidesEs = [
     ]
   },
   {
+    title: 'Revisión de Sesiones Grabadas',
+    image: '/img/vts-guide/playback-session-list.png',
+    content: 'Revise sesiones de entrenamiento grabadas directamente dentro de ARGUS sin salir de la aplicación.',
+    steps: [
+      'Abra Playback desde la barra de herramientas después de guardar una grabación',
+      'Use Sort y View para encontrar la sesión y mostrar miniaturas más grandes cuando sea necesario',
+      'Toque dos veces una sesión para reproducir todas las cámaras sincronizadas',
+      'Use Select para marcar una o más sesiones para eliminar; ARGUS pedirá confirmación antes de borrar archivos',
+      'Toque la X roja en la barra de reproducción para volver a la vista de cámara en vivo'
+    ],
+    link: {
+      text: 'Detalles de Session Playback ->',
+      url: '/docs/argus-software/session-playback'
+    }
+  },  {
     title: 'Monitoreo de Salud de Red',
     image: '/img/vts-guide/mesh-status-orange-marginal.png',
     content: 'Monitoree la calidad de conexión de la red mesh en tiempo real usando el panel de salud de red ubicado en la esquina inferior derecha de la aplicación Argus.',
@@ -459,3 +504,4 @@ export default function OperationQuickStart() {
     </Layout>
   );
 }
+

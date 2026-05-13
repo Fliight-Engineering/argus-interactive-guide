@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -17,7 +17,7 @@ const contentEn = {
     },
     {
       title: 'Operation',
-      description: 'Learn how to use the Argus software, view feeds, record sessions, and monitor network health.',
+      description: 'Learn how to use the Argus software, view feeds, record and replay sessions, and monitor network health.',
       image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
@@ -39,7 +39,7 @@ const contentVi = {
     },
     {
       title: 'Vận Hành',
-      description: 'Tìm hiểu cách sử dụng phần mềm Argus, xem luồng camera, ghi hình và theo dõi sức khỏe mạng.',
+      description: 'Tìm hiểu cách sử dụng phần mềm Argus, xem luồng camera, ghi hình, xem lại playback và theo dõi sức khỏe mạng.',
       image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
@@ -61,7 +61,7 @@ const contentEs = {
     },
     {
       title: 'Operación',
-      description: 'Aprenda a usar el software Argus, ver flujos de video, grabar sesiones y monitorear la salud de la red.',
+      description: 'Aprenda a usar el software Argus, ver flujos de video, grabar y reproducir sesiones, y monitorear la salud de la red.',
       image: '/img/vts-guide/qs-op-full-screen.png',
       link: '/quick-start/operation'
     }
@@ -138,3 +138,4 @@ export default function QuickStart() {
     </Layout>
   );
 }
+
