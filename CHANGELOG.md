@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-16
+### Added
+- Print-ready PDFs of the Quick Start Guide and User Manual, built from the same content as the guide and attached to every release (`Argus-VTS-Quick-Start-Guide-vX.Y.Z.pdf`, `Argus-VTS-User-Manual-vX.Y.Z.pdf`). Cover, contents with page numbers, bookmarks, page X of Y; videos print as a still with a QR code.
+- Technical Specifications page.
+- New VTS Guide app icon.
+
+### Changed
+- Updated to the current Argus and Fliight branding.
+- Kit contents, cases and battery life now match the Argus product page: two identical roller cases with new photos, up to three repeater access points per kit (usually two), approx. 10 h trainer/repeater and 8 h machine access point battery life, approx. 12 h camera battery life.
+- Battery Calibration now describes the Milwaukee battery and charger fix (it was labelled as the tablet battery).
+- Clarified the recommended charger: holds three M12 and three M18 packs, charges three at a time.
+
+### Fixed
+- App failed to start ("Failed to start local server") when another program was using port 8080.
+- Reloading or opening a docs page directly in the app showed "Server Error".
+- App showed an "Update Error" pop-up on every launch without internet.
+- Website deployment and release scripts follow the `main` → `prod` branch rename.
+- Removed "Edit this page" links that pointed at the Docusaurus template repository.
+
 ## [1.0.39] - 2026-05-13
 ### Changed
 - Simplified Session Playback audio control guidance.

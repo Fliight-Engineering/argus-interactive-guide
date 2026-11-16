@@ -49,6 +49,8 @@ npm run bump:major
 make release "message"
 ```
 
+Branches: work on `feat/`, `fix/` or `chore/` branches into `dev`. A release is a version bump + CHANGELOG entry on `dev`, a PR `dev` → `prod` (runs the PDF build), merge, then `npm run release` on `prod` to tag `vX.Y.Z` and trigger `release-electron.yml`. Pushing `prod` deploys the website.
+
 No test or lint scripts are configured.
 
 ## Architecture
