@@ -18,7 +18,7 @@ const baseUrl = isOfflineBuild ? '/' : '/argus-interactive-guide/';
 const config = {
   title: 'Argus Video Training System',
   tagline: 'Complete guide for deploying, testing, and operating the Argus VTS',
-  favicon: 'img/brand/argus-mark-red.svg',
+  favicon: 'img/brand/argus-guide-icon.svg',
 
   // Client modules - runs on every page and navigation
   clientModules: [
