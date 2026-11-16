@@ -239,6 +239,12 @@ a.pdf-external::after {
   font-size: 0.8em;
 }
 
+/* Sections measured to fit on a page (see prepare() in build-pdf.mjs). */
+.pdf-keep {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
 /* Keep steps, images, tables and callouts whole. */
 img,
 figure,

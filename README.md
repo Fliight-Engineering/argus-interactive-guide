@@ -108,6 +108,9 @@ content (download them from the run's *pdf* artifact) and on manual runs. On a
   ```
   Grab a poster with `ffmpeg -ss 2 -i clip.mp4 -frames:v 1 clip-poster.jpg`.
 - **Steps**: write procedures as numbered lists; a list item never splits across pages.
+- **Sections**: a heading and its content (up to the next heading of the same
+  level) stay on one page when they fit, so start a new `##`/`###` for each topic.
+  Sections longer than a page keep their heading with the intro and first image.
 - **Screen-only content** (e.g. "click here to open the app"): wrap it in
   `<div class="screen-only">…</div>` and it's left out of the PDF.
 - **Links** between docs become links inside the PDF; links to pages not in that

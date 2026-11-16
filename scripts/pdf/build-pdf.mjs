@@ -340,13 +340,19 @@ function extractChapter({ id, level, label, pathMap, webBase, prefix, qrDataUrl,
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const cssString = (s) => `"${String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
 
+// A4 page box (mm). The content area is what section fitting measures against.
+const PAGE = { width: 210, height: 297, top: 22, right: 17, bottom: 20, left: 17 };
+const MM_TO_PX = 96 / 25.4;
+const CONTENT_WIDTH_PX = Math.round((PAGE.width - PAGE.left - PAGE.right) * MM_TO_PX);
+const CONTENT_HEIGHT_PX = Math.floor((PAGE.height - PAGE.top - PAGE.bottom) * MM_TO_PX);
+
 function pageRulesCssFor({ docTitle, version, strings }) {
   const box = `font-family: 'Noto Sans Variable', sans-serif; font-size: 7.5pt; color: #5f6368;`;
   const rule = `border-bottom: 0.5pt solid #d9dce1; padding-bottom: 3mm; vertical-align: bottom;`;
   return `
 @page {
   size: A4;
-  margin: 22mm 17mm 20mm 17mm;
+  margin: ${PAGE.top}mm ${PAGE.right}mm ${PAGE.bottom}mm ${PAGE.left}mm;
   @top-left { content: ${cssString(`Argus VTS ${docTitle}`)}; ${box} ${rule} color: #ba0c2f; font-weight: 600; }
   @top-right { content: ${cssString(`${strings.version} ${version}`)}; ${box} ${rule} text-align: right; }
   @bottom-left { content: ${cssString(`© ${strings.copyright}`)}; ${box} vertical-align: top; padding-top: 3mm; }
@@ -420,7 +426,10 @@ ${body}
 
 /** Prepare the assembled document in the browser and report problems. */
 async function prepare(page) {
-  return page.evaluate(async () => {
+  // Lay the document out at print width so section heights can be measured.
+  await page.emulateMedia({ media: 'print' });
+  await page.setViewportSize({ width: CONTENT_WIDTH_PX, height: CONTENT_HEIGHT_PX });
+  return page.evaluate(async ({ pageHeight }) => {
     // Anchors that point nowhere fall back to their chapter.
     const ids = new Set([...document.querySelectorAll('[id]')].map((n) => n.id));
     const broken = [];
@@ -436,12 +445,62 @@ async function prepare(page) {
       [...document.images].map((img) => (img.complete ? null : new Promise((r) => (img.onload = img.onerror = r)))),
     );
     const failedImages = [...document.images].filter((img) => !img.naturalWidth).map((img) => img.src);
+
+    // Keep sections together so a heading never sits at the foot of a page
+    // with its content overleaf:
+    // - a section (heading + everything up to the next heading of the same or
+    //   higher level) that fits on one page is kept whole, so it moves to the
+    //   next page when it doesn't fit in the space left;
+    // - a longer section keeps its heading with its intro and first image.
+    const limit = pageHeight * 0.95;
+    const isHeading = (n) => /^H[2-6]$/.test(n.tagName);
+    const level = (n) => Number(n.tagName[1]);
+    const hasMedia = (n) => n.matches('img, figure, table, .pdf-video') || !!n.querySelector('img, figure, table');
+    const isCaption = (n) => n.tagName === 'P' && n.children.length === 1 && n.children[0].tagName === 'EM' && n.textContent.trim() === n.children[0].textContent.trim();
+    const height = (nodes) => {
+      const rects = nodes.map((n) => n.getBoundingClientRect());
+      return Math.max(...rects.map((r) => r.bottom)) - Math.min(...rects.map((r) => r.top));
+    };
+    const wrap = (nodes, kind) => {
+      const box = document.createElement('div');
+      box.className = `pdf-keep pdf-keep--${kind}`;
+      nodes[0].before(box);
+      nodes.forEach((n) => box.append(n));
+    };
+    const kept = { whole: 0, lead: 0 };
+    const headings = [...document.querySelectorAll('.chapter .markdown h2, .chapter .markdown h3, .chapter .markdown h4, .chapter .markdown h5, .chapter .markdown h6')].filter(
+      (h) => !h.classList.contains('chapter-title') && !h.closest('.qs-slide'),
+    );
+    for (const h of headings) {
+      if (h.closest('.pdf-keep')) continue;
+      const siblings = [...h.parentElement.children];
+      const group = [h];
+      for (const n of siblings.slice(siblings.indexOf(h) + 1)) {
+        if (isHeading(n) && level(n) <= level(h)) break;
+        group.push(n);
+      }
+      if (group.length === 1) continue;
+      if (height(group) <= limit) {
+        wrap(group, 'whole');
+        kept.whole++;
+        continue;
+      }
+      let end = group.findIndex((n, i) => i > 0 && hasMedia(n));
+      if (end === -1) end = 1;
+      if (group[end + 1] && isCaption(group[end + 1])) end++;
+      const lead = group.slice(0, end + 1);
+      if (height(lead) <= limit) {
+        wrap(lead, 'lead');
+        kept.lead++;
+      }
+    }
+
     const leftovers = [...document.querySelectorAll('video, iframe, button, details:not([open])')].map((n) =>
       n.tagName.toLowerCase(),
     );
     const tocTargets = [...document.querySelectorAll('[data-toc-target]')].map((a) => a.dataset.tocTarget);
-    return { broken, failedImages, leftovers, tocTargets };
-  });
+    return { broken, failedImages, leftovers, tocTargets, kept };
+  }, { pageHeight: CONTENT_HEIGHT_PX });
 }
 
 /**
@@ -499,7 +558,10 @@ async function renderPdf({ browser, base, built, outDir, pdfAssets }) {
   if (args.keepHtml) fs.writeFileSync(path.join(outDir, `${built.name}.html`), await page.content());
   await page.close();
 
-  console.log(`  → ${path.relative(ROOT, file)}  (${check.numPages} pages, ${built.chapterCount} chapters)`);
+  console.log(
+    `  → ${path.relative(ROOT, file)}  (${check.numPages} pages, ${built.chapterCount} chapters; ` +
+      `${report.kept.whole} sections kept whole, ${report.kept.lead} headings kept with their intro)`,
+  );
   const problems = [];
   if (report.failedImages.length) problems.push(`Images failed to load:\n    ${report.failedImages.join('\n    ')}`);
   if (report.leftovers.length) problems.push(`Interactive elements left in the PDF: ${report.leftovers.join(', ')}`);
