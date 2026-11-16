@@ -6,15 +6,13 @@ sidebar_position: 1
 
 Thực hiện quy trình này nếu pin của máy tính bảng hiển thị mức sạc không đúng hoặc không giữ được điện như mong đợi.
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Video from '@site/src/components/Video';
 
-<video
-  width="100%"
-  controls
-  style={{borderRadius: '8px'}}
->
-  <source src={useBaseUrl('/video/battery-calibration.mp4')} type="video/mp4" />
-</video>
+<Video
+  src="/video/battery-calibration.mp4"
+  poster="/video/battery-calibration-poster.jpg"
+  caption="Hướng dẫn hiệu chỉnh pin"
+/>
 
 ---
 

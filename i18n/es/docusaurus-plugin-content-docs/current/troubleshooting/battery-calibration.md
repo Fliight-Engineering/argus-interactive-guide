@@ -6,15 +6,13 @@ sidebar_position: 1
 
 Utilice este procedimiento si la batería de la tableta muestra niveles de carga incorrectos o no retiene la carga como se espera.
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Video from '@site/src/components/Video';
 
-<video
-  width="100%"
-  controls
-  style={{borderRadius: '8px'}}
->
-  <source src={useBaseUrl('/video/battery-calibration.mp4')} type="video/mp4" />
-</video>
+<Video
+  src="/video/battery-calibration.mp4"
+  poster="/video/battery-calibration-poster.jpg"
+  caption="Tutorial de calibración de la batería"
+/>
 
 ---
 
