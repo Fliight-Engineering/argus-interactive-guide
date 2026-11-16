@@ -330,8 +330,14 @@ function findBuildDir() {
 function startServer(buildDir) {
   return new Promise((resolve, reject) => {
     const server = http.createServer((req, res) => {
-      let filePath = path.join(buildDir, req.url === '/' ? 'index.html' : req.url);
-      
+      let urlPath;
+      try {
+        urlPath = decodeURIComponent(req.url.split(/[?#]/)[0]);
+      } catch {
+        urlPath = req.url.split(/[?#]/)[0];
+      }
+      let filePath = path.join(buildDir, urlPath === '/' ? 'index.html' : urlPath);
+
       // Security: prevent directory traversal
       filePath = path.normalize(filePath);
       if (!filePath.startsWith(buildDir)) {
@@ -339,7 +345,15 @@ function startServer(buildDir) {
         res.end('Forbidden');
         return;
       }
-      
+
+      // Docusaurus writes each route as <route>/index.html: serve that when the
+      // URL is a directory (reloading or opening any docs page directly).
+      if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+        filePath = path.join(filePath, 'index.html');
+      } else if (!path.extname(filePath) && fs.existsSync(`${filePath}.html`)) {
+        filePath = `${filePath}.html`;
+      }
+
       // Default to index.html for routes (SPA support)
       if (!path.extname(filePath) && !fs.existsSync(filePath)) {
         filePath = path.join(buildDir, 'index.html');
@@ -379,6 +393,10 @@ function startServer(buildDir) {
             '.woff2': 'font/woff2',
             '.ttf': 'font/ttf',
             '.eot': 'application/vnd.ms-fontobject',
+            '.webp': 'image/webp',
+            '.mp4': 'video/mp4',
+            '.xml': 'application/xml',
+            '.txt': 'text/plain',
           }[ext] || 'application/octet-stream';
           
           res.writeHead(200, { 'Content-Type': contentType });
@@ -392,23 +410,28 @@ function startServer(buildDir) {
     const maxAttempts = 10;
 
     function tryListen() {
-      server.listen(currentPort, '127.0.0.1', () => {
-        console.log(`Server started on port ${currentPort}`);
-        resolve({ server, port: currentPort });
-      });
-
-      server.on('error', (err) => {
-        if (err.code === 'EADDRINUSE') {
-          currentPort++;
-          if (currentPort < PORT + maxAttempts) {
-            server.close();
-            tryListen();
-          } else {
-            reject(new Error('Could not find available port'));
+      server.once('error', (err) => {
+        // Windows reports a port held exclusively by another process (e.g. a
+        // system service on 8080) as EACCES rather than EADDRINUSE.
+        if (err.code === 'EADDRINUSE' || err.code === 'EACCES') {
+          if (currentPort === 0) {
+            reject(err);
+            return;
           }
+          currentPort++;
+          // After the preferred range, let the OS pick any free port.
+          if (currentPort >= PORT + maxAttempts) currentPort = 0;
+          server.close();
+          tryListen();
         } else {
           reject(err);
         }
+      });
+
+      server.listen(currentPort, '127.0.0.1', () => {
+        const { port } = server.address();
+        console.log(`Server started on port ${port}`);
+        resolve({ server, port });
       });
     }
 
