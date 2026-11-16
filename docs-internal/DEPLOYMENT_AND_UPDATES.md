@@ -46,7 +46,7 @@ Edit code → git push → GitHub Pages updated
     https://fliight-engineering.github.io/argus-interactive-guide/
 ```
 
-- Every push to main triggers .github/workflows/deploy.yml
+- Every push to prod triggers .github/workflows/deploy.yml
 - Builds Docusaurus and deploys to GitHub Pages
 - Great for dev/testing - changes visible immediately
 
@@ -88,7 +88,7 @@ npm run publish
 
 | File | Trigger | Action |
 |------|---------|--------|
-| .github/workflows/deploy.yml | Push to main | Deploy to GitHub Pages |
+| .github/workflows/deploy.yml | Push to prod | Deploy to GitHub Pages |
 | .github/workflows/release-electron.yml | Tag v* | Build desktop apps + GitHub Release |
 
 ## Version Management

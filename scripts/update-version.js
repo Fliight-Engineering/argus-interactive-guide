@@ -15,7 +15,7 @@ const versionData = {
   version: packageJson.version,
   buildDate: new Date().toISOString(),
   updateUrl: 'https://github.com/Fliight-Engineering/argus-interactive-guide/releases/latest',
-  versionCheckUrl: 'https://raw.githubusercontent.com/Fliight-Engineering/argus-interactive-guide/main/static/version.json'
+  versionCheckUrl: 'https://raw.githubusercontent.com/Fliight-Engineering/argus-interactive-guide/prod/static/version.json'
 };
 
 fs.writeFileSync(

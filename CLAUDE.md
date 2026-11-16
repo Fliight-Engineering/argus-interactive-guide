@@ -88,5 +88,5 @@ All components are SSR-safe (guard `typeof window` / `typeof navigator` before b
 
 ## CI/CD
 
-- **`deploy.yml`** — triggers on push to `main`; builds site and deploys to GitHub Pages
+- **`deploy.yml`** — triggers on push to `prod`; builds site and deploys to GitHub Pages
 - **`release-electron.yml`** — triggers on `v*` tags; matrix builds Linux (Ubuntu) and Windows; produces `.AppImage`, `.deb`, and `.exe` artifacts attached to a GitHub Release

@@ -108,7 +108,7 @@ export default function VersionChecker({ testMode = false }) {
     try {
       // Try to fetch latest version from remote
       const response = await fetch(
-        'https://raw.githubusercontent.com/Fliight-Engineering/argus-interactive-guide/main/static/version.json',
+        'https://raw.githubusercontent.com/Fliight-Engineering/argus-interactive-guide/prod/static/version.json',
         { 
           cache: 'no-store',
           headers: {
