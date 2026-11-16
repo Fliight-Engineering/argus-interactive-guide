@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Slide from './Slide';
 import styles from './styles.module.css';
 
 export default function Carousel({ slides, backLink = '/quick-start/' }) {
@@ -101,74 +102,7 @@ export default function Carousel({ slides, backLink = '/quick-start/' }) {
         </Link>
 
         {/* Main slide content */}
-        <div className={styles.slideContent}>
-          {currentSlideData.imageUrl && (
-            <div className={styles.imageContainer}>
-              <img
-                src={currentSlideData.imageUrl}
-                alt={currentSlideData.title || 'Slide image'}
-                className={styles.slideImage}
-              />
-            </div>
-          )}
-          
-          <div className={styles.textContent}>
-            {currentSlideData.title && (
-              <h2 className={styles.slideTitle}>{currentSlideData.title}</h2>
-            )}
-            {currentSlideData.content && (
-              <div className={`${styles.slideText} ${currentSlideData.warning ? styles.warningHighlight : ''}`}>
-                {currentSlideData.content}
-              </div>
-            )}
-            {currentSlideData.note && (
-              <div className={styles.noteHighlight}>
-                <strong>ℹ️ NOTE:</strong> {currentSlideData.note}
-              </div>
-            )}
-            {currentSlideData.link && (
-              <Link
-                to={currentSlideData.link.url}
-                className={styles.slideLink}
-              >
-                {currentSlideData.link.text}
-              </Link>
-            )}
-            {currentSlideData.steps && (
-              <ul className={currentSlideData.noNumbers ? styles.stepsListNoNumbers : styles.stepsList}>
-                {currentSlideData.steps.map((step, idx) => (
-                  <li key={idx} className={styles.stepItem}>{step}</li>
-                ))}
-              </ul>
-            )}
-            {currentSlideData.table && (
-              <table className={styles.infoTable}>
-                <thead>
-                  <tr>
-                    {currentSlideData.table.headers.map((header, idx) => (
-                      <th key={idx}>{header}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {currentSlideData.table.rows.map((row, rowIdx) => {
-                    const indicatorColor = row[0] === 'Green' ? '#00B050' : 
-                                          row[0] === 'Orange' ? '#ff9800' : 
-                                          row[0] === 'Red' ? '#f44336' : 'inherit';
-                    return (
-                      <tr key={rowIdx}>
-                        <td style={{ fontWeight: 700, color: indicatorColor }}>{row[0]}</td>
-                        {row.slice(1).map((cell, cellIdx) => (
-                          <td key={cellIdx + 1}>{cell}</td>
-                        ))}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            )}
-          </div>
-        </div>
+        <Slide slide={currentSlideData} imageUrl={currentSlideData.imageUrl} />
 
         {/* Navigation */}
         <div className={styles.navigation}>
