@@ -32,6 +32,12 @@ The Video Training System kit comprises of:
 ![VTS Kit Components](/img/vts-guide/kit-contents.png)
 </div>
 
+- Trainer's tablet
+- Trainer access point
+- Repeater access points: up to three per kit (most kits have two)
+- Machine access point
+- Four remote camera systems: three magnet-mount and one suction-mount cab camera
+
 </div>
 </div>
 
@@ -39,7 +45,7 @@ The Video Training System kit comprises of:
 
 ## Packaging & Deployment Cases
 
-All components come packaged in two cases designed for easy deployment:
+The kit travels in two identical rugged roller cases: one for the trainer position and one for the vehicle.
 
 <div class="highlights-grid-single">
 
@@ -51,13 +57,13 @@ All components come packaged in two cases designed for easy deployment:
 ### Trainer Case
 
 Contains:
-- Trainer and repeater access point nodes
-- Batteries for access points
-- Trainer tablet
-- Tablet charger
+- Trainer access point
+- Repeater access points (up to three; most kits have two)
+- Trainer's tablet and charger
+- 18V access point batteries
 </td>
 <td class="image-info-card-image">
-![Trainer Case](/img/vts-guide/trainer-case.png)
+![Trainer case with the trainer's tablet and access points](/img/vts-guide/trainer-case-contents.png)
 </td>
 </tr>
 </table>
@@ -72,14 +78,13 @@ Contains:
 ### Machine Case
 
 Contains:
-- All 4 remote camera systems
-- Machine access point node
-- Batteries for all cameras and machine node
-- AP debugging cable
+- Four remote camera systems, each with a 12V battery
+- Machine access point and 18V battery
+- Service cable
 - Spare antennas
 </td>
 <td class="image-info-card-image">
-![Machine Case](/img/vts-guide/machine-case.png)
+![Machine case with the machine access point and four remote camera systems](/img/vts-guide/machine-case-contents.png)
 </td>
 </tr>
 </table>
@@ -106,8 +111,8 @@ A charging system is not included with the VTS kit. We recommend the **Milwaukee
 **Milwaukee M12-18C3 Multi Voltage Rapid Charger**
 
 **Key Features:**
-- Charges three batteries simultaneously
-- Accepts up to three M12™ and three M18™ battery packs
+- Holds up to six packs: three M12™ (camera) and three M18™ (access point)
+- Charges three of them at a time
 - Convenient carrying handle and integrated hang holes
 - **3.0Ah Batteries (12V)** charge in 48 minutes
 - **5.0Ah Batteries (18V)** charge in 63 minutes

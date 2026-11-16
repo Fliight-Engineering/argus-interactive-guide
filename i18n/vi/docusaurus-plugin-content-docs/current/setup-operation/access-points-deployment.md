@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Các Điểm Truy Cập tạo mạng mesh động sẽ tự cấu hình khi cài đặt.
 
-nút radio bộ lặp được dùng cho các tình huống cần tạo vị trí an toàn cho huấn luyện viên ở khoảng cách đáng kể so với khu vực hoạt động xe (200m+) hoặc quanh góc khuất.
+nút radio bộ lặp được dùng cho các tình huống cần tạo vị trí an toàn cho huấn luyện viên ở khoảng cách đáng kể so với khu vực hoạt động xe (200m+) hoặc quanh góc khuất. Mỗi bộ kit có tối đa ba điểm truy cập lặp (đa số có hai); Argus đã được vận hành ở khoảng cách hơn 600 m qua ba điểm lặp.
 
 <div class="highlights-grid-single">
 

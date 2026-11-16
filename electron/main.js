@@ -277,16 +277,13 @@ autoUpdater.on('update-downloaded', (info) => {
   }, delay);
 });
 
+// The background check runs on every launch, and tablets are often offline
+// (underground), so a failed check is only logged. A failed download the user
+// asked for is reported by the downloadUpdate() handler above.
 autoUpdater.on('error', (err) => {
   console.error('Auto-updater error:', err);
   closeProgressWindow();
   removeRendererNotification();
-  dialog.showMessageBox(mainWindow, {
-    type: 'error',
-    title: 'Update Error',
-    message: `Auto-update error: ${err.message}\n\nPlease download manually from GitHub Releases.`,
-    buttons: ['OK']
-  });
 });
 
 // Find build directory
@@ -330,8 +327,14 @@ function findBuildDir() {
 function startServer(buildDir) {
   return new Promise((resolve, reject) => {
     const server = http.createServer((req, res) => {
-      let filePath = path.join(buildDir, req.url === '/' ? 'index.html' : req.url);
-      
+      let urlPath;
+      try {
+        urlPath = decodeURIComponent(req.url.split(/[?#]/)[0]);
+      } catch {
+        urlPath = req.url.split(/[?#]/)[0];
+      }
+      let filePath = path.join(buildDir, urlPath === '/' ? 'index.html' : urlPath);
+
       // Security: prevent directory traversal
       filePath = path.normalize(filePath);
       if (!filePath.startsWith(buildDir)) {
@@ -339,7 +342,15 @@ function startServer(buildDir) {
         res.end('Forbidden');
         return;
       }
-      
+
+      // Docusaurus writes each route as <route>/index.html: serve that when the
+      // URL is a directory (reloading or opening any docs page directly).
+      if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+        filePath = path.join(filePath, 'index.html');
+      } else if (!path.extname(filePath) && fs.existsSync(`${filePath}.html`)) {
+        filePath = `${filePath}.html`;
+      }
+
       // Default to index.html for routes (SPA support)
       if (!path.extname(filePath) && !fs.existsSync(filePath)) {
         filePath = path.join(buildDir, 'index.html');
@@ -379,6 +390,10 @@ function startServer(buildDir) {
             '.woff2': 'font/woff2',
             '.ttf': 'font/ttf',
             '.eot': 'application/vnd.ms-fontobject',
+            '.webp': 'image/webp',
+            '.mp4': 'video/mp4',
+            '.xml': 'application/xml',
+            '.txt': 'text/plain',
           }[ext] || 'application/octet-stream';
           
           res.writeHead(200, { 'Content-Type': contentType });
@@ -392,23 +407,28 @@ function startServer(buildDir) {
     const maxAttempts = 10;
 
     function tryListen() {
-      server.listen(currentPort, '127.0.0.1', () => {
-        console.log(`Server started on port ${currentPort}`);
-        resolve({ server, port: currentPort });
-      });
-
-      server.on('error', (err) => {
-        if (err.code === 'EADDRINUSE') {
-          currentPort++;
-          if (currentPort < PORT + maxAttempts) {
-            server.close();
-            tryListen();
-          } else {
-            reject(new Error('Could not find available port'));
+      server.once('error', (err) => {
+        // Windows reports a port held exclusively by another process (e.g. a
+        // system service on 8080) as EACCES rather than EADDRINUSE.
+        if (err.code === 'EADDRINUSE' || err.code === 'EACCES') {
+          if (currentPort === 0) {
+            reject(err);
+            return;
           }
+          currentPort++;
+          // After the preferred range, let the OS pick any free port.
+          if (currentPort >= PORT + maxAttempts) currentPort = 0;
+          server.close();
+          tryListen();
         } else {
           reject(err);
         }
+      });
+
+      server.listen(currentPort, '127.0.0.1', () => {
+        const { port } = server.address();
+        console.log(`Server started on port ${port}`);
+        resolve({ server, port });
       });
     }
 
@@ -486,7 +506,7 @@ function createWindow() {
           contextIsolation: true,
           preload: path.join(__dirname, 'preload.js'),
         },
-        icon: path.join(__dirname, '..', 'static', 'img', 'vts-guide', 'argus-logo.png'),
+        icon: path.join(buildDir, 'img', 'brand', 'argus-guide-icon-512.png'),
         title: 'VTS Guide',
         // Start in fullscreen (F11 mode - no window borders)
         fullscreen: true,
@@ -537,7 +557,12 @@ app.whenReady().then(() => {
 
   // Check for updates after window is created (only in production)
   // Skip on macOS - auto-update requires Apple Developer certificate ($99/year)
-  if (app.isPackaged && isAutoUpdateSupported) {
+  // Installed builds ship resources/app-update.yml (where to look for
+  // releases); unpacked test builds (electron-builder --dir) don't.
+  const hasUpdateConfig = fs.existsSync(path.join(process.resourcesPath || '', 'app-update.yml'));
+  if (app.isPackaged && isAutoUpdateSupported && !hasUpdateConfig) {
+    console.log('No app-update.yml (unpacked build): skipping update check');
+  } else if (app.isPackaged && isAutoUpdateSupported) {
     setTimeout(() => {
       autoUpdater.checkForUpdates().catch((err) => {
         console.error('Failed to check for updates:', err);

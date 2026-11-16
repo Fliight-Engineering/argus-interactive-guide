@@ -60,7 +60,7 @@ npm run publish        # Patch: 1.0.4 → 1.0.5
 ```bash
 git add -A
 git commit -m "docs: update content"
-git push origin main
+git push origin prod
 ```
 → Website auto-deploys to GitHub Pages
 

@@ -18,7 +18,7 @@ const baseUrl = isOfflineBuild ? '/' : '/argus-interactive-guide/';
 const config = {
   title: 'Argus Video Training System',
   tagline: 'Complete guide for deploying, testing, and operating the Argus VTS',
-  favicon: 'img/vts-guide/image29.png',
+  favicon: 'img/brand/argus-guide-icon.svg',
 
   // Client modules - runs on every page and navigation
   clientModules: [
@@ -62,10 +62,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -73,10 +69,6 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -93,23 +85,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Social card for link previews
-      image: 'img/vts-guide/image29.png',
+      image: 'img/brand/argus-mark-512-red.png',
       colorMode: {
         defaultMode: 'dark',
         respectPrefersColorScheme: false,
         disableSwitch: false,
       },
       navbar: {
-        title: 'Argus VTS Guide',
+        title: 'VTS Guide',
         logo: {
-          alt: 'Argus VTS Logo',
-          src: 'img/vts-guide/argus-logo.png',
+          alt: 'Argus',
+          src: 'img/brand/argus-logo-red-on-light.svg',
+          srcDark: 'img/brand/argus-logo-red-on-dark.svg',
         },
         items: [
           {
             type: 'html',
             position: 'right',
-            value: `<img src="${baseUrl}img/vts-guide/fliight-logo-black.png" alt="FLIIGHT" class="fliight-logo-light" style="height: 28px; padding: 0 1rem;" /><img src="${baseUrl}img/vts-guide/fliight-logo-white.png" alt="FLIIGHT" class="fliight-logo-dark" style="height: 28px; padding: 0 1rem;" />`,
+            value: `<img src="${baseUrl}img/brand/fliight-technologies-color.svg" alt="Fliight Technologies" class="fliight-logo-light" style="height: 28px; padding: 0 1rem;" /><img src="${baseUrl}img/brand/fliight-technologies-color-dark.svg" alt="Fliight Technologies" class="fliight-logo-dark" style="height: 28px; padding: 0 1rem;" />`,
           },
           {
             type: 'localeDropdown',

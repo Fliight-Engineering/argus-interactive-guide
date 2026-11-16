@@ -1,0 +1,60 @@
+name: Build PDFs
+
+# Builds the Quick Start Guide and User Manual PDFs.
+# - On pull requests / manual runs: uploads them as a workflow artifact to review.
+# - Called by release-electron.yml on v* tags: the release job attaches them.
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'i18n/**'
+      - 'src/**'
+      - 'static/**'
+      - 'scripts/pdf/**'
+      - 'sidebars.js'
+      - 'docusaurus.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/pdf.yml'
+  workflow_dispatch:
+    inputs:
+      locale:
+        description: 'Locale(s): en, es, vi, a comma list, or all'
+        required: false
+        default: 'en'
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # tags, so the release date is the tag's commit date
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Build PDFs
+        run: npm run build:pdf -- --locale "${{ inputs.locale || 'en' }}"
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: dist-pdf/*.pdf
+          if-no-files-found: error

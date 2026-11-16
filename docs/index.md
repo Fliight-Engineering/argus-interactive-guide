@@ -66,7 +66,7 @@ View and record from up to 4 cameras simultaneously
 
 <div class="card-content">
 
-Everything runs on standard Milwaukee batteries for maximum portability
+Cameras and access points run on standard Milwaukee batteries for maximum portability
 
 </div>
 

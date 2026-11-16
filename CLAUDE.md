@@ -28,6 +28,15 @@ cd electron && npm start
 npm run docusaurus clear
 ```
 
+### PDFs
+
+```bash
+npm run build:pdf                 # Quick Start Guide + User Manual → dist-pdf/
+npm run build:pdf -- --skip-build # re-layout only (pdf.css changes)
+```
+
+`scripts/pdf/` builds the site into `.pdf-build/`, extracts each page's article (manual = `sidebars.js` order; Quick Start = `src/data/quickStart/` via `/print/quick-start-*`), and prints with Playwright/Chromium. Contents page numbers use two print passes. See README "PDFs".
+
 ### Release
 
 ```bash
@@ -39,6 +48,8 @@ npm run bump:major
 # Full release: bump + changelog + commit + tag + push
 make release "message"
 ```
+
+Branches: work on `feat/`, `fix/` or `chore/` branches into `dev`. A release is a version bump + CHANGELOG entry on `dev`, a PR `dev` → `prod` (runs the PDF build), merge, then `npm run release` on `prod` to tag `vX.Y.Z` and trigger `release-electron.yml`. Pushing `prod` deploys the website.
 
 No test or lint scripts are configured.
 
@@ -88,5 +99,6 @@ All components are SSR-safe (guard `typeof window` / `typeof navigator` before b
 
 ## CI/CD
 
-- **`deploy.yml`** — triggers on push to `main`; builds site and deploys to GitHub Pages
-- **`release-electron.yml`** — triggers on `v*` tags; matrix builds Linux (Ubuntu) and Windows; produces `.AppImage`, `.deb`, and `.exe` artifacts attached to a GitHub Release
+- **`deploy.yml`** — triggers on push to `prod`; builds site and deploys to GitHub Pages
+- **`release-electron.yml`** — triggers on `v*` tags; matrix builds Linux (Ubuntu) and Windows; produces `.AppImage`, `.deb`, and `.exe` artifacts plus both PDFs (via `pdf.yml`) attached to a GitHub Release
+- **`pdf.yml`** — builds the PDFs on content PRs / manual runs (artifact `pdf`); reused by the release workflow

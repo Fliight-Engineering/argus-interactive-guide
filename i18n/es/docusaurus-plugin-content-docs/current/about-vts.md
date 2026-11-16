@@ -32,6 +32,12 @@ El kit del Sistema de Capacitación por Video comprende:
 ![VTS Kit Components](/img/vts-guide/kit-contents.png)
 </div>
 
+- Tablet del instructor
+- Punto de acceso del instructor
+- Puntos de acceso repetidores: hasta tres por kit (la mayoría de los kits incluyen dos)
+- Punto de acceso de máquina
+- Cuatro sistemas de cámara remota: tres con montaje magnético y una cámara de cabina con ventosa
+
 </div>
 </div>
 
@@ -39,7 +45,7 @@ El kit del Sistema de Capacitación por Video comprende:
 
 ## Empaque y Maletines de Despliegue
 
-Todos los componentes vienen empacados en dos maletines diseñados para un fácil despliegue:
+El kit se transporta en dos maletines con ruedas resistentes e idénticos: uno para la posición del instructor y otro para el vehículo.
 
 <div class="highlights-grid-single">
 
@@ -51,13 +57,13 @@ Todos los componentes vienen empacados en dos maletines diseñados para un fáci
 ### Maletín del Instructor
 
 Contiene:
-- Nodo de red del instructor y nodo repetidor
-- Baterías para los nodos de red
-- Tablet del instructor
-- Cargador de tablet
+- Punto de acceso del instructor
+- Puntos de acceso repetidores (hasta tres; la mayoría de los kits incluyen dos)
+- Tablet del instructor y su cargador
+- Baterías de 18V para los puntos de acceso
 </td>
 <td class="image-info-card-image">
-![Trainer Case](/img/vts-guide/trainer-case.png)
+![Maletín del instructor con la tablet y los puntos de acceso](/img/vts-guide/trainer-case-contents.png)
 </td>
 </tr>
 </table>
@@ -72,14 +78,13 @@ Contiene:
 ### Maletín de Máquina
 
 Contiene:
-- Los 4 sistemas de cámara remota
-- Nodo de red de máquina
-- Baterías para todas las cámaras y el nodo de máquina
-- Cable de diagnóstico de AP
+- Cuatro sistemas de cámara remota, cada uno con una batería de 12V
+- Punto de acceso de máquina y batería de 18V
+- Cable de servicio
 - Antenas de repuesto
 </td>
 <td class="image-info-card-image">
-![Machine Case](/img/vts-guide/machine-case.png)
+![Maletín de máquina con el punto de acceso de máquina y cuatro cámaras remotas](/img/vts-guide/machine-case-contents.png)
 </td>
 </tr>
 </table>
@@ -106,8 +111,8 @@ El kit VTS no incluye un sistema de carga. Recomendamos la **Estación de Carga 
 **Cargador Rápido Multi-Voltaje Milwaukee M12-18C3**
 
 **Características Principales:**
-- Carga tres baterías simultáneamente
-- Acepta hasta tres paquetes de batería M12™ y tres M18™
+- Admite hasta seis paquetes: tres M12™ (cámaras) y tres M18™ (puntos de acceso)
+- Carga tres de ellos a la vez
 - Cómodo asa de transporte y orificios de colgado integrados
 - **Baterías 3.0Ah (12V)** se cargan en 48 minutos
 - **Baterías 5.0Ah (18V)** se cargan en 63 minutos

@@ -57,8 +57,8 @@ Para monitorear al aprendiz en la cabina:
 <td class="image-info-card-text">
 ### Duración de Batería
 
-- **12 horas** de operación por carga
-- Utiliza paquetes de batería Milwaukee estándar 12V, 3Ah
+- Aprox. **12 horas** de operación por carga
+- Utiliza paquetes de batería Milwaukee M12 estándar 12V, 3Ah
 - Cambie las baterías entre sesiones de capacitación para operación continua
 </td>
 <td class="image-info-card-image">

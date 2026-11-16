@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Los nodos de red crean una red mesh dinámica que se autoconfigura durante la instalación.
 
-Los nodos repetidores están pensados para situaciones en las que se necesita crear una ubicación segura para el instructor a una distancia significativa del área operativa del vehículo (200 m o más) o al doblar una esquina.
+Los nodos repetidores están pensados para situaciones en las que se necesita crear una ubicación segura para el instructor a una distancia significativa del área operativa del vehículo (200 m o más) o al doblar una esquina. Un kit incluye hasta tres nodos repetidores (la mayoría incluye dos); Argus se ha utilizado a más de 600 m a través de tres repetidores.
 
 <div class="highlights-grid-single">
 

@@ -70,8 +70,12 @@ jobs:
             artifacts/dist-electron/*.blockmap
           if-no-files-found: ignore
 
+  pdf:
+    # Quick Start Guide + User Manual PDFs, attached to the release below.
+    uses: ./.github/workflows/pdf.yml
+
   release:
-    needs: build
+    needs: [build, pdf]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

@@ -206,7 +206,7 @@
 .slideLink:hover {
   background: var(--ifm-color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 176, 80, 0.3);
+  box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
   text-decoration: none;
   color: var(--ifm-color-primary-contrast-foreground) !important;
 }
@@ -325,7 +325,7 @@
 .navButton:hover:not(.navButtonDisabled) {
   background: var(--ifm-color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 176, 80, 0.3);
+  box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
 }
 
 .navButton:active:not(.navButtonDisabled) {

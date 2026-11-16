@@ -6,7 +6,7 @@ sidebar_position: 5
 
 The Access points create a dynamic mesh network which will autoconfigure on setup. 
 
-Repeater AP/s are intended for situations to create a safe location for the trainer at a significant distance from the vehicle operational area (200m +) or around a corner.
+Repeater AP/s are intended for situations to create a safe location for the trainer at a significant distance from the vehicle operational area (200m +) or around a corner. A kit includes up to three repeater APs (most kits have two); Argus has been run over 600 m through three repeaters.
 
 <div class="highlights-grid-single">
 
