@@ -277,16 +277,13 @@ autoUpdater.on('update-downloaded', (info) => {
   }, delay);
 });
 
+// The background check runs on every launch, and tablets are often offline
+// (underground), so a failed check is only logged. A failed download the user
+// asked for is reported by the downloadUpdate() handler above.
 autoUpdater.on('error', (err) => {
   console.error('Auto-updater error:', err);
   closeProgressWindow();
   removeRendererNotification();
-  dialog.showMessageBox(mainWindow, {
-    type: 'error',
-    title: 'Update Error',
-    message: `Auto-update error: ${err.message}\n\nPlease download manually from GitHub Releases.`,
-    buttons: ['OK']
-  });
 });
 
 // Find build directory
@@ -560,7 +557,12 @@ app.whenReady().then(() => {
 
   // Check for updates after window is created (only in production)
   // Skip on macOS - auto-update requires Apple Developer certificate ($99/year)
-  if (app.isPackaged && isAutoUpdateSupported) {
+  // Installed builds ship resources/app-update.yml (where to look for
+  // releases); unpacked test builds (electron-builder --dir) don't.
+  const hasUpdateConfig = fs.existsSync(path.join(process.resourcesPath || '', 'app-update.yml'));
+  if (app.isPackaged && isAutoUpdateSupported && !hasUpdateConfig) {
+    console.log('No app-update.yml (unpacked build): skipping update check');
+  } else if (app.isPackaged && isAutoUpdateSupported) {
     setTimeout(() => {
       autoUpdater.checkForUpdates().catch((err) => {
         console.error('Failed to check for updates:', err);
