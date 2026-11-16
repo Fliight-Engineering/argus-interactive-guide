@@ -1,0 +1,565 @@
+/*
+ * Print layout for the PDF build (printed by Chromium on top of the site's own CSS).
+ * Page size, margins and running heads/footers are generated per document
+ * (see pageRulesCss in build-pdf.mjs); everything else lives here.
+ */
+
+:root {
+  --argus-red: #ba0c2f;
+  --ink: #1c1e21;
+  --muted: #5f6368;
+  --rule: #d9dce1;
+  --tint: #f6f7f9;
+  --ifm-font-family-base: 'Noto Sans Variable', 'Noto Sans', 'Segoe UI', Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-color-primary: var(--argus-red);
+  --ifm-link-color: var(--argus-red);
+  --ifm-background-color: #fff;
+  --ifm-font-color-base: var(--ink);
+}
+
+html,
+body {
+  background: #fff !important;
+  color: var(--ink);
+  font-family: var(--ifm-font-family-base);
+  font-size: 10pt;
+  line-height: 1.45;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ------------------------------------------------------------------- cover */
+
+.cover {
+  page: cover;
+  position: relative;
+  height: 297mm;
+  width: 210mm;
+  box-sizing: border-box;
+  padding: 28mm 22mm 20mm;
+  display: flex;
+  flex-direction: column;
+  break-after: page;
+  border-left: 9mm solid var(--argus-red);
+}
+
+.cover__logo {
+  width: 78mm;
+  height: auto;
+}
+
+.cover__body {
+  margin-top: 70mm;
+  flex: 1;
+}
+
+.cover__product {
+  font-size: 13pt;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cover__title {
+  font-size: 34pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 3mm;
+  color: var(--ink);
+}
+
+.cover__rule {
+  width: 30mm;
+  height: 1.5mm;
+  background: var(--argus-red);
+  margin: 9mm 0 7mm;
+}
+
+.cover__meta {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 1.5mm 8mm;
+  font-size: 11pt;
+  margin: 0;
+}
+
+.cover__meta dt {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cover__meta dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cover__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12mm;
+}
+
+.cover__fliight {
+  width: 62mm;
+  height: auto;
+}
+
+.cover__web {
+  font-size: 8.5pt;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------------- contents */
+
+.toc {
+  break-after: page;
+}
+
+.toc__title {
+  font-size: 22pt;
+  margin: 0 0 8mm;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li {
+  margin: 0;
+}
+
+.toc a {
+  display: flex;
+  align-items: baseline;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.toc__dots {
+  flex: 1;
+  border-bottom: 0.8pt dotted #b0b4ba;
+  margin: 0 2mm;
+  min-width: 6mm;
+}
+
+.toc__page {
+  font-variant-numeric: tabular-nums;
+  min-width: 6mm;
+  text-align: right;
+}
+
+.toc-l1 > a {
+  font-weight: 600;
+  font-size: 11pt;
+  padding: 2.4mm 0 1mm;
+}
+
+.toc-l2 > a,
+.toc-sub > a {
+  padding: 0.8mm 0 0.8mm 7mm;
+  font-size: 10pt;
+}
+
+.toc-l3 > a {
+  padding: 0.6mm 0 0.6mm 14mm;
+  font-size: 9.5pt;
+}
+
+.toc-sub > a {
+  color: var(--muted);
+  font-size: 9pt;
+}
+
+/* ---------------------------------------------------------------- chapters */
+
+.chapter {
+  break-before: page;
+}
+
+.chapter .markdown {
+  --ifm-h1-font-size: 20pt;
+  --ifm-h2-font-size: 14pt;
+  --ifm-h3-font-size: 12pt;
+  --ifm-h4-font-size: 10.5pt;
+  font-size: 10pt;
+}
+
+.chapter .markdown > :first-child {
+  margin-top: 0;
+}
+
+.chapter-title {
+  font-size: 20pt !important;
+  line-height: 1.2;
+  margin: 0 0 6mm !important;
+  padding-bottom: 3mm;
+  border-bottom: 1.2pt solid var(--argus-red);
+}
+
+.chapter .markdown h2,
+.chapter .markdown h3,
+.chapter .markdown h4 {
+  break-after: avoid;
+  page-break-after: avoid;
+  color: var(--ink);
+}
+
+.chapter .markdown h2 {
+  margin-top: 7mm !important;
+  margin-bottom: 2.5mm !important;
+}
+
+.chapter .markdown h3 {
+  margin-top: 5mm;
+  margin-bottom: 2mm;
+}
+
+.chapter .markdown p,
+.chapter .markdown li {
+  orphans: 3;
+  widows: 3;
+}
+
+.chapter .markdown hr {
+  margin: 5mm 0;
+  border-color: var(--rule);
+}
+
+a {
+  color: var(--argus-red);
+}
+
+a.pdf-external::after {
+  content: ' ↗';
+  font-size: 0.8em;
+}
+
+/* Keep steps, images, tables and callouts whole. */
+img,
+figure,
+table,
+tr,
+li,
+pre,
+blockquote,
+.admonition,
+.theme-admonition,
+.image-info-card,
+.battery-info-table,
+.rcs-section-container,
+.qs-print__step,
+.pdf-video {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* ------------------------------------------------------------------ images */
+
+.chapter img {
+  max-width: 100% !important;
+  max-height: 85mm;
+  width: auto;
+  height: auto !important;
+  object-fit: contain;
+  box-shadow: none !important;
+}
+
+/* Images inside cards share the card with text: keep them smaller. */
+.highlight-card img,
+.best-practice-card img,
+.setup-overview-card img {
+  max-height: 65mm !important;
+}
+
+/* ---------------------------------------------------- site layout → print */
+
+/* Card grids become a single column of bordered blocks. */
+.highlights-grid,
+.highlights-grid-single,
+.best-practices-grid,
+.setup-overview-grid {
+  display: block !important;
+  margin: 0 !important;
+}
+
+.highlight-card,
+.best-practice-card,
+.best-practice-card-full,
+.setup-overview-card {
+  /* Long cards print as plain sections: they may continue on the next page
+     (images, steps and tables inside still never split), and a bordered box
+     would leave empty fragments where it breaks. */
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  padding: 0 !important;
+  margin: 0 0 5mm !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+.highlights-grid > .highlight-card {
+  break-inside: avoid;
+  border: 0.75pt solid var(--rule) !important;
+  border-radius: 2mm !important;
+}
+
+/* Step-by-step photo grids: two per row. */
+.machine-ap-setup-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm !important;
+  margin: 3mm 0 !important;
+}
+
+.machine-ap-setup-grid p {
+  margin: 0;
+  text-align: center;
+}
+
+.machine-ap-setup-grid img {
+  height: auto !important;
+  max-height: 60mm !important;
+}
+
+/* Short feature cards: two per row, like the web layout. */
+.highlights-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm !important;
+  margin: 0 0 4mm !important;
+}
+
+.highlights-grid > .highlight-card {
+  margin: 0 !important;
+  padding: 3mm 4mm !important;
+}
+
+.highlights-grid > .highlight-card h3 {
+  font-size: 11pt !important;
+  margin-bottom: 1mm !important;
+}
+
+.highlight-card h3,
+.best-practice-card h3,
+.setup-overview-card h3 {
+  color: var(--argus-red) !important;
+  margin-top: 0 !important;
+}
+
+.card-content {
+  padding: 0 !important;
+}
+
+/* Side-by-side layouts stay side by side but fit A4. */
+.ap-images-container,
+.antenna-images-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 5mm !important;
+  margin: 3mm 0 !important;
+}
+
+.ap-image-wrapper,
+.antenna-image-wrapper {
+  min-width: 0 !important;
+  flex: 1 1 0 !important;
+}
+
+.ap-image-wrapper img,
+.antenna-image-wrapper img {
+  height: auto !important;
+  max-height: 70mm;
+}
+
+.rcs-section-container {
+  grid-template-columns: 1fr 55mm !important;
+}
+
+.rcs-image-content img {
+  max-height: 55mm !important;
+}
+
+table {
+  display: table !important;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+}
+
+table th,
+table td {
+  padding: 1.5mm 2.5mm !important;
+}
+
+.image-info-card td.image-info-card-image {
+  width: 42%;
+}
+
+.image-info-card td.image-info-card-image img {
+  max-height: 70mm;
+}
+
+/* -------------------------------------------------------------- admonitions */
+
+.theme-admonition,
+.admonition {
+  margin: 4mm 0 !important;
+  padding: 3mm 4mm !important;
+  box-shadow: none !important;
+}
+
+/* ------------------------------------------------------------------- video */
+
+.pdf-video {
+  margin: 4mm 0 6mm;
+  border: 0.75pt solid var(--rule);
+  border-radius: 2mm;
+  overflow: hidden;
+}
+
+.pdf-video__poster {
+  display: block;
+  width: 100%;
+  max-height: 85mm !important;
+  object-fit: cover !important;
+}
+
+.pdf-video__info {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+  padding: 3mm 4mm;
+  background: var(--tint);
+}
+
+.pdf-video__qr {
+  width: 24mm !important;
+  height: 24mm !important;
+  flex: none;
+}
+
+.pdf-video__label {
+  font-weight: 700;
+  color: var(--argus-red);
+}
+
+.pdf-video__caption {
+  font-size: 9pt;
+}
+
+.pdf-video__url {
+  font-size: 8pt;
+  word-break: break-all;
+}
+
+/* -------------------------------------------------------- quick start steps */
+
+.qs-print__intro {
+  font-size: 11pt;
+  color: var(--muted);
+}
+
+.qs-print__step {
+  counter-increment: qs-step;
+  margin: 0 0 4mm;
+}
+
+/* Image left, instructions right: about three steps per A4 page. */
+.qs-slide--print {
+  display: grid;
+  grid-template-columns: 68mm 1fr;
+  border: 0.75pt solid var(--rule);
+  border-radius: 2mm;
+  overflow: hidden;
+}
+
+.qs-slide--print .qs-slide__image {
+  background: var(--tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3mm;
+}
+
+.qs-slide--print .qs-slide__img {
+  max-height: 62mm !important;
+  max-width: 100% !important;
+  border-radius: 1mm;
+}
+
+.qs-slide--print .qs-slide__text {
+  padding: 3mm 5mm 3mm;
+  font-size: 9.5pt;
+}
+
+/* Steps without an image use the full width. */
+.qs-slide--print:not(:has(.qs-slide__image)) {
+  grid-template-columns: 1fr;
+}
+
+.qs-slide--print .qs-slide__title {
+  font-size: 13pt !important;
+  margin: 0 0 2mm !important;
+  color: var(--ink);
+}
+
+.qs-slide--print .qs-slide__title::before {
+  content: counter(qs-step) '. ';
+  color: var(--argus-red);
+}
+
+.qs-slide__lead {
+  margin: 0 0 2mm;
+}
+
+.qs-slide__lead--warning {
+  border-left: 1.2mm solid #e6a700;
+  background: #fff8e6;
+  padding: 2mm 3mm;
+  font-weight: 600;
+}
+
+.qs-slide__note {
+  background: #eef4ff;
+  border-left: 1.2mm solid #4a7bd0;
+  padding: 2mm 3mm;
+  margin: 0 0 2mm;
+}
+
+.qs-slide__steps {
+  margin: 0 0 2mm;
+  padding-left: 6mm;
+}
+
+ul.qs-slide__steps {
+  list-style: decimal;
+}
+
+ul.qs-slide__steps--plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+.qs-slide__link {
+  display: inline-block;
+  font-size: 9pt;
+  margin: 0 0 2mm;
+}
+
+.qs-slide__table {
+  margin-top: 2mm;
+}
+
+/* Quick Start chapters: each part opens with its own title page area. */
+.pdf-doc--quick-start .qs-print__step:first-of-type {
+  margin-top: 4mm;
+}

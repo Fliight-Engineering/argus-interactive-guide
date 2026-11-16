@@ -28,6 +28,15 @@ cd electron && npm start
 npm run docusaurus clear
 ```
 
+### PDFs
+
+```bash
+npm run build:pdf                 # Quick Start Guide + User Manual → dist-pdf/
+npm run build:pdf -- --skip-build # re-layout only (pdf.css changes)
+```
+
+`scripts/pdf/` builds the site into `.pdf-build/`, extracts each page's article (manual = `sidebars.js` order; Quick Start = `src/data/quickStart/` via `/print/quick-start-*`), and prints with Playwright/Chromium. Contents page numbers use two print passes. See README "PDFs".
+
 ### Release
 
 ```bash
@@ -89,4 +98,5 @@ All components are SSR-safe (guard `typeof window` / `typeof navigator` before b
 ## CI/CD
 
 - **`deploy.yml`** — triggers on push to `prod`; builds site and deploys to GitHub Pages
-- **`release-electron.yml`** — triggers on `v*` tags; matrix builds Linux (Ubuntu) and Windows; produces `.AppImage`, `.deb`, and `.exe` artifacts attached to a GitHub Release
+- **`release-electron.yml`** — triggers on `v*` tags; matrix builds Linux (Ubuntu) and Windows; produces `.AppImage`, `.deb`, and `.exe` artifacts plus both PDFs (via `pdf.yml`) attached to a GitHub Release
+- **`pdf.yml`** — builds the PDFs on content PRs / manual runs (artifact `pdf`); reused by the release workflow
