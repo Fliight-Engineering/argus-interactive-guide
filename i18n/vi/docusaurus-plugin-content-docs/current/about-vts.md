@@ -32,6 +32,12 @@ Bộ kit Hệ Thống Đào Tạo Video bao gồm:
 ![Các Thành Phần Bộ Kit VTS](/img/vts-guide/kit-contents.png)
 </div>
 
+- Máy tính bảng huấn luyện viên
+- Điểm truy cập huấn luyện viên
+- Điểm truy cập lặp: tối đa ba mỗi bộ kit (đa số bộ kit có hai)
+- Điểm truy cập máy
+- Bốn hệ thống camera từ xa: ba camera gắn nam châm và một camera cabin gắn giác hút
+
 </div>
 </div>
 
@@ -52,7 +58,7 @@ Bộ thiết bị được vận chuyển trong hai vali kéo chắc chắn gi�
 
 Bao gồm:
 - Điểm truy cập huấn luyện viên
-- Các điểm truy cập lặp
+- Các điểm truy cập lặp (tối đa ba; đa số bộ kit có hai)
 - Máy tính bảng huấn luyện viên và bộ sạc
 - Pin 18V cho điểm truy cập
 </td>
@@ -105,8 +111,8 @@ Hệ thống sạc không được bao gồm trong bộ kit VTS. Chúng tôi khu
 **Milwaukee M12-18C3 Multi Voltage Rapid Charger**
 
 **Tính Năng Chính:**
-- Sạc ba pin cùng lúc
-- Hỗ trợ tối đa ba bộ pin M12™ và ba bộ M18™
+- Chứa tối đa sáu bộ pin: ba M12™ (camera) và ba M18™ (điểm truy cập)
+- Sạc ba bộ pin cùng lúc
 - Tay cầm tiện lợi và lỗ treo tích hợp
 - **Pin 3.0Ah (12V)** sạc trong 48 phút
 - **Pin 5.0Ah (18V)** sạc trong 63 phút

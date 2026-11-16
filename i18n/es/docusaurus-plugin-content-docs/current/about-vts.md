@@ -32,6 +32,12 @@ El kit del Sistema de Capacitación por Video comprende:
 ![VTS Kit Components](/img/vts-guide/kit-contents.png)
 </div>
 
+- Tablet del instructor
+- Punto de acceso del instructor
+- Puntos de acceso repetidores: hasta tres por kit (la mayoría de los kits incluyen dos)
+- Punto de acceso de máquina
+- Cuatro sistemas de cámara remota: tres con montaje magnético y una cámara de cabina con ventosa
+
 </div>
 </div>
 
@@ -52,7 +58,7 @@ El kit se transporta en dos maletines con ruedas resistentes e idénticos: uno p
 
 Contiene:
 - Punto de acceso del instructor
-- Puntos de acceso repetidores
+- Puntos de acceso repetidores (hasta tres; la mayoría de los kits incluyen dos)
 - Tablet del instructor y su cargador
 - Baterías de 18V para los puntos de acceso
 </td>
@@ -105,8 +111,8 @@ El kit VTS no incluye un sistema de carga. Recomendamos la **Estación de Carga 
 **Cargador Rápido Multi-Voltaje Milwaukee M12-18C3**
 
 **Características Principales:**
-- Carga tres baterías simultáneamente
-- Acepta hasta tres paquetes de batería M12™ y tres M18™
+- Admite hasta seis paquetes: tres M12™ (cámaras) y tres M18™ (puntos de acceso)
+- Carga tres de ellos a la vez
 - Cómodo asa de transporte y orificios de colgado integrados
 - **Baterías 3.0Ah (12V)** se cargan en 48 minutos
 - **Baterías 5.0Ah (18V)** se cargan en 63 minutos

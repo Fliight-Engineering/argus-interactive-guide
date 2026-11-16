@@ -32,6 +32,12 @@ The Video Training System kit comprises of:
 ![VTS Kit Components](/img/vts-guide/kit-contents.png)
 </div>
 
+- Trainer's tablet
+- Trainer access point
+- Repeater access points: up to three per kit (most kits have two)
+- Machine access point
+- Four remote camera systems: three magnet-mount and one suction-mount cab camera
+
 </div>
 </div>
 
@@ -52,7 +58,7 @@ The kit travels in two identical rugged roller cases: one for the trainer positi
 
 Contains:
 - Trainer access point
-- Repeater access points
+- Repeater access points (up to three; most kits have two)
 - Trainer's tablet and charger
 - 18V access point batteries
 </td>
@@ -105,8 +111,8 @@ A charging system is not included with the VTS kit. We recommend the **Milwaukee
 **Milwaukee M12-18C3 Multi Voltage Rapid Charger**
 
 **Key Features:**
-- Charges three batteries simultaneously
-- Accepts up to three M12™ and three M18™ battery packs
+- Holds up to six packs: three M12™ (camera) and three M18™ (access point)
+- Charges three of them at a time
 - Convenient carrying handle and integrated hang holes
 - **3.0Ah Batteries (12V)** charge in 48 minutes
 - **5.0Ah Batteries (18V)** charge in 63 minutes

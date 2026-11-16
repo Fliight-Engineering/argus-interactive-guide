@@ -396,9 +396,14 @@ blockquote,
 
 table {
   display: table !important;
-  width: 100%;
+  width: 100% !important;
   border-collapse: collapse;
   font-size: 9pt;
+}
+
+/* Two-column (label | value) tables line up from one table to the next. */
+table th:first-child:nth-last-child(2) {
+  width: 38%;
 }
 
 table th,

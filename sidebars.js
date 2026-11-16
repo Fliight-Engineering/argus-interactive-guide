@@ -1,4 +1,4 @@
-﻿// @ts-check
+// @ts-check
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -41,6 +41,7 @@ const sidebars = {
     'access-points',
     'remote-camera-systems',
     'trainers-tablet',
+    'technical-specifications',
     {
       type: 'category',
       label: 'Set Up and Operation',
