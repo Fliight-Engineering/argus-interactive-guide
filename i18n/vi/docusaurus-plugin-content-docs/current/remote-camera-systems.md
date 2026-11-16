@@ -57,8 +57,8 @@ Camera phát video di động gắn nhanh vào xe đào tạo. Không cần ngu�
 <td class="image-info-card-text">
 ### Thời Lượng Pin
 
-- **12 giờ** hoạt động mỗi lần sạc
-- Sử dụng bộ pin Milwaukee 12V, 3Ah tiêu chuẩn
+- Khoảng **12 giờ** hoạt động mỗi lần sạc
+- Sử dụng bộ pin Milwaukee M12 12V, 3Ah tiêu chuẩn
 - Thay pin giữa các buổi đào tạo để hoạt động liên tục
 </td>
 <td class="image-info-card-image">

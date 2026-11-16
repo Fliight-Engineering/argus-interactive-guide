@@ -57,8 +57,8 @@ For monitoring the trainee in the cab then:
 <td class="image-info-card-text">
 ### Battery Life
 
-- **12 hours** of operation per charge
-- Uses standard 12V, 3Ah Milwaukee battery packs
+- Approx. **12 hours** of operation per charge
+- Uses standard 12V, 3Ah Milwaukee M12 battery packs
 - Swap batteries between training sessions for continuous operation
 </td>
 <td class="image-info-card-image">

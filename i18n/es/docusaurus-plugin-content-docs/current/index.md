@@ -66,7 +66,7 @@ Visualice y grabe hasta 4 cámaras simultáneamente
 
 <div class="card-content">
 
-Todo funciona con baterías Milwaukee estándar para máxima portabilidad
+Las cámaras y los puntos de acceso funcionan con baterías Milwaukee estándar para máxima portabilidad
 
 </div>
 

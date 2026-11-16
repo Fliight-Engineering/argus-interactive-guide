@@ -67,8 +67,9 @@ A mesh network consists of multiple access points that work together to extend w
 <table class="image-info-card">
 <tr>
 <td class="image-info-card-text">
-- Minimum **10 hours** of operation per battery
-- Uses standard **18V, 5-6Ah Milwaukee battery packs**
+- Trainer and repeater access points: approx. **10 hours** per battery
+- Machine access point: approx. **8 hours** per battery (it powers more radios)
+- Uses standard **18V, 5-6Ah Milwaukee M18 battery packs**
 - Swap batteries between training sessions for continuous operation
 </td>
 <td class="image-info-card-image">

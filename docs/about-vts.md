@@ -39,7 +39,7 @@ The Video Training System kit comprises of:
 
 ## Packaging & Deployment Cases
 
-All components come packaged in two cases designed for easy deployment:
+The kit travels in two identical rugged roller cases: one for the trainer position and one for the vehicle.
 
 <div class="highlights-grid-single">
 
@@ -51,13 +51,13 @@ All components come packaged in two cases designed for easy deployment:
 ### Trainer Case
 
 Contains:
-- Trainer and repeater access point nodes
-- Batteries for access points
-- Trainer tablet
-- Tablet charger
+- Trainer access point
+- Repeater access points
+- Trainer's tablet and charger
+- 18V access point batteries
 </td>
 <td class="image-info-card-image">
-![Trainer Case](/img/vts-guide/trainer-case.png)
+![Trainer case with the trainer's tablet and access points](/img/vts-guide/trainer-case-contents.png)
 </td>
 </tr>
 </table>
@@ -72,14 +72,13 @@ Contains:
 ### Machine Case
 
 Contains:
-- All 4 remote camera systems
-- Machine access point node
-- Batteries for all cameras and machine node
-- AP debugging cable
+- Four remote camera systems, each with a 12V battery
+- Machine access point and 18V battery
+- Service cable
 - Spare antennas
 </td>
 <td class="image-info-card-image">
-![Machine Case](/img/vts-guide/machine-case.png)
+![Machine case with the machine access point and four remote camera systems](/img/vts-guide/machine-case-contents.png)
 </td>
 </tr>
 </table>

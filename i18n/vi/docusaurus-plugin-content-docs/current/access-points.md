@@ -67,8 +67,9 @@ Mạng mesh bao gồm nhiều điểm truy cập hoạt động cùng nhau để
 <table class="image-info-card">
 <tr>
 <td class="image-info-card-text">
-- Tối thiểu **10 giờ** hoạt động mỗi pin
-- Sử dụng bộ pin Milwaukee **18V, 5-6Ah** tiêu chuẩn
+- Điểm truy cập huấn luyện viên và điểm lặp: khoảng **10 giờ** mỗi pin
+- Điểm truy cập máy: khoảng **8 giờ** mỗi pin (cấp nguồn cho nhiều radio hơn)
+- Sử dụng bộ pin Milwaukee M18 **18V, 5-6Ah** tiêu chuẩn
 - Thay pin giữa các buổi đào tạo để hoạt động liên tục
 </td>
 <td class="image-info-card-image">

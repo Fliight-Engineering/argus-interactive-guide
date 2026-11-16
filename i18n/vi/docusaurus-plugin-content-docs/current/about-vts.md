@@ -39,7 +39,7 @@ Bộ kit Hệ Thống Đào Tạo Video bao gồm:
 
 ## Hộp Đựng & Triển Khai
 
-Tất cả thiết bị được đóng gói trong hai hộp thiết kế để dễ triển khai:
+Bộ thiết bị được vận chuyển trong hai vali kéo chắc chắn giống hệt nhau: một cho vị trí huấn luyện viên và một cho phương tiện.
 
 <div class="highlights-grid-single">
 
@@ -51,13 +51,13 @@ Tất cả thiết bị được đóng gói trong hai hộp thiết kế để 
 ### Hộp Huấn Luyện Viên
 
 Bao gồm:
-- Nút điểm truy cập huấn luyện viên và bộ lặp
-- Pin cho điểm truy cập
-- Máy tính bảng huấn luyện viên
-- Bộ sạc máy tính bảng
+- Điểm truy cập huấn luyện viên
+- Các điểm truy cập lặp
+- Máy tính bảng huấn luyện viên và bộ sạc
+- Pin 18V cho điểm truy cập
 </td>
 <td class="image-info-card-image">
-![Hộp Huấn Luyện Viên](/img/vts-guide/trainer-case.png)
+![Hộp huấn luyện viên với máy tính bảng và các điểm truy cập](/img/vts-guide/trainer-case-contents.png)
 </td>
 </tr>
 </table>
@@ -72,14 +72,13 @@ Bao gồm:
 ### Hộp Máy
 
 Bao gồm:
-- Toàn bộ 4 hệ thống camera từ xa
-- Nút điểm truy cập máy
-- Pin cho tất cả camera và nút máy
-- Cáp gỡ lỗi nút radio
+- Bốn hệ thống camera từ xa, mỗi hệ thống có một pin 12V
+- Điểm truy cập máy và pin 18V
+- Cáp bảo trì
 - Anten dự phòng
 </td>
 <td class="image-info-card-image">
-![Hộp Máy](/img/vts-guide/machine-case.png)
+![Hộp máy với điểm truy cập máy và bốn camera từ xa](/img/vts-guide/machine-case-contents.png)
 </td>
 </tr>
 </table>

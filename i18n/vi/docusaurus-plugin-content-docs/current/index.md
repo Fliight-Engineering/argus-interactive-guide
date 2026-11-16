@@ -66,7 +66,7 @@ Xem và ghi từ tối đa 4 camera cùng lúc
 
 <div class="card-content">
 
-Tất cả chạy bằng pin Milwaukee tiêu chuẩn để đảm bảo tính cơ động tối đa
+Camera và điểm truy cập chạy bằng pin Milwaukee tiêu chuẩn để đảm bảo tính cơ động tối đa
 
 </div>
 

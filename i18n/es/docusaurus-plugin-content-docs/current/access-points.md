@@ -67,8 +67,9 @@ Una red mesh consiste en múltiples nodos de red que trabajan juntos para extend
 <table class="image-info-card">
 <tr>
 <td class="image-info-card-text">
-- Mínimo **10 horas** de operación por batería
-- Utiliza paquetes de batería Milwaukee estándar **18V, 5-6Ah**
+- Puntos de acceso del instructor y repetidores: aprox. **10 horas** por batería
+- Punto de acceso de máquina: aprox. **8 horas** por batería (alimenta más radios)
+- Utiliza paquetes de batería Milwaukee M18 estándar **18V, 5-6Ah**
 - Cambie las baterías entre sesiones de capacitación para operación continua
 </td>
 <td class="image-info-card-image">
