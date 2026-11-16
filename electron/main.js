@@ -486,7 +486,7 @@ function createWindow() {
           contextIsolation: true,
           preload: path.join(__dirname, 'preload.js'),
         },
-        icon: path.join(__dirname, '..', 'static', 'img', 'vts-guide', 'argus-logo.png'),
+        icon: path.join(buildDir, 'img', 'brand', 'argus-mark-512-red.png'),
         title: 'VTS Guide',
         // Start in fullscreen (F11 mode - no window borders)
         fullscreen: true,

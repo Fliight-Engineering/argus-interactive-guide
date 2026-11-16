@@ -18,30 +18,30 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #00B050;
-  --ifm-color-primary-dark: #009d47;
-  --ifm-color-primary-darker: #009443;
-  --ifm-color-primary-darkest: #007a37;
-  --ifm-color-primary-light: #00c359;
-  --ifm-color-primary-lighter: #00cc5d;
-  --ifm-color-primary-lightest: #00e66a;
+  --ifm-color-primary: #ba0c2f;
+  --ifm-color-primary-dark: #a70b2a;
+  --ifm-color-primary-darker: #9e0a28;
+  --ifm-color-primary-darkest: #820821;
+  --ifm-color-primary-light: #cd0d34;
+  --ifm-color-primary-lighter: #d60e36;
+  --ifm-color-primary-lightest: #f0123e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #00B050;
-  --ifm-color-primary-dark: #009d47;
-  --ifm-color-primary-darker: #009443;
-  --ifm-color-primary-darkest: #007a37;
-  --ifm-color-primary-light: #00c359;
-  --ifm-color-primary-lighter: #00cc5d;
-  --ifm-color-primary-lightest: #00e66a;
+  --ifm-color-primary: #e8435f;
+  --ifm-color-primary-dark: #e52848;
+  --ifm-color-primary-darker: #e21c3d;
+  --ifm-color-primary-darkest: #ba1733;
+  --ifm-color-primary-light: #eb5e76;
+  --ifm-color-primary-lighter: #ed6b81;
+  --ifm-color-primary-lightest: #f293a3;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Custom Barmico branding - Theme-aware navbar */
+/* Argus branding (fliight-branding/argus) - Theme-aware navbar */
 .navbar {
   background-color: #e5e5e5;
   min-height: 55px;
